@@ -28,13 +28,19 @@
     "reviews": {
       "type": "purelane-reviews",
       "settings": {}
-    }
+    },
+    "ingredients": {
+  "type": "purelane-ingredients",
+  "settings": {}
+}
   },
   "order": [
     "announcement",
     "header",
     "hero",
     "why",
-    "reviews"
+    "reviews",
+    "ingredients"
+
   ]
 }
