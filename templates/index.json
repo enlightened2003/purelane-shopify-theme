@@ -13,21 +13,23 @@
       "type": "purelane-announcement",
       "settings": {}
     },
-
     "header": {
       "type": "purelane-header",
       "settings": {}
     },
-
     "hero": {
       "type": "purelane-hero",
       "settings": {}
+    },
+    "why": {
+      "type": "purelane-why",
+      "settings": {}
     }
   },
-
   "order": [
     "announcement",
     "header",
-    "hero"
+    "hero",
+    "why"
   ]
 }
