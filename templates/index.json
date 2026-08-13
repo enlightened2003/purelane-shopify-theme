@@ -36,6 +36,10 @@
 "how_it_works": {
   "type": "purelane-how-it-works",
   "settings": {}
+},
+"products": {
+  "type": "purelane-products",
+  "settings": {}
 }
 
   },
@@ -46,7 +50,8 @@
     "why",
     "reviews",
     "ingredients",
-    "how_it_works"
+    "how_it_works",
+    "products"
 
   ]
 }
