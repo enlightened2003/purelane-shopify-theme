@@ -17,11 +17,17 @@
     "header": {
       "type": "purelane-header",
       "settings": {}
+    },
+
+    "hero": {
+      "type": "purelane-hero",
+      "settings": {}
     }
   },
 
   "order": [
     "announcement",
-    "header"
+    "header",
+    "hero"
   ]
 }
