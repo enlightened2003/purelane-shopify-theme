@@ -12,9 +12,16 @@
     "announcement": {
       "type": "purelane-announcement",
       "settings": {}
+    },
+
+    "header": {
+      "type": "purelane-header",
+      "settings": {}
     }
   },
+
   "order": [
-    "announcement"
+    "announcement",
+    "header"
   ]
 }
