@@ -1,0 +1,86 @@
+<div class="purelane-announcement">
+  <div class="purelane-announcement-track">
+
+    <span>
+      100% PLANT-BASED <strong>AND NON-TOXIC</strong>
+    </span>
+
+    <span>
+      LOVED BY <strong>30,000+ HAPPY HOMES</strong>
+    </span>
+
+    <span>
+      BUY 3 <strong>AT FLAT ₹499</strong>
+    </span>
+
+    <span>
+      FREE SHIPPING <strong>ON EVERY ORDER</strong>
+    </span>
+
+  </div>
+</div>
+
+<style>
+  .purelane-announcement {
+    width: 100%;
+    height: 38px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .purelane-announcement-track {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 0 25px;
+    white-space: nowrap;
+  }
+
+  .purelane-announcement-track span {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555555;
+  }
+
+  .purelane-announcement-track strong {
+    color: #5b8f27;
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .purelane-announcement {
+      height: 34px;
+    }
+
+    .purelane-announcement-track {
+      width: max-content;
+      justify-content: flex-start;
+      animation: announcement-scroll 18s linear infinite;
+    }
+  }
+
+  @keyframes announcement-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Purelane Announcement",
+  "settings": []
+}
+{% endschema %}
