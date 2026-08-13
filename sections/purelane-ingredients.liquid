@@ -1,0 +1,396 @@
+<section class="purelane-ingredients">
+
+  <div class="purelane-ingredients-inner">
+
+    <!-- LEFT CONTENT -->
+    <div class="purelane-ingredients-content">
+
+      <p class="purelane-ingredients-kicker">
+        PLANT-BASED FORMULA
+      </p>
+
+      <h2>
+        GOOD FOR<br>
+        <span>YOUR HOME.</span>
+      </h2>
+
+      <p class="purelane-ingredients-intro">
+        Thoughtfully selected plant-based ingredients
+        designed to deliver powerful cleaning without
+        unnecessary harshness.
+      </p>
+
+      <a href="#shop" class="purelane-ingredients-button">
+        EXPLORE INGREDIENTS
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <!-- RIGHT INGREDIENT CARDS -->
+    <div class="purelane-ingredients-list">
+
+      <div class="purelane-ingredient-card">
+
+        <div class="purelane-ingredient-number">
+          01
+        </div>
+
+        <div class="purelane-ingredient-icon">
+          ✦
+        </div>
+
+        <div class="purelane-ingredient-info">
+          <h3>PLANT EXTRACTS</h3>
+
+          <p>
+            Plant-derived ingredients selected
+            for effective everyday cleaning.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="purelane-ingredient-card">
+
+        <div class="purelane-ingredient-number">
+          02
+        </div>
+
+        <div class="purelane-ingredient-icon">
+          ◌
+        </div>
+
+        <div class="purelane-ingredient-info">
+          <h3>GENTLE FORMULA</h3>
+
+          <p>
+            A balanced formula made for
+            everyday use around your home.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="purelane-ingredient-card">
+
+        <div class="purelane-ingredient-number">
+          03
+        </div>
+
+        <div class="purelane-ingredient-icon">
+          ✓
+        </div>
+
+        <div class="purelane-ingredient-info">
+          <h3>NO UNNECESSARY CHEMICALS</h3>
+
+          <p>
+            Focused on what your home needs
+            and leaving out what it doesn't.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  /* ==============================
+     PURELANE INGREDIENTS
+     ============================== */
+
+  .purelane-ingredients {
+    width: 100%;
+    padding: 110px 24px;
+
+    background: #241a3d;
+    color: #ffffff;
+  }
+
+  .purelane-ingredients-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+
+    align-items: center;
+  }
+
+
+  /* ==============================
+     LEFT CONTENT
+     ============================== */
+
+  .purelane-ingredients-content {
+    max-width: 500px;
+  }
+
+  .purelane-ingredients-kicker {
+    margin: 0 0 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+
+    color: #f0a03c;
+  }
+
+  .purelane-ingredients-content h2 {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  .purelane-ingredients-content h2 span {
+    color: #f0a03c;
+  }
+
+  .purelane-ingredients-intro {
+    max-width: 470px;
+    margin: 28px 0 32px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.72);
+  }
+
+
+  /* ==============================
+     BUTTON
+     ============================== */
+
+  .purelane-ingredients-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 22px;
+
+    border-radius: 999px;
+
+    background: #f0a03c;
+    color: #241a3d;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+
+    text-decoration: none;
+
+    transition:
+      transform .25s ease,
+      background .25s ease;
+  }
+
+  .purelane-ingredients-button:hover {
+    transform: translateY(-2px);
+    background: #ffb557;
+  }
+
+  .purelane-ingredients-button span {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+
+  /* ==============================
+     INGREDIENT LIST
+     ============================== */
+
+  .purelane-ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+
+  /* ==============================
+     INGREDIENT CARD
+     ============================== */
+
+  .purelane-ingredient-card {
+    min-height: 145px;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 45px 70px 1fr;
+    align-items: center;
+    gap: 18px;
+
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.055);
+
+    transition:
+      transform .3s ease,
+      background .3s ease,
+      border-color .3s ease;
+  }
+
+  .purelane-ingredient-card:hover {
+    transform: translateX(6px);
+
+    background: rgba(255,255,255,.09);
+
+    border-color: rgba(240,160,60,.35);
+  }
+
+
+  /* ==============================
+     NUMBER
+     ============================== */
+
+  .purelane-ingredient-number {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+
+    color: rgba(255,255,255,.38);
+  }
+
+
+  /* ==============================
+     ICON
+     ============================== */
+
+  .purelane-ingredient-icon {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(240,160,60,.10);
+    border: 1px solid rgba(240,160,60,.30);
+
+    color: #f0a03c;
+
+    font-size: 23px;
+  }
+
+
+  /* ==============================
+     TEXT
+     ============================== */
+
+  .purelane-ingredient-info h3 {
+    margin: 0 0 7px;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.1;
+
+    letter-spacing: .01em;
+
+    color: #ffffff;
+  }
+
+  .purelane-ingredient-info p {
+    max-width: 430px;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+
+    color: rgba(255,255,255,.58);
+  }
+
+
+  /* ==============================
+     TABLET
+     ============================== */
+
+  @media (max-width: 850px) {
+
+    .purelane-ingredients {
+      padding: 85px 20px;
+    }
+
+    .purelane-ingredients-inner {
+      grid-template-columns: 1fr;
+      gap: 55px;
+    }
+
+    .purelane-ingredients-content {
+      max-width: 650px;
+    }
+
+  }
+
+
+  /* ==============================
+     MOBILE
+     ============================== */
+
+  @media (max-width: 520px) {
+
+    .purelane-ingredients {
+      padding: 65px 16px;
+    }
+
+    .purelane-ingredients-content h2 {
+      font-size: 50px;
+    }
+
+    .purelane-ingredient-card {
+      grid-template-columns: 35px 55px 1fr;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .purelane-ingredient-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .purelane-ingredient-info h3 {
+      font-size: 15px;
+    }
+
+    .purelane-ingredient-info p {
+      font-size: 12px;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Purelane Ingredients",
+  "settings": []
+}
+{% endschema %}
