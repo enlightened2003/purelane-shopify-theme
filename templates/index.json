@@ -32,7 +32,12 @@
     "ingredients": {
   "type": "purelane-ingredients",
   "settings": {}
+},
+"how_it_works": {
+  "type": "purelane-how-it-works",
+  "settings": {}
 }
+
   },
   "order": [
     "announcement",
@@ -40,7 +45,8 @@
     "hero",
     "why",
     "reviews",
-    "ingredients"
+    "ingredients",
+    "how_it_works"
 
   ]
 }
