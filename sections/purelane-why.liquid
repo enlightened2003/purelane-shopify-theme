@@ -1,0 +1,298 @@
+<section class="purelane-why">
+  <div class="purelane-why-inner">
+
+    <!-- SECTION HEADING -->
+    <div class="purelane-why-heading">
+      <p class="purelane-why-kicker">WHY PURELANE</p>
+
+      <h2>
+        CLEANING THAT<br>
+        <span>CARES.</span>
+      </h2>
+
+      <p class="purelane-why-intro">
+        Powerful enough for everyday messes.
+        Gentle enough for the people and planet around you.
+      </p>
+    </div>
+
+    <!-- BENEFIT CARDS -->
+    <div class="purelane-why-grid">
+
+      <!-- CARD 1 -->
+      <div class="purelane-why-card">
+        <div class="purelane-why-icon">
+          <span>✦</span>
+        </div>
+
+        <h3>PLANT<br>POWERED</h3>
+
+        <p>
+          Made with plant-based ingredients
+          that get the job done without
+          unnecessary harsh chemicals.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="purelane-why-card">
+        <div class="purelane-why-icon">
+          <span>✓</span>
+        </div>
+
+        <h3>SAFE FOR<br>FAMILIES</h3>
+
+        <p>
+          A thoughtful formula designed
+          for homes with children and
+          pets.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="purelane-why-card">
+        <div class="purelane-why-icon">
+          <span>◯</span>
+        </div>
+
+        <h3>ZERO HARSH<br>CHEMICALS</h3>
+
+        <p>
+          No unnecessary harsh chemicals.
+          Just effective everyday cleaning
+          for your home.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* ==============================
+     PURELANE WHY SECTION
+     ============================== */
+
+  .purelane-why {
+    width: 100%;
+    padding: 100px 24px;
+    background: #f5f2ec;
+    color: #17102b;
+  }
+
+  .purelane-why-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+
+  /* ==============================
+     HEADING
+     ============================== */
+
+  .purelane-why-heading {
+    max-width: 700px;
+    margin-bottom: 55px;
+  }
+
+  .purelane-why-kicker {
+    margin: 0 0 16px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+
+    color: #c9761d;
+  }
+
+  .purelane-why-heading h2 {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(44px, 7vw, 82px);
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+
+    color: #241a3d;
+  }
+
+  .purelane-why-heading h2 span {
+    color: #4b3a8f;
+  }
+
+  .purelane-why-intro {
+    max-width: 570px;
+    margin: 25px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+
+    color: #625b6f;
+  }
+
+
+  /* ==============================
+     CARD GRID
+     ============================== */
+
+  .purelane-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+
+  /* ==============================
+     CARD
+     ============================== */
+
+  .purelane-why-card {
+    min-height: 300px;
+    padding: 34px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(75, 58, 143, .12);
+    border-radius: 24px;
+
+    box-shadow:
+      0 15px 40px rgba(36, 26, 61, .07);
+
+    transition:
+      transform .3s ease,
+      box-shadow .3s ease;
+  }
+
+  .purelane-why-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 22px 50px rgba(36, 26, 61, .12);
+  }
+
+
+  /* ==============================
+     ICON
+     ============================== */
+
+  .purelane-why-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(240, 160, 60, .10);
+    border: 1px solid rgba(240, 160, 60, .28);
+
+    color: #f0a03c;
+
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+
+  /* ==============================
+     CARD TEXT
+     ============================== */
+
+  .purelane-why-card h3 {
+    margin: 0 0 16px;
+
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -.02em;
+
+    color: #241a3d;
+  }
+
+  .purelane-why-card p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #6b6574;
+  }
+
+
+  /* ==============================
+     TABLET
+     ============================== */
+
+  @media (max-width: 800px) {
+
+    .purelane-why {
+      padding: 75px 20px;
+    }
+
+    .purelane-why-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .purelane-why-card {
+      min-height: auto;
+    }
+
+  }
+
+
+  /* ==============================
+     MOBILE
+     ============================== */
+
+  @media (max-width: 500px) {
+
+    .purelane-why {
+      padding: 60px 16px;
+    }
+
+    .purelane-why-heading {
+      margin-bottom: 35px;
+    }
+
+    .purelane-why-heading h2 {
+      font-size: 48px;
+    }
+
+    .purelane-why-intro {
+      font-size: 15px;
+    }
+
+    .purelane-why-card {
+      padding: 27px;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Purelane Why",
+  "settings": []
+}
+{% endschema %}
