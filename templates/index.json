@@ -24,12 +24,17 @@
     "why": {
       "type": "purelane-why",
       "settings": {}
+    },
+    "reviews": {
+      "type": "purelane-reviews",
+      "settings": {}
     }
   },
   "order": [
     "announcement",
     "header",
     "hero",
-    "why"
+    "why",
+    "reviews"
   ]
 }
