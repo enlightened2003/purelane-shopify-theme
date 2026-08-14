@@ -39,7 +39,9 @@
     },
     "why": {
       "type": "purelane-why",
-      "settings": {}
+      "settings": {
+        "product_collection": "products"
+      }
     },
     "how_it_works": {
       "type": "purelane-how-it-works",
