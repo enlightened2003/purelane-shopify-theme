@@ -1,0 +1,1238 @@
+<section class="purelane-build-section">
+
+  <!-- =====================================================
+       BUILD YOUR BUNDLE HEADER
+  ====================================================== -->
+
+  <div class="purelane-build-header">
+
+    <div class="purelane-build-eyebrow">
+      BUILD YOUR BUNDLE
+    </div>
+
+    <h2>ONE BOX. EVERY ROOM.</h2>
+
+    <p>
+      Mix and match across kitchen, laundry, home and skin.<br>
+      One flat price, no code needed, free shipping either way.
+    </p>
+
+  </div>
+
+
+  <!-- =====================================================
+       BUNDLE CARDS
+  ====================================================== -->
+
+  <div class="purelane-build-cards">
+
+
+    <!-- ===================================================
+         STARTER
+    ==================================================== -->
+
+    <article class="purelane-build-card">
+
+      <div class="purelane-build-badge">
+        STARTER
+      </div>
+
+      <div class="purelane-build-images">
+
+        {% assign starter_1 = collections[section.settings.collection].products[0] %}
+        {% assign starter_2 = collections[section.settings.collection].products[1] %}
+
+        {% if starter_1 %}
+          <img
+            src="{{ starter_1.featured_image | image_url: width: 180 }}"
+            alt="{{ starter_1.title | escape }}"
+          >
+        {% endif %}
+
+        {% if starter_2 %}
+          <img
+            src="{{ starter_2.featured_image | image_url: width: 180 }}"
+            alt="{{ starter_2.title | escape }}"
+          >
+        {% endif %}
+
+      </div>
+
+
+      <div class="purelane-build-number">
+        2
+      </div>
+
+      <div class="purelane-build-products">
+        PRODUCTS
+      </div>
+
+
+      <div class="purelane-build-price">
+
+        <strong>₹349</strong>
+
+        <del>₹398</del>
+
+      </div>
+
+      <div class="purelane-flat-price">
+        Flat ₹174 per product
+      </div>
+
+
+      <ul>
+
+        <li>✓ Pick any two products</li>
+        <li>✓ Free shipping across India</li>
+
+      </ul>
+
+
+      <a
+        href="/collections/{{ section.settings.collection }}"
+        class="purelane-build-button"
+      >
+        BUILD THIS BOX
+      </a>
+
+    </article>
+
+
+
+    <!-- ===================================================
+         MOST POPULAR
+    ==================================================== -->
+
+    <article class="purelane-build-card purelane-build-popular">
+
+      <div class="purelane-build-badge">
+        MOST POPULAR
+      </div>
+
+      <div class="purelane-build-images">
+
+        {% assign popular_1 = collections[section.settings.collection].products[0] %}
+        {% assign popular_2 = collections[section.settings.collection].products[1] %}
+        {% assign popular_3 = collections[section.settings.collection].products[2] %}
+
+        {% if popular_1 %}
+          <img
+            src="{{ popular_1.featured_image | image_url: width: 180 }}"
+            alt="{{ popular_1.title | escape }}"
+          >
+        {% endif %}
+
+        {% if popular_2 %}
+          <img
+            src="{{ popular_2.featured_image | image_url: width: 180 }}"
+            alt="{{ popular_2.title | escape }}"
+          >
+        {% endif %}
+
+        {% if popular_3 %}
+          <img
+            src="{{ popular_3.featured_image | image_url: width: 180 }}"
+            alt="{{ popular_3.title | escape }}"
+          >
+        {% endif %}
+
+      </div>
+
+
+      <div class="purelane-build-number">
+        3
+      </div>
+
+      <div class="purelane-build-products">
+        PRODUCTS
+      </div>
+
+
+      <div class="purelane-build-price">
+
+        <strong>₹499</strong>
+
+        <del>₹897</del>
+
+      </div>
+
+      <div class="purelane-flat-price">
+        Flat ₹166 per product
+      </div>
+
+
+      <ul>
+
+        <li>✓ Pick any three products</li>
+        <li>✓ Covers kitchen and laundry</li>
+        <li>✓ Free shipping across India</li>
+
+      </ul>
+
+
+      <a
+        href="/collections/{{ section.settings.collection }}"
+        class="purelane-build-button purelane-build-button-primary"
+      >
+        BUILD THIS BOX →
+      </a>
+
+    </article>
+
+
+
+    <!-- ===================================================
+         WHOLE HOME
+    ==================================================== -->
+
+    <article class="purelane-build-card">
+
+      <div class="purelane-build-badge">
+        WHOLE HOME
+      </div>
+
+      <div class="purelane-build-images">
+
+        {% assign whole_1 = collections[section.settings.collection].products[0] %}
+        {% assign whole_2 = collections[section.settings.collection].products[1] %}
+        {% assign whole_3 = collections[section.settings.collection].products[2] %}
+        {% assign whole_4 = collections[section.settings.collection].products[3] %}
+        {% assign whole_5 = collections[section.settings.collection].products[4] %}
+
+        {% if whole_1 %}
+          <img
+            src="{{ whole_1.featured_image | image_url: width: 150 }}"
+            alt="{{ whole_1.title | escape }}"
+          >
+        {% endif %}
+
+        {% if whole_2 %}
+          <img
+            src="{{ whole_2.featured_image | image_url: width: 150 }}"
+            alt="{{ whole_2.title | escape }}"
+          >
+        {% endif %}
+
+        {% if whole_3 %}
+          <img
+            src="{{ whole_3.featured_image | image_url: width: 150 }}"
+            alt="{{ whole_3.title | escape }}"
+          >
+        {% endif %}
+
+        {% if whole_4 %}
+          <img
+            src="{{ whole_4.featured_image | image_url: width: 150 }}"
+            alt="{{ whole_4.title | escape }}"
+          >
+        {% endif %}
+
+        {% if whole_5 %}
+          <img
+            src="{{ whole_5.featured_image | image_url: width: 150 }}"
+            alt="{{ whole_5.title | escape }}"
+          >
+        {% endif %}
+
+      </div>
+
+
+      <div class="purelane-build-number">
+        5
+      </div>
+
+      <div class="purelane-build-products">
+        PRODUCTS
+      </div>
+
+
+      <div class="purelane-build-price">
+
+        <strong>₹799</strong>
+
+        <del>₹1,495</del>
+
+      </div>
+
+      <div class="purelane-flat-price">
+        Flat ₹160 per product
+      </div>
+
+
+      <ul>
+
+        <li>✓ Pick any five products</li>
+        <li>✓ Every room in one order</li>
+        <li>✓ Free shipping across India</li>
+
+      </ul>
+
+
+      <a
+        href="/collections/{{ section.settings.collection }}"
+        class="purelane-build-button"
+      >
+        BUILD THIS BOX
+      </a>
+
+    </article>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       BESTSELLERS
+  ====================================================== -->
+
+  <div class="purelane-bestsellers">
+
+    <div class="purelane-bestsellers-label">
+      BESTSELLERS
+    </div>
+
+    <h2>
+      LOVED BY 30,000 HOMES
+    </h2>
+
+    <div class="purelane-bestseller-divider">
+      <span></span>
+      <b>⌄</b>
+      <span></span>
+    </div>
+
+
+    <!-- ===================================================
+         PRODUCT CARDS
+    ==================================================== -->
+
+    <div class="purelane-bestseller-track">
+
+      {% assign bestseller_products =
+        collections[section.settings.collection].products
+      %}
+
+
+      {% for product in bestseller_products limit: 8 %}
+
+        <article class="purelane-bestseller-card">
+
+          <div class="purelane-bestseller-tag">
+
+            {% case forloop.index %}
+
+              {% when 1 %}
+                BEST SELLER
+
+              {% when 2 %}
+                BEST SELLER
+
+              {% when 3 %}
+                TOP RATED
+
+              {% else %}
+                NEW
+
+            {% endcase %}
+
+          </div>
+
+
+          <div class="purelane-bestseller-image">
+
+            {% if product.featured_image %}
+
+              <img
+                src="{{ product.featured_image | image_url: width: 500 }}"
+                alt="{{ product.title | escape }}"
+                loading="lazy"
+              >
+
+            {% endif %}
+
+          </div>
+
+
+          <div class="purelane-bestseller-info">
+
+            <h3>
+              {{ product.title }}
+            </h3>
+
+            {% if product.description != blank %}
+
+              <p>
+                {{ product.description
+                  | strip_html
+                  | truncate: 100
+                }}
+              </p>
+
+            {% endif %}
+
+
+            <div class="purelane-bestseller-price">
+
+              {% if product.compare_at_price > product.price %}
+
+                <strong>
+                  {{ product.price | money_without_trailing_zeros }}
+                </strong>
+
+                <del>
+                  {{ product.compare_at_price | money_without_trailing_zeros }}
+                </del>
+
+              {% else %}
+
+                <strong>
+                  {{ product.price | money_without_trailing_zeros }}
+                </strong>
+
+              {% endif %}
+
+            </div>
+
+
+            <a href="{{ product.url }}">
+              SHOP NOW →
+            </a>
+
+          </div>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.purelane-build-section {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 65px 0 90px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  background:
+
+    radial-gradient(
+      ellipse at 25% 20%,
+      rgba(255,255,255,.30),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      ellipse at 80% 65%,
+      rgba(255,255,255,.18),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      180deg,
+      #dff6e4 0%,
+      #c8ecd6 45%,
+      #a9d9c4 100%
+    );
+
+}
+
+
+/* =========================================================
+   WAVY BACKGROUND
+========================================================= */
+
+.purelane-build-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: .5;
+
+  background:
+
+    repeating-linear-gradient(
+      -7deg,
+      transparent 0px,
+      transparent 72px,
+      rgba(255,255,255,.20) 75px,
+      transparent 80px
+    );
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.purelane-build-header {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 38px;
+
+  padding: 0 20px;
+
+}
+
+
+.purelane-build-eyebrow {
+
+  margin-bottom: 15px;
+
+  color: #77798a;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .25em;
+
+}
+
+
+.purelane-build-header h2 {
+
+  margin: 0;
+
+  color: #18112f;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -.04em;
+
+}
+
+
+.purelane-build-header p {
+
+  margin: 18px auto 0;
+
+  color: #56586c;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+
+}
+
+
+/* =========================================================
+   BUNDLE CARDS
+========================================================= */
+
+.purelane-build-cards {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 60px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+}
+
+
+.purelane-build-card {
+
+  min-height: 480px;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  border-radius: 20px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.88),
+      rgba(211,235,229,.82)
+    );
+
+  border: 1px solid rgba(188,201,204,.7);
+
+  box-shadow:
+
+    0 15px 35px rgba(55,85,75,.10);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+}
+
+
+.purelane-build-popular {
+
+  border: 1.5px solid rgba(193,151,74,.65);
+
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.purelane-build-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 22px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  background: rgba(240,246,222,.8);
+
+  color: #7d9d55;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .13em;
+
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+========================================================= */
+
+.purelane-build-images {
+
+  height: 105px;
+
+  margin-top: 10px;
+
+  padding: 5px 10px;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,.48);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+}
+
+
+.purelane-build-images img {
+
+  width: 62px;
+
+  height: 88px;
+
+  object-fit: contain;
+
+  display: block;
+
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.purelane-build-number {
+
+  margin-top: 14px;
+
+  color: #29223e;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+}
+
+
+.purelane-build-products {
+
+  margin-top: 4px;
+
+  color: #7d7e8d;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.purelane-build-price {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 12px;
+
+}
+
+
+.purelane-build-price strong {
+
+  color: #c27617;
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+}
+
+
+.purelane-build-price del {
+
+  color: #7c7d87;
+
+  font-size: 11px;
+
+}
+
+
+.purelane-flat-price {
+
+  margin-top: 2px;
+
+  color: #797a88;
+
+  font-size: 10px;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.purelane-build-card ul {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 13px 0 17px;
+
+}
+
+
+.purelane-build-card li {
+
+  margin-bottom: 7px;
+
+  color: #606274;
+
+  font-size: 10px;
+
+}
+
+
+/* =========================================================
+   BUILD BUTTON
+========================================================= */
+
+.purelane-build-button {
+
+  height: 40px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.86);
+
+  border: 1px solid rgba(130,140,160,.25);
+
+  color: #075d59;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+}
+
+
+.purelane-build-button-primary {
+
+  background: #006f69;
+
+  color: white;
+
+  border-color: #006f69;
+
+}
+
+
+/* =========================================================
+   BESTSELLERS
+========================================================= */
+
+.purelane-bestsellers {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 70px;
+
+}
+
+
+.purelane-bestsellers-label {
+
+  text-align: center;
+
+  color: #7b7d8c;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .25em;
+
+}
+
+
+.purelane-bestsellers h2 {
+
+  margin: 10px 0 0;
+
+  text-align: center;
+
+  color: #18112f;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 39px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -.04em;
+
+}
+
+
+.purelane-bestseller-divider {
+
+  width: 100px;
+
+  margin: 12px auto 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+.purelane-bestseller-divider span {
+
+  height: 1px;
+
+  flex: 1;
+
+  background: rgba(100,110,120,.25);
+
+}
+
+
+.purelane-bestseller-divider b {
+
+  color: #c67a1b;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BESTSELLER CARDS
+========================================================= */
+
+.purelane-bestseller-track {
+
+  width: 100%;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  gap: 14px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+}
+
+
+.purelane-bestseller-track::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+
+.purelane-bestseller-card {
+
+  position: relative;
+
+  flex: 0 0 250px;
+
+  min-height: 330px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.9),
+      rgba(210,235,228,.85)
+    );
+
+  border: 1px solid rgba(185,200,202,.65);
+
+}
+
+
+.purelane-bestseller-tag {
+
+  position: absolute;
+
+  top: 13px;
+
+  left: 13px;
+
+  z-index: 2;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(242,247,223,.9);
+
+  color: #7b9c50;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: .1em;
+
+}
+
+
+.purelane-bestseller-image {
+
+  height: 180px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(255,255,255,.4);
+
+}
+
+
+.purelane-bestseller-image img {
+
+  width: 150px;
+
+  height: 150px;
+
+  object-fit: contain;
+
+}
+
+
+.purelane-bestseller-info {
+
+  padding: 15px;
+
+}
+
+
+.purelane-bestseller-info h3 {
+
+  margin: 0 0 8px;
+
+  color: #27203d;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+}
+
+
+.purelane-bestseller-info p {
+
+  margin: 0 0 10px;
+
+  color: #686a7a;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+}
+
+
+.purelane-bestseller-price {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+.purelane-bestseller-price strong {
+
+  color: #18112f;
+
+  font-size: 20px;
+
+}
+
+
+.purelane-bestseller-price del {
+
+  color: #777987;
+
+  font-size: 10px;
+
+}
+
+
+.purelane-bestseller-info > a {
+
+  display: block;
+
+  margin-top: 12px;
+
+  color: #075d59;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .1em;
+
+  text-decoration: none;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .purelane-build-cards {
+
+    width: calc(100% - 40px);
+
+    grid-template-columns: repeat(3, 300px);
+
+    overflow-x: auto;
+
+  }
+
+  .purelane-build-header h2 {
+
+    font-size: 42px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .purelane-build-section {
+
+    padding-top: 50px;
+
+  }
+
+  .purelane-build-header h2 {
+
+    font-size: 34px;
+
+  }
+
+  .purelane-build-header p {
+
+    font-size: 14px;
+
+  }
+
+  .purelane-build-cards {
+
+    width: 100%;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+    display: flex;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+  }
+
+  .purelane-build-cards::-webkit-scrollbar {
+
+    display: none;
+
+  }
+
+  .purelane-build-card {
+
+    flex: 0 0 290px;
+
+  }
+
+  .purelane-bestsellers h2 {
+
+    font-size: 31px;
+
+  }
+
+}
+
+</style>
+
+
+
+{% schema %}
+
+{
+  "name": "Purelane Build Bundle",
+
+  "settings": [
+
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Product collection"
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Build Bundle"
+    }
+
+  ]
+
+}
+
+{% endschema %}
