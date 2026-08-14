@@ -7,14 +7,13 @@
   <div class="purelane-build-header">
 
     <div class="purelane-build-eyebrow">
-      BUILD YOUR BUNDLE
+      {{ section.settings.header_eyebrow | escape }}
     </div>
 
-    <h2>ONE BOX. EVERY ROOM.</h2>
+    <h2>{{ section.settings.header_title | escape }}</h2>
 
     <p>
-      Mix and match across kitchen, laundry, home and skin.<br>
-      One flat price, no code needed, free shipping either way.
+      {{ section.settings.header_text | escape | newline_to_br }}
     </p>
 
   </div>
@@ -34,7 +33,7 @@
     <article class="purelane-build-card">
 
       <div class="purelane-build-badge">
-        STARTER
+        {{ section.settings.starter_badge | escape }}
       </div>
 
       <div class="purelane-build-images">
@@ -70,21 +69,23 @@
 
       <div class="purelane-build-price">
 
-        <strong>₹349</strong>
+        <strong>{{ section.settings.starter_price | times: 100 | money_without_trailing_zeros }}</strong>
 
-        <del>₹398</del>
+        {% if section.settings.starter_compare_price > section.settings.starter_price %}
+          <del>{{ section.settings.starter_compare_price | times: 100 | money_without_trailing_zeros }}</del>
+        {% endif %}
 
       </div>
 
       <div class="purelane-flat-price">
-        Flat ₹174 per product
+        Flat {{ section.settings.starter_price | divided_by: 2 | times: 100 | money_without_trailing_zeros }} per product
       </div>
 
 
       <ul>
 
-        <li>✓ Pick any two products</li>
-        <li>✓ Free shipping across India</li>
+        <li>✓ {{ section.settings.starter_feature_1 | escape }}</li>
+        <li>✓ {{ section.settings.starter_feature_2 | escape }}</li>
 
       </ul>
 
@@ -93,7 +94,7 @@
         href="/collections/{{ section.settings.collection }}"
         class="purelane-build-button"
       >
-        BUILD THIS BOX
+        {{ section.settings.starter_button_label | escape }}
       </a>
 
     </article>
@@ -107,7 +108,7 @@
     <article class="purelane-build-card purelane-build-popular">
 
       <div class="purelane-build-badge">
-        MOST POPULAR
+        {{ section.settings.popular_badge | escape }}
       </div>
 
       <div class="purelane-build-images">
@@ -151,22 +152,24 @@
 
       <div class="purelane-build-price">
 
-        <strong>₹499</strong>
+        <strong>{{ section.settings.popular_price | times: 100 | money_without_trailing_zeros }}</strong>
 
-        <del>₹897</del>
+        {% if section.settings.popular_compare_price > section.settings.popular_price %}
+          <del>{{ section.settings.popular_compare_price | times: 100 | money_without_trailing_zeros }}</del>
+        {% endif %}
 
       </div>
 
       <div class="purelane-flat-price">
-        Flat ₹166 per product
+        Flat {{ section.settings.popular_price | divided_by: 3 | times: 100 | money_without_trailing_zeros }} per product
       </div>
 
 
       <ul>
 
-        <li>✓ Pick any three products</li>
-        <li>✓ Covers kitchen and laundry</li>
-        <li>✓ Free shipping across India</li>
+        <li>✓ {{ section.settings.popular_feature_1 | escape }}</li>
+        <li>✓ {{ section.settings.popular_feature_2 | escape }}</li>
+        <li>✓ {{ section.settings.popular_feature_3 | escape }}</li>
 
       </ul>
 
@@ -175,7 +178,7 @@
         href="/collections/{{ section.settings.collection }}"
         class="purelane-build-button purelane-build-button-primary"
       >
-        BUILD THIS BOX →
+        {{ section.settings.popular_button_label | escape }} →
       </a>
 
     </article>
@@ -189,7 +192,7 @@
     <article class="purelane-build-card">
 
       <div class="purelane-build-badge">
-        WHOLE HOME
+        {{ section.settings.whole_badge | escape }}
       </div>
 
       <div class="purelane-build-images">
@@ -249,22 +252,24 @@
 
       <div class="purelane-build-price">
 
-        <strong>₹799</strong>
+        <strong>{{ section.settings.whole_price | times: 100 | money_without_trailing_zeros }}</strong>
 
-        <del>₹1,495</del>
+        {% if section.settings.whole_compare_price > section.settings.whole_price %}
+          <del>{{ section.settings.whole_compare_price | times: 100 | money_without_trailing_zeros }}</del>
+        {% endif %}
 
       </div>
 
       <div class="purelane-flat-price">
-        Flat ₹160 per product
+        Flat {{ section.settings.whole_price | divided_by: 5 | times: 100 | money_without_trailing_zeros }} per product
       </div>
 
 
       <ul>
 
-        <li>✓ Pick any five products</li>
-        <li>✓ Every room in one order</li>
-        <li>✓ Free shipping across India</li>
+        <li>✓ {{ section.settings.whole_feature_1 | escape }}</li>
+        <li>✓ {{ section.settings.whole_feature_2 | escape }}</li>
+        <li>✓ {{ section.settings.whole_feature_3 | escape }}</li>
 
       </ul>
 
@@ -273,7 +278,7 @@
         href="/collections/{{ section.settings.collection }}"
         class="purelane-build-button"
       >
-        BUILD THIS BOX
+        {{ section.settings.whole_button_label | escape }}
       </a>
 
     </article>
@@ -361,10 +366,13 @@
             </p>
           {% endif %}
 
-          <div class="purelane-bestseller-rating">
-            <span>★★★★★</span>
-            <small>4.9</small>
-          </div>
+          {% assign review_rating = product.metafields.reviews.rating.value %}
+          {% if review_rating != blank %}
+            <div class="purelane-bestseller-rating" aria-label="Rated {{ review_rating }} out of 5">
+              <span aria-hidden="true">★★★★★</span>
+              <small>{{ review_rating }}</small>
+            </div>
+          {% endif %}
 
           <div class="purelane-bestseller-price">
 
@@ -1324,6 +1332,20 @@
 }
 
 /* =========================================================
+   KEYBOARD FOCUS
+========================================================= */
+
+.purelane-build-button:focus-visible,
+.purelane-bestseller-cart button:focus-visible,
+.purelane-bestseller-soldout:focus-visible,
+.purelane-bestseller-image:focus-visible,
+.purelane-bestseller-info h3 a:focus-visible {
+  outline: 3px solid #c98220;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
    REDUCED MOTION
 ========================================================= */
 
@@ -1437,6 +1459,170 @@
       "type": "collection",
       "id": "collection",
       "label": "Product collection"
+    },
+
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "header_eyebrow",
+      "label": "Eyebrow",
+      "default": "BUILD YOUR BUNDLE"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Title",
+      "default": "ONE BOX. EVERY ROOM."
+    },
+    {
+      "type": "textarea",
+      "id": "header_text",
+      "label": "Description",
+      "default": "Mix and match across kitchen, laundry, home and skin.\nOne flat price, no code needed, free shipping either way."
+    },
+
+    {
+      "type": "header",
+      "content": "Starter bundle"
+    },
+    {
+      "type": "text",
+      "id": "starter_badge",
+      "label": "Badge",
+      "default": "STARTER"
+    },
+    {
+      "type": "number",
+      "id": "starter_price",
+      "label": "Bundle price (₹)",
+      "default": 349,
+      
+    },
+    {
+      "type": "number",
+      "id": "starter_compare_price",
+      "label": "Compare-at price (₹)",
+      "default": 398,
+      
+    },
+    {
+      "type": "text",
+      "id": "starter_feature_1",
+      "label": "Feature 1",
+      "default": "Pick any two products"
+    },
+    {
+      "type": "text",
+      "id": "starter_feature_2",
+      "label": "Feature 2",
+      "default": "Free shipping across India"
+    },
+    {
+      "type": "text",
+      "id": "starter_button_label",
+      "label": "Button label",
+      "default": "BUILD THIS BOX"
+    },
+
+    {
+      "type": "header",
+      "content": "Most popular bundle"
+    },
+    {
+      "type": "text",
+      "id": "popular_badge",
+      "label": "Badge",
+      "default": "MOST POPULAR"
+    },
+    {
+      "type": "number",
+      "id": "popular_price",
+      "label": "Bundle price (₹)",
+      "default": 499,
+      
+    },
+    {
+      "type": "number",
+      "id": "popular_compare_price",
+      "label": "Compare-at price (₹)",
+      "default": 897,
+      
+    },
+    {
+      "type": "text",
+      "id": "popular_feature_1",
+      "label": "Feature 1",
+      "default": "Pick any three products"
+    },
+    {
+      "type": "text",
+      "id": "popular_feature_2",
+      "label": "Feature 2",
+      "default": "Covers kitchen and laundry"
+    },
+    {
+      "type": "text",
+      "id": "popular_feature_3",
+      "label": "Feature 3",
+      "default": "Free shipping across India"
+    },
+    {
+      "type": "text",
+      "id": "popular_button_label",
+      "label": "Button label",
+      "default": "BUILD THIS BOX"
+    },
+
+    {
+      "type": "header",
+      "content": "Whole home bundle"
+    },
+    {
+      "type": "text",
+      "id": "whole_badge",
+      "label": "Badge",
+      "default": "WHOLE HOME"
+    },
+    {
+      "type": "number",
+      "id": "whole_price",
+      "label": "Bundle price (₹)",
+      "default": 799,
+    
+    },
+    {
+      "type": "number",
+      "id": "whole_compare_price",
+      "label": "Compare-at price (₹)",
+      "default": 1495,
+      
+    },
+    {
+      "type": "text",
+      "id": "whole_feature_1",
+      "label": "Feature 1",
+      "default": "Pick any five products"
+    },
+    {
+      "type": "text",
+      "id": "whole_feature_2",
+      "label": "Feature 2",
+      "default": "Every room in one order"
+    },
+    {
+      "type": "text",
+      "id": "whole_feature_3",
+      "label": "Feature 3",
+      "default": "Free shipping across India"
+    },
+    {
+      "type": "text",
+      "id": "whole_button_label",
+      "label": "Button label",
+      "default": "BUILD THIS BOX"
     }
 
   ],
