@@ -1,0 +1,232 @@
+<section class="purelane-related">
+  <div class="purelane-related__container">
+
+    <div class="purelane-related__header">
+      <div>
+        <p class="purelane-related__eyebrow">EXPLORE PURELANE</p>
+        <h2>YOU MAY ALSO<br>LIKE.</h2>
+      </div>
+
+      <a href="{{ routes.all_products_collection_url }}" class="purelane-related__link">
+        VIEW ALL PRODUCTS
+        <span>→</span>
+      </a>
+    </div>
+
+    {% assign related_count = 0 %}
+
+    <div class="purelane-related__grid">
+
+      {% for product in collections.all.products %}
+        {% unless product.handle == product.handle %}
+        {% endunless %}
+      {% endfor %}
+
+      {% for product in collections.all.products limit: 4 %}
+        {% if product.id != product.id %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign current_product = product %}
+
+      {% for related_product in collections.all.products limit: 4 %}
+        {% if related_product.id != current_product.id %}
+          {% assign related_count = related_count | plus: 1 %}
+
+          <a href="{{ related_product.url }}" class="purelane-related__card">
+
+            <div class="purelane-related__image">
+              {% if related_product.featured_image %}
+                {{
+                  related_product.featured_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: related_product.featured_image.alt
+                }}
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag }}
+              {% endif %}
+            </div>
+
+            <div class="purelane-related__info">
+              <p class="purelane-related__rating">★★★★★</p>
+
+              <h3>{{ related_product.title }}</h3>
+
+              <p class="purelane-related__price">
+                {{ related_product.price | money }}
+              </p>
+            </div>
+
+          </a>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .purelane-related {
+    background: #f5f6fc;
+    padding: 110px 6%;
+  }
+
+  .purelane-related__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .purelane-related__header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .purelane-related__eyebrow {
+    margin: 0 0 18px;
+    color: #b87922;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+
+  .purelane-related h2 {
+    margin: 0;
+    color: #211d49;
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -3px;
+  }
+
+  .purelane-related__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+    padding: 18px 28px;
+    border: 1px solid #51439a;
+    border-radius: 999px;
+    color: #51439a;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .purelane-related__link span {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .purelane-related__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .purelane-related__card {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #dedff0;
+    border-radius: 24px;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .purelane-related__image {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #e9e7f7;
+  }
+
+  .purelane-related__image img,
+  .purelane-related__image svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .purelane-related__info {
+    padding: 25px;
+  }
+
+  .purelane-related__rating {
+    margin: 0 0 14px;
+    color: #e2a33d;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .purelane-related__info h3 {
+    margin: 0 0 15px;
+    color: #211d49;
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .purelane-related__price {
+    margin: 0;
+    color: #51439a;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .purelane-related__card:hover .purelane-related__image img {
+    transform: scale(1.03);
+  }
+
+  .purelane-related__image img {
+    transition: transform 0.35s ease;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .purelane-related__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .purelane-related {
+      padding: 75px 5%;
+    }
+
+    .purelane-related__header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .purelane-related h2 {
+      font-size: 52px;
+    }
+
+    .purelane-related__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .purelane-related__link {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Purelane Related Products",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purelane Related Products"
+    }
+  ]
+}
+{% endschema %}
