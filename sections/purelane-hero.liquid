@@ -9,12 +9,11 @@
          ===================================================== -->
 
     <div class="pl-hero-content">
-
-      <div class="pl-hero-title">
-        <span>CLEAN</span>
-        <span>THAT</span>
-        <span class="pl-orange">LASTS</span>
-      </div>
+<div class="pl-hero-title">
+  <span>{{ section.settings.title_line_1 }}</span>
+  <span>{{ section.settings.title_line_2 }}</span>
+  <span class="pl-orange">{{ section.settings.title_line_3 }}</span>
+</div>
 
       <div class="pl-hero-divider">
         <span></span>
@@ -23,9 +22,8 @@
       </div>
 
       <p class="pl-hero-description">
-        Homecare that works on the toughest grime, made from plants.
-        Kind to your home, your family and the world outside it.
-      </p>
+  {{ section.settings.description }}
+</p>
 
       <div class="pl-hero-buttons">
 
@@ -199,19 +197,17 @@
         <div class="pl-offer-card">
 
           <small class="pl-offer-label">
-            ANY 3 PRODUCTS
-          </small>
+  {{ section.settings.offer_label }}
+</small>
 
-          <div class="pl-offer-price">
-            ₹499
-            <del>₹897</del>
-          </div>
+<div class="pl-offer-price">
+  {{ section.settings.offer_price }}
+  <del>{{ section.settings.offer_compare_price }}</del>
+</div>
 
-          <span class="pl-offer-save">
-            SAVE ₹398
-          </span>
-
-        </div>
+<span class="pl-offer-save">
+  {{ section.settings.offer_savings }}
+</span>
 
 
         <!-- =================================================
