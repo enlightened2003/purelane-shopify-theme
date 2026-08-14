@@ -19,7 +19,11 @@
     },
     "hero": {
       "type": "purelane-hero",
-      "settings": {}
+      "settings": {
+        "bottle_scene_1": "shopify://shop_images/ChatGPTImageAug13_2026_09_49_17PM_b41fc8b8-1a7c-494c-96eb-0304cbd0d7ac.png",
+        "bottle_scene_2": "shopify://shop_images/ChatGPTImageAug13_2026_09_53_28PM.png",
+        "bottle_scene_3": "shopify://shop_images/ChatGPTImageAug13_2026_09_55_20PM.png"
+      }
     },
     "reviews": {
       "type": "purelane-reviews",
