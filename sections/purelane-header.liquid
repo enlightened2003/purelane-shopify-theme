@@ -2,7 +2,11 @@
   <div class="purelane-header-inner">
 
     <!-- LOGO -->
-    <a href="{{ routes.root_url }}" class="purelane-logo" aria-label="Purelane home">
+    <a
+      href="{{ routes.root_url }}"
+      class="purelane-logo"
+      aria-label="Purelane home"
+    >
       <span class="purelane-logo-icon">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path
@@ -28,15 +32,30 @@
     <!-- NAVIGATION -->
     <nav class="purelane-nav" aria-label="Main navigation">
 
-      <a href="{{ routes.root_url }}">Home</a>
+      <!-- HOME -->
+      <a href="{{ routes.root_url }}#purelane-home">
+        Home
+      </a>
 
-      <a href="#ingredients">Ingredients</a>
+      <!-- INGREDIENTS -->
+      <a href="{{ routes.root_url }}#ingredients">
+        Ingredients
+      </a>
 
-      <a href="#how-it-works">How it works</a>
+      <!-- HOW IT WORKS -->
+      <a href="{{ routes.root_url }}#how-it-works">
+        How it works
+      </a>
 
-      <a href="#shop">Shop</a>
+      <!-- SHOP -->
+      <a href="{{ routes.root_url }}#shop">
+        Shop
+      </a>
 
-      <a href="#bundles">Bundles</a>
+      <!-- BUNDLES -->
+      <a href="{{ routes.root_url }}#bundles">
+        Bundles
+      </a>
 
     </nav>
 
@@ -146,8 +165,10 @@
 
 .purelane-header {
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 100%;
 
   z-index: 50;
@@ -391,11 +412,20 @@
 
 
 /* =========================================================
+   CART
+   ========================================================= */
+
+.purelane-cart {
+  position: relative;
+}
+
+
+/* =========================================================
    CART COUNT
    ========================================================= */
 
-.purelane-header {
-  position: relative;
+.purelane-cart-count {
+  position: absolute;
 
   top: -7px;
   right: -8px;
@@ -419,6 +449,8 @@
   font-size: 9px;
 
   font-weight: 800;
+
+  line-height: 1;
 }
 
 
@@ -441,6 +473,12 @@
   gap: 4px;
 
   color: #ffffff;
+
+  background: transparent;
+
+  border: 0;
+
+  cursor: pointer;
 }
 
 
@@ -527,6 +565,25 @@
     display: flex;
   }
 
+}
+
+
+/* =========================================================
+   SMOOTH SCROLL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Prevent sections from hiding underneath the header */
+#purelane-home,
+#ingredients,
+#how-it-works,
+#shop,
+#bundles {
+  scroll-margin-top: 100px;
 }
 
 </style>
