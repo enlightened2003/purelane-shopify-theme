@@ -6,7 +6,7 @@
     <article class="purelane-benefit-card">
 
       <div class="purelane-benefit-icon">
-        <svg viewBox="0 0 24 24" fill="none">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="8" cy="8" r="2.5"/>
           <circle cx="16" cy="7" r="2.5"/>
           <circle cx="13" cy="15" r="2.5"/>
@@ -34,7 +34,7 @@
     <article class="purelane-benefit-card">
 
       <div class="purelane-benefit-icon">
-        <svg viewBox="0 0 24 24" fill="none">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 3L19 6.5V11.5C19 16.2 16.2 19.6 12 21C7.8 19.6 5 16.2 5 11.5V6.5L12 3Z"/>
           <path d="M9 12L11 14L15 10"/>
         </svg>
@@ -58,7 +58,7 @@
     <article class="purelane-benefit-card">
 
       <div class="purelane-benefit-icon">
-        <svg viewBox="0 0 24 24" fill="none">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 20S4 15.5 4 9.5C4 6.5 6.2 5 8.5 5C10.1 5 11.5 5.9 12 7C12.5 5.9 13.9 5 15.5 5C17.8 5 20 6.5 20 9.5C20 15.5 12 20 12 20Z"/>
         </svg>
       </div>
@@ -85,38 +85,37 @@
 <style>
 
 /* =========================================================
-   PURELANE BENEFITS SECTION
+   PURELANE BENEFITS
    ========================================================= */
 
 .purelane-benefits-section {
   width: 100%;
+  box-sizing: border-box;
 
-  margin: 0;
-
-  padding: 85px 0 100px;
+  padding: 30px 0 70px;
 
   background: transparent;
 
-  box-sizing: border-box;
+  position: relative;
 }
 
 
 /* =========================================================
-   THREE CARD GRID
+   GRID
    ========================================================= */
 
 .purelane-benefits-grid {
-  width: min(1200px, calc(100% - 80px));
+  width: min(1190px, calc(100% - 70px));
 
   margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 22px;
 
-  align-items: stretch;
+  box-sizing: border-box;
 }
 
 
@@ -125,6 +124,8 @@
    ========================================================= */
 
 .purelane-benefit-card {
+  width: 100%;
+  min-width: 0;
   min-height: 400px;
 
   box-sizing: border-box;
@@ -132,18 +133,16 @@
   padding: 32px 30px 30px;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
 
-  border-radius: 28px;
+  border-radius: 30px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,.82),
-      rgba(218,238,235,.72)
+      rgba(255,255,255,.86),
+      rgba(218,238,235,.74)
     );
 
   border: 1px solid rgba(190,201,205,.65);
@@ -152,7 +151,6 @@
     0 18px 40px rgba(40,70,65,.08);
 
   backdrop-filter: blur(18px);
-
   -webkit-backdrop-filter: blur(18px);
 }
 
@@ -163,13 +161,11 @@
 
 .purelane-benefit-icon {
   width: 62px;
-
   height: 62px;
 
-  flex-shrink: 0;
+  flex: 0 0 62px;
 
   display: grid;
-
   place-items: center;
 
   margin-bottom: 22px;
@@ -179,12 +175,12 @@
   background: rgba(248,247,242,.88);
 
   border: 1px solid rgba(190,198,202,.65);
-}
 
+  box-sizing: border-box;
+}
 
 .purelane-benefit-icon svg {
   width: 28px;
-
   height: 28px;
 
   stroke: #76a844;
@@ -192,7 +188,6 @@
   stroke-width: 1.6;
 
   stroke-linecap: round;
-
   stroke-linejoin: round;
 }
 
@@ -233,14 +228,12 @@
 
   line-height: 1.55;
 
-  font-weight: 400;
-
   color: #666579;
 }
 
 
 /* =========================================================
-   LEARN MORE
+   BUTTON
    ========================================================= */
 
 .purelane-benefit-button {
@@ -251,14 +244,12 @@
   padding: 0 23px;
 
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.86);
 
   border: 1px solid rgba(110,96,160,.28);
 
@@ -274,15 +265,15 @@
 
   text-decoration: none;
 
+  box-sizing: border-box;
+
   transition:
     transform .2s ease,
     background .2s ease;
 }
 
-
 .purelane-benefit-button:hover {
   transform: translateY(-2px);
-
   background: #ffffff;
 }
 
@@ -294,20 +285,16 @@
 @media (max-width: 900px) {
 
   .purelane-benefits-section {
-    padding: 65px 0 80px;
+    padding: 25px 0 60px;
   }
 
   .purelane-benefits-grid {
     width: calc(100% - 40px);
-
-    grid-template-columns: repeat(3, 1fr);
-
     gap: 14px;
   }
 
   .purelane-benefit-card {
     min-height: 360px;
-
     padding: 25px 22px;
   }
 
@@ -329,7 +316,7 @@
 @media (max-width: 650px) {
 
   .purelane-benefits-section {
-    padding: 45px 0 60px;
+    padding: 20px 0 45px;
   }
 
   .purelane-benefits-grid {
