@@ -8,14 +8,12 @@
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.05fr .95fr;
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 80px;
     align-items: start;
   }
 
-  /* =========================
-     PRODUCT MEDIA
-  ========================= */
+  /* PRODUCT MEDIA */
 
   .purelane-product__media {
     position: sticky;
@@ -68,11 +66,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
 
-  /* =========================
-     PRODUCT INFO
-  ========================= */
+  /* PRODUCT INFORMATION */
 
   .purelane-product__info {
     padding-top: 20px;
@@ -91,7 +88,7 @@
     margin: 0;
     color: #211b43;
     font-size: clamp(42px, 5vw, 72px);
-    line-height: .98;
+    line-height: 0.98;
     font-weight: 900;
     letter-spacing: -2px;
   }
@@ -135,9 +132,11 @@
     margin: 34px 0;
   }
 
-  /* =========================
-     VARIANTS
-  ========================= */
+  /* VARIANTS */
+
+  .purelane-product__variant {
+    margin-bottom: 24px;
+  }
 
   .purelane-product__label {
     display: block;
@@ -155,14 +154,12 @@
     padding: 0 18px;
     border: 1px solid #d8d4e5;
     border-radius: 14px;
-    background: #fff;
+    background: #ffffff;
     color: #211b43;
     font-size: 16px;
   }
 
-  /* =========================
-     QUANTITY
-  ========================= */
+  /* QUANTITY */
 
   .purelane-product__quantity {
     margin-top: 24px;
@@ -176,7 +173,7 @@
     border: 1px solid #d8d4e5;
     border-radius: 999px;
     overflow: hidden;
-    background: #fff;
+    background: #ffffff;
   }
 
   .purelane-product__quantity-box button {
@@ -187,6 +184,10 @@
     color: #56439a;
     font-size: 22px;
     cursor: pointer;
+  }
+
+  .purelane-product__quantity-box button:hover {
+    background: #f1eff8;
   }
 
   .purelane-product__quantity-box input {
@@ -201,9 +202,7 @@
     font-weight: 800;
   }
 
-  /* =========================
-     BUTTONS
-  ========================= */
+  /* BUTTONS */
 
   .purelane-product__buttons {
     margin-top: 30px;
@@ -215,18 +214,24 @@
     border: 0;
     border-radius: 999px;
     background: #56439a;
-    color: #fff;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: transform .2s ease, background .2s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
   }
 
   .purelane-product__add:hover {
     background: #6652a9;
     transform: translateY(-2px);
+  }
+
+  .purelane-product__add:disabled {
+    background: #aaa8b6;
+    cursor: not-allowed;
+    transform: none;
   }
 
   .purelane-product__buy {
@@ -244,6 +249,13 @@
     cursor: pointer;
   }
 
+  .purelane-product__buy:hover {
+    background: #56439a;
+    color: #ffffff;
+  }
+
+  /* BENEFITS */
+
   .purelane-product__benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -255,7 +267,7 @@
     padding: 18px 12px;
     border: 1px solid #e0ddeb;
     border-radius: 16px;
-    background: #fff;
+    background: #ffffff;
     text-align: center;
   }
 
@@ -274,9 +286,7 @@
     text-transform: uppercase;
   }
 
-  /* =========================
-     MOBILE
-  ========================= */
+  /* MOBILE */
 
   @media screen and (max-width: 900px) {
     .purelane-product {
@@ -309,12 +319,15 @@
 </style>
 
 <section class="purelane-product">
+
   <div class="purelane-product__inner">
 
-    <!-- PRODUCT MEDIA -->
+    <!-- PRODUCT IMAGE -->
+
     <div class="purelane-product__media">
 
       <div class="purelane-product__main-image">
+
         {% if product.featured_image %}
           {{
             product.featured_image
@@ -330,12 +343,15 @@
             No product image
           </span>
         {% endif %}
+
       </div>
 
       {% if product.images.size > 1 %}
+
         <div class="purelane-product__thumbnails">
 
           {% for image in product.images %}
+
             <div class="purelane-product__thumbnail">
               {{
                 image
@@ -345,14 +361,18 @@
                   alt: image.alt
               }}
             </div>
+
           {% endfor %}
 
         </div>
+
       {% endif %}
 
     </div>
 
+
     <!-- PRODUCT INFORMATION -->
+
     <div class="purelane-product__info">
 
       {% if product.vendor != blank %}
@@ -361,11 +381,14 @@
         </p>
       {% endif %}
 
+
       <h1 class="purelane-product__title">
         {{ product.title }}
       </h1>
 
+
       <div class="purelane-product__rating">
+
         <span class="purelane-product__stars">
           ★★★★★
         </span>
@@ -373,11 +396,14 @@
         <span class="purelane-product__rating-text">
           Loved by Purelane homes
         </span>
+
       </div>
+
 
       <div class="purelane-product__price">
         {{ product.selected_or_first_available_variant.price | money }}
       </div>
+
 
       {% if product.description != blank %}
         <div class="purelane-product__description">
@@ -385,33 +411,43 @@
         </div>
       {% endif %}
 
+
       <div class="purelane-product__divider"></div>
 
-      {% form 'product', product, id: 'PurelaneProductForm-' | append: section.id %}
+
+      <!-- SHOPIFY PRODUCT FORM -->
+
+      {% form 'product', product %}
 
         {% unless product.has_only_default_variant %}
+
           <div class="purelane-product__variant">
 
             <label
               class="purelane-product__label"
-              for="PurelaneVariant-{{ section.id }}">
+              for="PurelaneVariant-{{ section.id }}"
+            >
               Choose your option
             </label>
+
 
             <select
               id="PurelaneVariant-{{ section.id }}"
               name="id"
-              class="purelane-product__select">
+              class="purelane-product__select"
+            >
 
               {% for variant in product.variants %}
+
                 <option
                   value="{{ variant.id }}"
-                  {% if variant == product.selected_or_first_available_variant %}
+                  {% if variant.id == product.selected_or_first_available_variant.id %}
                     selected
                   {% endif %}
                   {% unless variant.available %}
                     disabled
-                  {% endunless %}>
+                  {% endunless %}
+                >
 
                   {{ variant.title }}
 
@@ -420,47 +456,61 @@
                   {% endunless %}
 
                 </option>
+
               {% endfor %}
 
             </select>
 
           </div>
+
         {% else %}
 
           <input
             type="hidden"
             name="id"
-            value="{{ product.selected_or_first_available_variant.id }}">
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
 
         {% endunless %}
 
+
         <!-- QUANTITY -->
+
         <div class="purelane-product__quantity">
 
           <label
             class="purelane-product__label"
-            for="PurelaneQuantity-{{ section.id }}">
+            for="PurelaneQuantity-{{ section.id }}"
+          >
             Quantity
           </label>
+
 
           <div class="purelane-product__quantity-box">
 
             <button
               type="button"
-              onclick="this.nextElementSibling.stepDown()">
+              onclick="this.nextElementSibling.stepDown()"
+              aria-label="Decrease quantity"
+            >
               −
             </button>
+
 
             <input
               id="PurelaneQuantity-{{ section.id }}"
               type="number"
               name="quantity"
               value="1"
-              min="1">
+              min="1"
+            >
+
 
             <button
               type="button"
-              onclick="this.previousElementSibling.stepUp()">
+              onclick="this.previousElementSibling.stepUp()"
+              aria-label="Increase quantity"
+            >
               +
             </button>
 
@@ -468,7 +518,9 @@
 
         </div>
 
+
         <!-- ACTION BUTTONS -->
+
         <div class="purelane-product__buttons">
 
           <button
@@ -477,7 +529,8 @@
             class="purelane-product__add"
             {% unless product.selected_or_first_available_variant.available %}
               disabled
-            {% endunless %}>
+            {% endunless %}
+          >
 
             {% if product.selected_or_first_available_variant.available %}
               Add to Cart →
@@ -487,42 +540,64 @@
 
           </button>
 
+
           {% if product.selected_or_first_available_variant.available %}
+
             <button
               type="submit"
               name="checkout"
-              class="purelane-product__buy">
-
+              class="purelane-product__buy"
+            >
               Buy It Now →
             </button>
+
           {% endif %}
 
         </div>
 
       {% endform %}
 
+
       <!-- BENEFITS -->
+
       <div class="purelane-product__benefits">
 
         <div class="purelane-product__benefit">
-          <span class="purelane-product__benefit-icon">✦</span>
+
+          <span class="purelane-product__benefit-icon">
+            ✦
+          </span>
+
           <span class="purelane-product__benefit-text">
             Plant Powered
           </span>
+
         </div>
 
+
         <div class="purelane-product__benefit">
-          <span class="purelane-product__benefit-icon">✓</span>
+
+          <span class="purelane-product__benefit-icon">
+            ✓
+          </span>
+
           <span class="purelane-product__benefit-text">
             Family Friendly
           </span>
+
         </div>
 
+
         <div class="purelane-product__benefit">
-          <span class="purelane-product__benefit-icon">○</span>
+
+          <span class="purelane-product__benefit-icon">
+            ○
+          </span>
+
           <span class="purelane-product__benefit-text">
             Gentle Formula
           </span>
+
         </div>
 
       </div>
@@ -530,7 +605,9 @@
     </div>
 
   </div>
+
 </section>
+
 
 {% schema %}
 {
