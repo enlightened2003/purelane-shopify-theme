@@ -1,1 +1,196 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","mobile_thumbnails":"hide","media_position":"left","image_zoom":"lightbox","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"disclosures":{"type":"disclosures","settings":{"padding_top":36,"padding_bottom":0}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":28}}},"order":["main","disclosures","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "purelane-main-product",
+      "settings": {}
+    },
+    "purelane_product_details_aqDtEw": {
+      "type": "purelane-product-details",
+      "blocks": {
+        "detail_hwn3aP": {
+          "type": "detail",
+          "settings": {
+            "heading": "Powerful & effective",
+            "text": "Cuts through everyday dirt, grime, soap scum and stains with ease."
+          }
+        },
+        "detail_4gfKPn": {
+          "type": "detail",
+          "settings": {
+            "heading": "Plant-powered care",
+            "text": "Thoughtfully formulated with a focus on effective ingredients and a gentler home."
+          }
+        },
+        "detail_UCt6LN": {
+          "type": "detail",
+          "settings": {
+            "heading": "Made for everyday homes",
+            "text": "Simple, practical cleaning designed for the spaces you use every day."
+          }
+        }
+      },
+      "block_order": [
+        "detail_hwn3aP",
+        "detail_4gfKPn",
+        "detail_UCt6LN"
+      ],
+      "name": "Purelane Product Details",
+      "settings": {}
+    },
+    "purelane_related_products_938QYg": {
+      "type": "purelane-related-products",
+      "name": "Purelane Related Products",
+      "settings": {}
+    },
+    "1786685746f2b9a47e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_71a26ce_ArBBtN": {
+          "type": "ai_gen_block_71a26ce",
+          "settings": {
+            "heading": "CLEANING THAT FEELS BETTER.",
+            "description": "<p>Purelane products are powerful, plant-powered, gentle, and designed for everyday homes. Experience the difference of cleaning that cares.</p>",
+            "card_1_title": "Plant Powered",
+            "card_2_title": "Tough on Dirt",
+            "card_3_title": "Family Friendly",
+            "card_4_title": "Made for Everyday Homes",
+            "background_color": "#F9F9F7",
+            "heading_color": "#1A2B4A",
+            "text_color": "#4A5568",
+            "icon_color": "#C9A961",
+            "card_background": "#FFFFFF",
+            "card_border_color": "#E8E8E6",
+            "desktop_width_percent": 100,
+            "section_padding": 60,
+            "header_spacing": 40,
+            "grid_spacing": 50,
+            "card_gap": 30,
+            "card_padding": 40,
+            "heading_size": 36,
+            "heading_margin": 20,
+            "description_size": 16,
+            "card_title_size": 16,
+            "card_radius": 8,
+            "card_border_width": 1,
+            "icon_size": 50,
+            "icon_margin": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_71a26ce_ArBBtN"
+      ],
+      "settings": {}
+    },
+    "1786685914b21a5189": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_44bc096_CjJjgN": {
+          "type": "ai_gen_block_44bc096",
+          "settings": {
+            "section_title": "HOW IT WORKS.",
+            "desktop_width_percent": 100,
+            "max_width": 1200,
+            "section_padding": 60,
+            "step_1_title": "Choose your cleaner",
+            "step_1_description": "Select from our range of eco-friendly, powerful cleaning solutions designed for every surface in your home.",
+            "step_2_title": "Clean with confidence",
+            "step_2_description": "Apply our safe, non-toxic formula and watch it work its magic on dirt, grime, and stains.",
+            "step_3_title": "Enjoy a fresher home",
+            "step_3_description": "Experience a spotless, naturally fresh space that's safe for your family and the environment.",
+            "background_color": "#F9F9F7",
+            "title_color": "#1A2B4A",
+            "step_title_color": "#1A2B4A",
+            "step_description_color": "#4A5568",
+            "number_bg_color": "#FFFFFF",
+            "number_text_color": "#1A2B4A",
+            "accent_color": "#D4AF37",
+            "title_size": 32,
+            "step_title_size": 20,
+            "step_description_size": 15,
+            "header_spacing": 40,
+            "steps_top_margin": 20,
+            "step_gap": 40,
+            "step_padding": 20,
+            "number_size": 70,
+            "number_font_size": 28,
+            "number_border_width": 2,
+            "number_margin_bottom": 20,
+            "step_title_margin": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_44bc096_CjJjgN"
+      ],
+      "settings": {}
+    },
+    "1786686090c1c49337": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_09a8092_TDBkBa": {
+          "type": "ai_gen_block_09a8092",
+          "settings": {
+            "title": "WHAT'S INSIDE.",
+            "description": "<p>Purelane uses thoughtfully selected plant-powered ingredients and avoids unnecessary harshness.</p>",
+            "desktop_width_percent": 100,
+            "card_1_title": "Plant-Powered Ingredients",
+            "card_1_text": "<p>Harnessing the natural power of plants to deliver effective cleaning without compromise.</p>",
+            "card_2_title": "Gentle on Your Home",
+            "card_2_text": "<p>Formulated to be safe for your family, pets, and all surfaces in your home.</p>",
+            "card_3_title": "Powerful Everyday Cleaning",
+            "card_3_text": "<p>Tackles tough messes with ease while maintaining a fresh, natural scent.</p>",
+            "background_color": "#F9F9F7",
+            "title_color": "#1A2B3C",
+            "description_color": "#4A5568",
+            "card_background": "#FFFFFF",
+            "card_border_color": "#E8E6E1",
+            "card_title_color": "#1A2B3C",
+            "card_text_color": "#4A5568",
+            "icon_color": "#C9A961",
+            "max_width": 1200,
+            "section_padding": 60,
+            "header_spacing": 40,
+            "cards_top_margin": 40,
+            "card_gap": 30,
+            "card_padding": 40,
+            "title_size": 32,
+            "title_margin": 16,
+            "description_size": 16,
+            "card_title_size": 20,
+            "card_title_margin": 12,
+            "card_text_size": 15,
+            "card_border_width": 1,
+            "card_border_radius": 8,
+            "icon_size": 50,
+            "icon_margin": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_09a8092_TDBkBa"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "purelane_product_details_aqDtEw",
+    "purelane_related_products_938QYg",
+    "1786685746f2b9a47e",
+    "1786685914b21a5189",
+    "1786686090c1c49337"
+  ]
+}

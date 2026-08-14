@@ -1,0 +1,440 @@
+{% doc %}
+  @prompt
+    Create a premium Purelane Homecare benefits section for a cleaning products brand. Use a clean light background, dark navy typography, and subtle gold accents. Heading: “CLEANING THAT FEELS BETTER.” Add a short paragraph explaining that Purelane products are powerful, plant-powered, gentle, and designed for everyday homes. Below the text, create 4 elegant benefit cards: “Plant Powered”, “Tough on Dirt”, “Family Friendly”, and “Made for Everyday Homes”. Keep the design minimal, premium, spacious, and consistent with the existing Purelane product page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-benefits-section-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.section_padding }}px 40px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-benefits-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-benefits-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-benefits-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_margin }}px 0;
+    text-transform: uppercase;
+  }
+
+  .ai-benefits-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.text_color }};
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .ai-benefits-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: {{ block.settings.card_gap }}px;
+    margin-top: {{ block.settings.grid_spacing }}px;
+  }
+
+  .ai-benefits-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background }};
+    padding: {{ block.settings.card_padding }}px;
+    border-radius: {{ block.settings.card_radius }}px;
+    text-align: center;
+    border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-benefits-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .ai-benefits-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto {{ block.settings.icon_margin }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-benefits-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: {{ block.settings.icon_color }};
+    fill: none;
+  }
+
+  .ai-benefits-card-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-benefits-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-benefits-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding | times: 0.7 }}px 20px;
+    }
+
+    .ai-benefits-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+    }
+
+    .ai-benefits-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.9 }}px;
+    }
+
+    .ai-benefits-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.card_gap | times: 0.7 }}px;
+    }
+
+    .ai-benefits-card-{{ ai_gen_id }} {
+      padding: {{ block.settings.card_padding | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<purelane-benefits-{{ ai_gen_id }} class="ai-benefits-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-benefits-container-{{ ai_gen_id }}">
+    <div class="ai-benefits-header-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-benefits-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-benefits-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+
+    <div class="ai-benefits-grid-{{ ai_gen_id }}">
+      <div class="ai-benefits-card-{{ ai_gen_id }}">
+        <div class="ai-benefits-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 1 10 10c0 6-10 12-10 12S2 18 2 12A10 10 0 0 1 12 2z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3 class="ai-benefits-card-title-{{ ai_gen_id }}">{{ block.settings.card_1_title }}</h3>
+      </div>
+
+      <div class="ai-benefits-card-{{ ai_gen_id }}">
+        <div class="ai-benefits-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3 class="ai-benefits-card-title-{{ ai_gen_id }}">{{ block.settings.card_2_title }}</h3>
+      </div>
+
+      <div class="ai-benefits-card-{{ ai_gen_id }}">
+        <div class="ai-benefits-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="ai-benefits-card-title-{{ ai_gen_id }}">{{ block.settings.card_3_title }}</h3>
+      </div>
+
+      <div class="ai-benefits-card-{{ ai_gen_id }}">
+        <div class="ai-benefits-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="ai-benefits-card-title-{{ ai_gen_id }}">{{ block.settings.card_4_title }}</h3>
+      </div>
+    </div>
+  </div>
+</purelane-benefits-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class PurelaneBenefits{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+    }
+
+    customElements.define('purelane-benefits-{{ ai_gen_id }}', PurelaneBenefits{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Purelane benefits",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "CLEANING THAT FEELS BETTER."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Purelane products are powerful, plant-powered, gentle, and designed for everyday homes. Experience the difference of cleaning that cares.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Benefit cards"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_1_title",
+      "label": "Card 1 title",
+      "default": "Plant Powered"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_2_title",
+      "label": "Card 2 title",
+      "default": "Tough on Dirt"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_3_title",
+      "label": "Card 3 title",
+      "default": "Family Friendly"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_4_title",
+      "label": "Card 4 title",
+      "default": "Made for Everyday Homes"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F9F9F7"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#1A2B4A"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#4A5568"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#C9A961"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border",
+      "default": "#E8E8E6"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Header spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing",
+      "label": "Grid spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Card gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_margin",
+      "label": "Heading margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "Card title size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "label": "Card border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "icon_margin",
+      "label": "Icon margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Purelane benefits"
+    }
+  ]
+}
+{% endschema %}

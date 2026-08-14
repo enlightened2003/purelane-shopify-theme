@@ -1,0 +1,534 @@
+{% doc %}
+  @prompt
+    Create a premium “WHAT’S INSIDE.” section for Purelane Homecare. Explain that Purelane uses thoughtfully selected plant-powered ingredients and avoids unnecessary harshness. Create 3 elegant cards: “Plant-Powered Ingredients”, “Gentle on Your Home”, and “Powerful Everyday Cleaning”. Use a clean light background, dark navy typography, subtle gold accents, generous spacing, and a premium minimal design consistent with the existing Purelane product page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-whats-inside-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px 20px;
+  }
+
+  .ai-whats-inside-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    width: {{ block.settings.desktop_width_percent }}%;
+  }
+
+  .ai-whats-inside-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-whats-inside-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_margin }}px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .ai-whats-inside-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .ai-whats-inside-cards-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: {{ block.settings.card_gap }}px;
+    margin-top: {{ block.settings.cards_top_margin }}px;
+  }
+
+  .ai-whats-inside-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background }};
+    border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: {{ block.settings.card_padding }}px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-whats-inside-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .ai-whats-inside-card-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto {{ block.settings.icon_margin }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-whats-inside-card-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: {{ block.settings.icon_color }};
+    fill: none;
+  }
+
+  .ai-whats-inside-card-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_title_size }}px;
+    color: {{ block.settings.card_title_color }};
+    margin: 0 0 {{ block.settings.card_title_margin }}px;
+    font-weight: 600;
+  }
+
+  .ai-whats-inside-card-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_text_size }}px;
+    color: {{ block.settings.card_text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-whats-inside-cards-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.card_gap | times: 0.8 }}px;
+    }
+
+    .ai-whats-inside-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-whats-inside-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<whats-inside-{{ ai_gen_id }} class="ai-whats-inside-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-whats-inside-container-{{ ai_gen_id }}">
+    <div class="ai-whats-inside-header-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-whats-inside-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div class="ai-whats-inside-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+
+    <div class="ai-whats-inside-cards-{{ ai_gen_id }}">
+      <div class="ai-whats-inside-card-{{ ai_gen_id }}">
+        <div class="ai-whats-inside-card-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2z"/>
+            <path d="M12 6v6l4 2"/>
+            <circle cx="12" cy="12" r="1"/>
+            <path d="M8 2.5c-1.5 1-2.5 2.5-3 4.5"/>
+            <path d="M16 2.5c1.5 1 2.5 2.5 3 4.5"/>
+          </svg>
+        </div>
+        {% if block.settings.card_1_title != blank %}
+          <h3 class="ai-whats-inside-card-title-{{ ai_gen_id }}">{{ block.settings.card_1_title }}</h3>
+        {% endif %}
+        {% if block.settings.card_1_text != blank %}
+          <div class="ai-whats-inside-card-text-{{ ai_gen_id }}">{{ block.settings.card_1_text }}</div>
+        {% endif %}
+      </div>
+
+      <div class="ai-whats-inside-card-{{ ai_gen_id }}">
+        <div class="ai-whats-inside-card-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+            <path d="M12 2v7"/>
+            <circle cx="12" cy="9" r="1"/>
+          </svg>
+        </div>
+        {% if block.settings.card_2_title != blank %}
+          <h3 class="ai-whats-inside-card-title-{{ ai_gen_id }}">{{ block.settings.card_2_title }}</h3>
+        {% endif %}
+        {% if block.settings.card_2_text != blank %}
+          <div class="ai-whats-inside-card-text-{{ ai_gen_id }}">{{ block.settings.card_2_text }}</div>
+        {% endif %}
+      </div>
+
+      <div class="ai-whats-inside-card-{{ ai_gen_id }}">
+        <div class="ai-whats-inside-card-icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="m4.93 4.93 1.41 1.41"/>
+            <path d="m17.66 17.66 1.41 1.41"/>
+          </svg>
+        </div>
+        {% if block.settings.card_3_title != blank %}
+          <h3 class="ai-whats-inside-card-title-{{ ai_gen_id }}">{{ block.settings.card_3_title }}</h3>
+        {% endif %}
+        {% if block.settings.card_3_text != blank %}
+          <div class="ai-whats-inside-card-text-{{ ai_gen_id }}">{{ block.settings.card_3_text }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</whats-inside-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class WhatsInside{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.cards = this.querySelectorAll('.ai-whats-inside-card-{{ ai_gen_id }}');
+        this.setupObserver();
+      }
+
+      setupObserver() {
+        const options = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+              }, index * 100);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        this.cards.forEach((card) => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          observer.observe(card);
+        });
+      }
+    }
+
+    customElements.define('whats-inside-{{ ai_gen_id }}', WhatsInside{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "What's inside",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "WHAT'S INSIDE."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Purelane uses thoughtfully selected plant-powered ingredients and avoids unnecessary harshness.</p>"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_1_title",
+      "label": "Title",
+      "default": "Plant-Powered Ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "card_1_text",
+      "label": "Description",
+      "default": "<p>Harnessing the natural power of plants to deliver effective cleaning without compromise.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_2_title",
+      "label": "Title",
+      "default": "Gentle on Your Home"
+    },
+    {
+      "type": "richtext",
+      "id": "card_2_text",
+      "label": "Description",
+      "default": "<p>Formulated to be safe for your family, pets, and all surfaces in your home.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "card_3_title",
+      "label": "Title",
+      "default": "Powerful Everyday Cleaning"
+    },
+    {
+      "type": "richtext",
+      "id": "card_3_text",
+      "label": "Description",
+      "default": "<p>Tackles tough messes with ease while maintaining a fresh, natural scent.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F9F9F7"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#1A2B3C"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#4A5568"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border",
+      "default": "#E8E6E1"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title",
+      "default": "#1A2B3C"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#4A5568"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#C9A961"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Header spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "cards_top_margin",
+      "label": "Cards top margin",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Card gap",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "label": "Title margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "Card title size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_title_margin",
+      "label": "Card title margin",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_text_size",
+      "label": "Card text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "icon_margin",
+      "label": "Icon margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "What's inside"
+    }
+  ]
+}
+{% endschema %}

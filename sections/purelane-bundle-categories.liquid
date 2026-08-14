@@ -1,0 +1,863 @@
+<section class="purelane-bundle-categories">
+
+  <div class="purelane-bundle-categories-inner">
+
+    <!-- =====================================================
+         HEADING
+    ====================================================== -->
+
+    <div class="purelane-bundle-categories-heading">
+      <h2>FIND THE RIGHT BUNDLE FOR YOU</h2>
+    </div>
+
+
+    <!-- =====================================================
+         BUNDLE CARDS
+    ====================================================== -->
+
+    <div class="purelane-bundle-categories-grid">
+
+      <!-- CARD 1 -->
+      <a href="/collections/purelane-cleaning-products"
+         class="purelane-bundle-category-card">
+
+        <div class="purelane-bundle-image">
+
+          {% assign product = collections['purelane-cleaning-products'].products[0] %}
+
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 500 }}"
+              alt="{{ product.title | escape }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="purelane-bottle-placeholder"></div>
+          {% endif %}
+
+        </div>
+
+        <div class="purelane-bundle-category-info">
+          <h3>KITCHEN BUNDLE</h3>
+          <p>Grease, dishes &amp; more</p>
+        </div>
+
+      </a>
+
+
+      <!-- CARD 2 -->
+      <a href="/collections/purelane-cleaning-products"
+         class="purelane-bundle-category-card">
+
+        <div class="purelane-bundle-image">
+
+          {% assign product = collections['purelane-cleaning-products'].products[1] %}
+
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 500 }}"
+              alt="{{ product.title | escape }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="purelane-bottle-placeholder"></div>
+          {% endif %}
+
+        </div>
+
+        <div class="purelane-bundle-category-info">
+          <h3>BATHROOM BUNDLE</h3>
+          <p>Deep clean &amp; disinfect</p>
+        </div>
+
+      </a>
+
+
+      <!-- CARD 3 -->
+      <a href="/collections/purelane-cleaning-products"
+         class="purelane-bundle-category-card">
+
+        <div class="purelane-bundle-image">
+
+          {% assign product = collections['purelane-cleaning-products'].products[2] %}
+
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 500 }}"
+              alt="{{ product.title | escape }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="purelane-bottle-placeholder"></div>
+          {% endif %}
+
+        </div>
+
+        <div class="purelane-bundle-category-info">
+          <h3>LAUNDRY BUNDLE</h3>
+          <p>Softer, fresher wash</p>
+        </div>
+
+      </a>
+
+
+      <!-- CARD 4 -->
+      <a href="/collections/purelane-cleaning-products"
+         class="purelane-bundle-category-card">
+
+        <div class="purelane-bundle-image">
+
+          {% assign product = collections['purelane-cleaning-products'].products[3] %}
+
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | image_url: width: 500 }}"
+              alt="{{ product.title | escape }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="purelane-bottle-placeholder"></div>
+          {% endif %}
+
+        </div>
+
+        <div class="purelane-bundle-category-info">
+          <h3>HARD WATER BUNDLE</h3>
+          <p>Melt away limescale</p>
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         BENEFITS STRIP
+    ====================================================== -->
+
+    <div class="purelane-bundle-benefits-strip">
+
+
+      <!-- PLANT DERIVED -->
+
+      <div class="purelane-bundle-benefit">
+
+        <div class="purelane-bundle-benefit-icon">
+
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 27C16 19 17 12 25 7"/>
+            <path d="M16 21C11 21 7 18 6 12"/>
+            <path d="M17 16C21 16 24 14 26 10"/>
+            <path d="M16 21C13 18 11 15 11 11"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <strong>
+            PLANT DERIVED<br>
+            FORMULAS
+          </strong>
+        </div>
+
+      </div>
+
+
+      <!-- RECYCLABLE -->
+
+      <div class="purelane-bundle-benefit">
+
+        <div class="purelane-bundle-benefit-icon">
+
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x="7" y="9" width="18" height="18" rx="2"/>
+            <path d="M10 9V6H22V9"/>
+            <path d="M12 14H20"/>
+            <path d="M12 19H18"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <strong>
+            RECYCLABLE<br>
+            PACKAGING
+          </strong>
+        </div>
+
+      </div>
+
+
+      <!-- SAFE -->
+
+      <div class="purelane-bundle-benefit">
+
+        <div class="purelane-bundle-benefit-icon">
+
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 27C16 27 6 21 6 13C6 8 9 6 12 6C14 6 15.5 7 16 9C16.5 7 18 6 20 6C23 6 26 8 26 13C26 21 16 27 16 27Z"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <strong>
+            SAFE FOR<br>
+            KIDS &amp; PETS
+          </strong>
+        </div>
+
+      </div>
+
+
+      <!-- MADE IN INDIA -->
+
+      <div class="purelane-bundle-benefit">
+
+        <div class="purelane-bundle-benefit-icon">
+
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="10"/>
+            <path d="M6 16H26"/>
+            <path d="M16 6C19 9 20 12 20 16C20 20 19 23 16 26"/>
+            <path d="M16 6C13 9 12 12 12 16C12 20 13 23 16 26"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <strong>
+            MADE IN<br>
+            INDIA
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   PURELANE BUNDLE CATEGORIES
+========================================================= */
+
+.purelane-bundle-categories {
+
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  padding: 70px 0 70px;
+
+  background:
+
+    radial-gradient(
+      ellipse at 20% 25%,
+      rgba(255,255,255,.25),
+      transparent 38%
+    ),
+
+    radial-gradient(
+      ellipse at 80% 70%,
+      rgba(255,255,255,.18),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      180deg,
+      #dff5e2 0%,
+      #c5ead4 48%,
+      #a8d6c2 100%
+    );
+
+}
+
+
+/* =========================================================
+   WAVY BACKGROUND
+========================================================= */
+
+.purelane-bundle-categories::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -10% -5%;
+
+  pointer-events: none;
+
+  opacity: .42;
+
+  background:
+
+    repeating-linear-gradient(
+      -7deg,
+      transparent 0,
+      transparent 72px,
+      rgba(255,255,255,.18) 75px,
+      rgba(255,255,255,.06) 80px,
+      transparent 88px
+    );
+
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.purelane-bundle-categories-inner {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1430px,
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.purelane-bundle-categories-heading {
+
+  text-align: center;
+
+  margin-bottom: 34px;
+
+}
+
+
+.purelane-bundle-categories-heading h2 {
+
+  margin: 0;
+
+  color: #17102f;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(
+    42px,
+    4.4vw,
+    66px
+  );
+
+  line-height: .95;
+
+  font-weight: 900;
+
+  letter-spacing: -.055em;
+
+}
+
+
+/* =========================================================
+   FOUR CARDS
+========================================================= */
+
+.purelane-bundle-categories-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.purelane-bundle-category-card {
+
+  min-width: 0;
+
+  height: 340px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  text-decoration: none;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.88),
+      rgba(222,239,235,.74)
+    );
+
+  border:
+    1px solid
+    rgba(190,201,205,.72);
+
+  box-shadow:
+    0 15px 35px
+    rgba(43,75,67,.08);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+.purelane-bundle-category-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 22px 42px
+    rgba(43,75,67,.13);
+
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.purelane-bundle-image {
+
+  height: 240px;
+
+  flex: 0 0 240px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    rgba(190,201,205,.50);
+
+}
+
+
+.purelane-bundle-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 18px 45px;
+
+  box-sizing: border-box;
+
+  mix-blend-mode: multiply;
+
+}
+
+
+/* =========================================================
+   FALLBACK BOTTLE
+========================================================= */
+
+.purelane-bottle-placeholder {
+
+  width: 88px;
+
+  height: 175px;
+
+  position: relative;
+
+  border-radius: 17px 17px 11px 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #9477d5,
+      #6650ad
+    );
+
+  box-shadow:
+    0 15px 28px
+    rgba(71,50,120,.22);
+
+}
+
+
+.purelane-bottle-placeholder::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -27px;
+
+  left: 31px;
+
+  width: 26px;
+
+  height: 30px;
+
+  border-radius: 5px 5px 0 0;
+
+  background: #7961be;
+
+}
+
+
+.purelane-bottle-placeholder::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+
+  right: 14px;
+
+  top: 72px;
+
+  height: 48px;
+
+  border-radius: 5px;
+
+  background: #f3f0f8;
+
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.purelane-bundle-category-info {
+
+  padding: 17px 20px 18px;
+
+}
+
+
+.purelane-bundle-category-info h3 {
+
+  margin: 0 0 8px;
+
+  color: #21193b;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  letter-spacing: -.025em;
+
+}
+
+
+.purelane-bundle-category-info p {
+
+  margin: 0;
+
+  color: #6b6d7b;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+}
+
+
+/* =========================================================
+   BENEFITS STRIP
+========================================================= */
+
+.purelane-bundle-benefits-strip {
+
+  min-height: 92px;
+
+  margin-top: 58px;
+
+  padding: 0 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  align-items: center;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 27px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.78),
+      rgba(226,239,235,.70)
+    );
+
+  border:
+    1px solid
+    rgba(190,201,205,.68);
+
+  box-shadow:
+    0 14px 32px
+    rgba(43,75,67,.07);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+}
+
+
+/* =========================================================
+   BENEFIT ITEM
+========================================================= */
+
+.purelane-bundle-benefit {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+}
+
+
+.purelane-bundle-benefit-icon {
+
+  width: 32px;
+
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+}
+
+
+.purelane-bundle-benefit-icon svg {
+
+  width: 27px;
+
+  height: 27px;
+
+  stroke: #70a43d;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+}
+
+
+.purelane-bundle-benefit strong {
+
+  display: block;
+
+  color: #676979;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  letter-spacing: .13em;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .purelane-bundle-categories-inner {
+
+    width: calc(100% - 40px);
+
+  }
+
+  .purelane-bundle-categories-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .purelane-bundle-benefits-strip {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding: 20px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .purelane-bundle-categories {
+
+    padding: 55px 0;
+
+  }
+
+  .purelane-bundle-categories-inner {
+
+    width: calc(100% - 30px);
+
+  }
+
+  .purelane-bundle-categories-heading {
+
+    margin-bottom: 25px;
+
+  }
+
+  .purelane-bundle-categories-heading h2 {
+
+    font-size: 38px;
+
+  }
+
+  .purelane-bundle-categories-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+  }
+
+  .purelane-bundle-category-card {
+
+    height: 315px;
+
+  }
+
+  .purelane-bundle-image {
+
+    height: 220px;
+
+    flex-basis: 220px;
+
+  }
+
+  .purelane-bundle-benefits-strip {
+
+    margin-top: 35px;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    padding: 22px;
+
+  }
+
+  .purelane-bundle-benefit {
+
+    justify-content: flex-start;
+
+  }
+
+}
+
+</style>
+
+
+{% schema %}
+
+{
+  "name":  "Bundle Categories",
+
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Product collection"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Bundle Categories"
+    }
+  ]
+
+}
+
+{% endschema %}

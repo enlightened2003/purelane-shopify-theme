@@ -1,0 +1,400 @@
+<section class="purelane-newsletter">
+
+  <div class="purelane-newsletter-card">
+
+    <div class="purelane-newsletter-eyebrow">
+      JOIN THE PURELANE CLUB
+    </div>
+
+    <h2>
+      GET ₹100 OFF YOUR FIRST BUNDLE
+    </h2>
+
+    <p>
+      Plus first access to new launches and restocks.
+    </p>
+
+    <form
+      method="post"
+      action="{{ routes.newsletter_subscribe_url }}"
+      class="purelane-newsletter-form"
+    >
+
+      <input
+        type="email"
+        name="contact[email]"
+        placeholder="your@email.com"
+        aria-label="Email address"
+        required
+      >
+
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="newsletter"
+      >
+
+      <button type="submit">
+        GET MY ₹100 OFF
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.purelane-newsletter {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0 0 86px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255,255,255,.16),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #bfe8cf 0%,
+      #a9dbc1 100%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* subtle flowing lines */
+
+.purelane-newsletter::before {
+  content: "";
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: .42;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 25%,
+      transparent 0 48%,
+      rgba(255,255,255,.30) 49%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 78% 60%,
+      transparent 0 48%,
+      rgba(255,255,255,.25) 49%,
+      transparent 50%
+    );
+
+  transform: scale(1.4);
+}
+
+
+/* MAIN GLASS CARD */
+
+.purelane-newsletter-card {
+  width: min(1430px, calc(100% - 100px));
+
+  min-height: 300px;
+
+  margin: 0 auto;
+
+  padding: 42px 40px 56px;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 0 0 30px 30px;
+
+  border: 1px solid rgba(190, 201, 205, .65);
+
+  border-top: none;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.78),
+      rgba(224,239,237,.70)
+    );
+
+  box-shadow:
+    0 20px 45px rgba(40,70,65,.10);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* EYEBROW */
+
+.purelane-newsletter-eyebrow {
+  margin-bottom: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: .20em;
+
+  color: #6e7381;
+}
+
+
+/* HEADING */
+
+.purelane-newsletter-card h2 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(42px, 4.1vw, 64px);
+
+  line-height: .98;
+
+  letter-spacing: -.045em;
+
+  font-weight: 900;
+
+  color: #21183b;
+}
+
+
+/* DESCRIPTION */
+
+.purelane-newsletter-card p {
+  margin: 20px 0 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 21px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+
+  color: #575a70;
+}
+
+
+/* FORM */
+
+.purelane-newsletter-form {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+
+/* EMAIL */
+
+.purelane-newsletter-form input[type="email"] {
+  width: 305px;
+
+  height: 58px;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(180, 191, 198, .70);
+
+  outline: none;
+
+  background: rgba(255,255,255,.78);
+
+  color: #3f4052;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.7);
+}
+
+
+.purelane-newsletter-form input[type="email"]::placeholder {
+  color: #858897;
+}
+
+
+.purelane-newsletter-form input[type="email"]:focus {
+  border-color: rgba(8, 115, 105, .55);
+
+  box-shadow:
+    0 0 0 3px rgba(8,115,105,.10);
+}
+
+
+/* BUTTON */
+
+.purelane-newsletter-form button {
+  height: 58px;
+
+  padding: 0 30px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #08776e;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: .10em;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 12px 25px rgba(8,119,110,.20);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.purelane-newsletter-form button:hover {
+  transform: translateY(-2px);
+
+  background: #06675f;
+
+  box-shadow:
+    0 16px 30px rgba(8,119,110,.25);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .purelane-newsletter {
+    padding-bottom: 65px;
+  }
+
+  .purelane-newsletter-card {
+    width: calc(100% - 50px);
+
+    padding: 40px 25px 50px;
+  }
+
+  .purelane-newsletter-card h2 {
+    font-size: 44px;
+  }
+
+  .purelane-newsletter-card p {
+    font-size: 18px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .purelane-newsletter {
+    padding-bottom: 50px;
+  }
+
+  .purelane-newsletter-card {
+    width: calc(100% - 30px);
+
+    min-height: auto;
+
+    padding: 35px 18px 42px;
+
+    border-radius: 0 0 24px 24px;
+  }
+
+  .purelane-newsletter-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: .16em;
+
+    margin-bottom: 16px;
+  }
+
+  .purelane-newsletter-card h2 {
+    font-size: 34px;
+
+    line-height: 1.02;
+  }
+
+  .purelane-newsletter-card p {
+    margin: 17px 0 25px;
+
+    font-size: 16px;
+  }
+
+  .purelane-newsletter-form {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .purelane-newsletter-form input[type="email"],
+  .purelane-newsletter-form button {
+    width: 100%;
+  }
+
+}
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

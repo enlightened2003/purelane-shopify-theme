@@ -1,0 +1,546 @@
+<section class="purelane-shelf-section">
+
+  <div class="purelane-shelf-card">
+
+    <!-- HEADER -->
+    <div class="purelane-shelf-header">
+
+      <div class="purelane-shelf-title">
+
+        <span>THE FULL RANGE</span>
+
+        <h2>EVERY ROOM,<br>ONE SHELF</h2>
+
+      </div>
+
+      <div class="purelane-shelf-description">
+        Floors, taps, kitchen, laundry, bathroom and
+        hand care — one place for everything you need
+        to replace every harsh bottle under your sink.
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+    <div class="purelane-shelf-scroll">
+
+      <div class="purelane-shelf-track">
+
+        {% assign shelf_products =
+          collections[section.settings.collection].products
+        %}
+
+        {% for product in shelf_products limit: 9 %}
+
+          <div class="purelane-shelf-product">
+
+            {% if product.featured_image %}
+
+              <img
+                src="{{ product.featured_image | image_url: width: 220 }}"
+                alt="{{ product.title | escape }}"
+                loading="lazy"
+              >
+
+            {% endif %}
+
+          </div>
+
+        {% endfor %}
+
+
+        <!-- ORANGE END CARD -->
+
+        <div class="purelane-shelf-end">
+
+          <div class="purelane-shelf-end-line"></div>
+          <div class="purelane-shelf-end-line small"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SWIPE LABEL -->
+
+    <div class="purelane-shelf-swipe">
+
+      Swipe to see the full shelf
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.purelane-shelf-section {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 48px 0 42px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 18% 35%,
+      rgba(255,255,255,.32),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 82% 60%,
+      rgba(255,255,255,.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #dff5e3 0%,
+      #c9ecd7 50%,
+      #a9d9c4 100%
+    );
+
+}
+
+
+/* WAVY BACKGROUND */
+
+.purelane-shelf-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: .45;
+
+  background:
+    repeating-linear-gradient(
+      -8deg,
+      transparent 0,
+      transparent 65px,
+      rgba(255,255,255,.18) 68px,
+      transparent 75px
+    );
+
+}
+
+
+/* =========================================================
+   MAIN WHITE CARD
+========================================================= */
+
+.purelane-shelf-card {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1350px,
+    calc(100% - 100px)
+  );
+
+  margin: 0 auto;
+
+  padding: 30px 28px 18px;
+
+  box-sizing: border-box;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.88),
+      rgba(222,239,234,.80)
+    );
+
+  border: 1px solid rgba(190,202,204,.7);
+
+  box-shadow:
+    0 15px 35px rgba(40,75,65,.10);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.purelane-shelf-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  padding: 0 12px 20px;
+
+}
+
+
+.purelane-shelf-title {
+
+  flex: 0 0 auto;
+
+}
+
+
+.purelane-shelf-title > span {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #7c7d8c;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .22em;
+
+}
+
+
+.purelane-shelf-title h2 {
+
+  margin: 0;
+
+  color: #221a3c;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 38px;
+
+  line-height: .96;
+
+  font-weight: 900;
+
+  letter-spacing: -.04em;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.purelane-shelf-description {
+
+  width: 360px;
+
+  padding-top: 12px;
+
+  color: #666779;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+}
+
+
+/* =========================================================
+   PRODUCT SCROLL
+========================================================= */
+
+.purelane-shelf-scroll {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+
+}
+
+
+.purelane-shelf-scroll::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+
+.purelane-shelf-track {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 10px;
+
+  width: max-content;
+
+  padding: 5px 5px 0;
+
+}
+
+
+/* =========================================================
+   PRODUCT
+========================================================= */
+
+.purelane-shelf-product {
+
+  width: 86px;
+
+  height: 115px;
+
+  flex: 0 0 86px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.purelane-shelf-product img {
+
+  width: 82px;
+
+  height: 110px;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition:
+    transform .25s ease;
+
+}
+
+
+.purelane-shelf-product:hover img {
+
+  transform: translateY(-5px);
+
+}
+
+
+/* =========================================================
+   ORANGE END CARD
+========================================================= */
+
+.purelane-shelf-end {
+
+  width: 82px;
+
+  height: 88px;
+
+  flex: 0 0 82px;
+
+  margin-left: 4px;
+
+  margin-bottom: 8px;
+
+  border-radius: 9px;
+
+  background: #eea44c;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+}
+
+
+.purelane-shelf-end-line {
+
+  width: 40px;
+
+  height: 8px;
+
+  border-radius: 5px;
+
+  background: rgba(255,255,255,.85);
+
+}
+
+
+.purelane-shelf-end-line.small {
+
+  width: 28px;
+
+  height: 6px;
+
+}
+
+
+/* =========================================================
+   SWIPE TEXT
+========================================================= */
+
+.purelane-shelf-swipe {
+
+  margin-top: 3px;
+
+  text-align: left;
+
+  padding-left: 5px;
+
+  color: #727586;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .purelane-shelf-card {
+
+    width: calc(100% - 50px);
+
+  }
+
+  .purelane-shelf-header {
+
+    gap: 30px;
+
+  }
+
+  .purelane-shelf-title h2 {
+
+    font-size: 32px;
+
+  }
+
+  .purelane-shelf-description {
+
+    width: 300px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .purelane-shelf-section {
+
+    padding: 35px 0;
+
+  }
+
+  .purelane-shelf-card {
+
+    width: calc(100% - 30px);
+
+    padding: 24px 18px 15px;
+
+    border-radius: 20px;
+
+  }
+
+  .purelane-shelf-header {
+
+    display: block;
+
+    padding: 0 4px 15px;
+
+  }
+
+  .purelane-shelf-title h2 {
+
+    font-size: 30px;
+
+  }
+
+  .purelane-shelf-description {
+
+    width: 100%;
+
+    padding-top: 14px;
+
+    font-size: 11px;
+
+  }
+
+}
+
+</style>
+
+
+
+{% schema %}
+
+{
+  "name": "Purelane Shelf",
+
+  "settings": [
+
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Product collection"
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Shelf"
+    }
+
+  ]
+
+}
+
+{% endschema %}

@@ -1,0 +1,221 @@
+<section class="purelane-details">
+  <div class="purelane-details__container">
+
+    <div class="purelane-details__intro">
+      <p class="purelane-details__eyebrow">PURELANE HOMECARE</p>
+
+      <h2>
+        CLEANING THAT<br>
+        FEELS BETTER.
+      </h2>
+
+      <p class="purelane-details__intro-text">
+        Powerful everyday cleaning, thoughtfully made for modern homes.
+        Effective on messes, gentle on the spaces and people around you.
+      </p>
+    </div>
+
+    <div class="purelane-details__grid">
+
+      {% for block in section.blocks %}
+        <div class="purelane-details__card" {{ block.shopify_attributes }}>
+
+          <div class="purelane-details__number">
+            {{ forloop.index | prepend: '0' }}
+          </div>
+
+          <div>
+            <h3>{{ block.settings.heading }}</h3>
+
+            {% if block.settings.text != blank %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .purelane-details {
+    background: #f5f6fc;
+    padding: 110px 6%;
+  }
+
+  .purelane-details__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .purelane-details__intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 75px;
+  }
+
+  .purelane-details__eyebrow {
+    grid-column: 1 / -1;
+    margin: 0 0 -35px;
+    color: #b87922;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+
+  .purelane-details h2 {
+    margin: 0;
+    color: #211d49;
+    font-size: clamp(48px, 6vw, 86px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -3px;
+  }
+
+  .purelane-details__intro-text {
+    max-width: 520px;
+    margin: 0;
+    color: #77758b;
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  .purelane-details__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .purelane-details__card {
+    min-height: 230px;
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid #dedff0;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .purelane-details__number {
+    color: #b87922;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  .purelane-details__card h3 {
+    margin: 0 0 14px;
+    color: #211d49;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .purelane-details__card p {
+    margin: 0;
+    color: #77758b;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  @media screen and (max-width: 900px) {
+    .purelane-details {
+      padding: 80px 6%;
+    }
+
+    .purelane-details__intro {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .purelane-details__eyebrow {
+      margin-bottom: 0;
+    }
+
+    .purelane-details__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .purelane-details {
+      padding: 65px 5%;
+    }
+
+    .purelane-details h2 {
+      font-size: 48px;
+      letter-spacing: -2px;
+    }
+
+    .purelane-details__intro-text {
+      font-size: 17px;
+    }
+
+    .purelane-details__card {
+      min-height: 200px;
+      padding: 28px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Purelane Product Details",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "detail",
+      "name": "Product detail",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Powerful cleaning"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Designed to make everyday cleaning simple and effective."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Purelane Product Details",
+      "blocks": [
+        {
+          "type": "detail",
+          "settings": {
+            "heading": "Powerful & effective",
+            "text": "Cuts through everyday dirt, grime, soap scum and stains with ease."
+          }
+        },
+        {
+          "type": "detail",
+          "settings": {
+            "heading": "Plant-powered care",
+            "text": "Thoughtfully formulated with a focus on effective ingredients and a gentler home."
+          }
+        },
+        {
+          "type": "detail",
+          "settings": {
+            "heading": "Made for everyday homes",
+            "text": "Simple, practical cleaning designed for the spaces you use every day."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
