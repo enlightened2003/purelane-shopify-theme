@@ -288,126 +288,156 @@
 
   <div class="purelane-bestsellers">
 
-    <div class="purelane-bestsellers-label">
-      BESTSELLERS
-    </div>
+  <div class="purelane-bestsellers-label">
+    BESTSELLERS
+  </div>
 
-    <h2>
-      LOVED BY 30,000 HOMES
-    </h2>
+  <h2>LOVED BY 30,000 HOMES</h2>
 
-    <div class="purelane-bestseller-divider">
-      <span></span>
-      <b>⌄</b>
-      <span></span>
-    </div>
+  <div class="purelane-bestseller-divider">
+    <span></span>
+    <b>⌄</b>
+    <span></span>
+  </div>
 
+  {% assign bestseller_products = collections[section.settings.collection].products %}
 
-    <!-- ===================================================
-         PRODUCT CARDS
-    ==================================================== -->
+  <div class="purelane-bestseller-grid">
 
-    <div class="purelane-bestseller-track">
+    {% for product in bestseller_products limit: 8 %}
 
-      {% assign bestseller_products =
-        collections[section.settings.collection].products
-      %}
+      <article class="purelane-bestseller-card">
 
+        <div class="purelane-bestseller-tag">
+          {% case forloop.index %}
+            {% when 1 %}
+              BEST SELLER
+            {% when 2 %}
+              BEST SELLER
+            {% when 3 %}
+              TOP RATED
+            {% else %}
+              NEW
+          {% endcase %}
+        </div>
 
-      {% for product in bestseller_products limit: 8 %}
+        <a
+          href="{{ product.url }}"
+          class="purelane-bestseller-image"
+          aria-label="{{ product.title | escape }}"
+        >
 
-        <article class="purelane-bestseller-card">
+          {% if product.featured_image %}
 
-          <div class="purelane-bestseller-tag">
+            <img
+              src="{{ product.featured_image | image_url: width: 500 }}"
+              alt="{{ product.featured_image.alt | default: product.title | escape }}"
+              loading="lazy"
+              width="500"
+              height="500"
+            >
 
-            {% case forloop.index %}
+          {% else %}
 
-              {% when 1 %}
-                BEST SELLER
-
-              {% when 2 %}
-                BEST SELLER
-
-              {% when 3 %}
-                TOP RATED
-
-              {% else %}
-                NEW
-
-            {% endcase %}
-
-          </div>
-
-
-          <div class="purelane-bestseller-image">
-
-            {% if product.featured_image %}
-
-              <img
-                src="{{ product.featured_image | image_url: width: 500 }}"
-                alt="{{ product.title | escape }}"
-                loading="lazy"
-              >
-
-            {% endif %}
-
-          </div>
-
-
-          <div class="purelane-bestseller-info">
-
-            <h3>
-              {{ product.title }}
-            </h3>
-
-            {% if product.description != blank %}
-
-              <p>
-                {{ product.description
-                  | strip_html
-                  | truncate: 100
-                }}
-              </p>
-
-            {% endif %}
-
-
-            <div class="purelane-bestseller-price">
-
-              {% if product.compare_at_price > product.price %}
-
-                <strong>
-                  {{ product.price | money_without_trailing_zeros }}
-                </strong>
-
-                <del>
-                  {{ product.compare_at_price | money_without_trailing_zeros }}
-                </del>
-
-              {% else %}
-
-                <strong>
-                  {{ product.price | money_without_trailing_zeros }}
-                </strong>
-
-              {% endif %}
-
+            <div class="purelane-product-placeholder">
+              <span>PURELANE</span>
             </div>
 
+          {% endif %}
 
+        </a>
+
+        <div class="purelane-bestseller-info">
+
+          <h3>
             <a href="{{ product.url }}">
-              SHOP NOW →
+              {{ product.title }}
             </a>
+          </h3>
+
+          {% if product.description != blank %}
+            <p>
+              {{ product.description | strip_html | truncate: 85 }}
+            </p>
+          {% endif %}
+
+          <div class="purelane-bestseller-rating">
+            <span>★★★★★</span>
+            <small>4.9</small>
+          </div>
+
+          <div class="purelane-bestseller-price">
+
+            {% if product.compare_at_price > product.price %}
+
+              <strong>
+                {{ product.price | money_without_trailing_zeros }}
+              </strong>
+
+              <del>
+                {{ product.compare_at_price | money_without_trailing_zeros }}
+              </del>
+
+              <span>SAVE</span>
+
+            {% else %}
+
+              <strong>
+                {{ product.price | money_without_trailing_zeros }}
+              </strong>
+
+            {% endif %}
 
           </div>
 
-        </article>
+          {% if product.available %}
 
-      {% endfor %}
+            <form
+              method="post"
+              action="/cart/add"
+              class="purelane-bestseller-cart"
+            >
 
-    </div>
+              <input
+                type="hidden"
+                name="id"
+                value="{{ product.selected_or_first_available_variant.id }}"
+              >
+
+              <input
+                type="hidden"
+                name="quantity"
+                value="1"
+              >
+
+              <button type="submit">
+                ADD TO CART
+                <span>→</span>
+              </button>
+
+            </form>
+
+          {% else %}
+
+            <button
+              type="button"
+              class="purelane-bestseller-soldout"
+              disabled
+            >
+              SOLD OUT
+            </button>
+
+          {% endif %}
+
+        </div>
+
+      </article>
+
+    {% endfor %}
 
   </div>
+
+</div>
 
 </section>
 
@@ -927,196 +957,382 @@
 
 
 /* =========================================================
-   BESTSELLER CARDS
+   BESTSELLER PRODUCT GRID
 ========================================================= */
 
-.purelane-bestseller-track {
+.purelane-bestseller-grid {
+  width: min(1180px, calc(100% - 60px));
+  margin: 0 auto;
 
-  width: 100%;
-
-  padding: 0 20px;
-
-  box-sizing: border-box;
-
-  display: flex;
-
-  gap: 14px;
-
-  overflow-x: auto;
-
-  scrollbar-width: none;
-
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
-
-.purelane-bestseller-track::-webkit-scrollbar {
-
-  display: none;
-
-}
-
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
 
 .purelane-bestseller-card {
-
   position: relative;
-
-  flex: 0 0 250px;
-
-  min-height: 330px;
-
-  box-sizing: border-box;
-
+  min-width: 0;
   overflow: hidden;
 
   border-radius: 20px;
 
   background:
-
     linear-gradient(
       145deg,
-      rgba(255,255,255,.9),
-      rgba(210,235,228,.85)
+      rgba(255, 255, 255, 0.92),
+      rgba(210, 235, 228, 0.86)
     );
 
-  border: 1px solid rgba(185,200,202,.65);
+  border: 1px solid rgba(185, 200, 202, 0.65);
 
+  box-shadow:
+    0 14px 30px rgba(55, 85, 75, 0.10);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+.purelane-bestseller-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 38px rgba(55, 85, 75, 0.16);
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
 
 .purelane-bestseller-tag {
-
   position: absolute;
-
   top: 13px;
-
   left: 13px;
+  z-index: 3;
 
-  z-index: 2;
-
-  padding: 5px 8px;
+  padding: 6px 9px;
 
   border-radius: 999px;
 
-  background: rgba(242,247,223,.9);
+  background: rgba(242, 247, 223, 0.95);
 
-  color: #7b9c50;
+  color: #78974f;
 
   font-size: 7px;
-
   font-weight: 800;
-
-  letter-spacing: .1em;
-
+  letter-spacing: 0.1em;
 }
 
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
 
 .purelane-bestseller-image {
-
-  height: 180px;
-
+  height: 205px;
   padding: 20px;
 
   box-sizing: border-box;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, 0.42);
 
+  text-decoration: none;
 }
 
-
 .purelane-bestseller-image img {
-
-  width: 150px;
-
-  height: 150px;
+  width: 165px;
+  height: 165px;
 
   object-fit: contain;
 
+  display: block;
+
+  transition: transform 0.3s ease;
 }
 
+.purelane-bestseller-card:hover
+.purelane-bestseller-image img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   NO IMAGE PLACEHOLDER
+========================================================= */
+
+.purelane-product-placeholder {
+  width: 165px;
+  height: 165px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  border: 1px dashed rgba(80, 110, 105, 0.3);
+
+  color: #7c8d88;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
 
 .purelane-bestseller-info {
-
-  padding: 15px;
-
+  padding: 16px;
 }
 
-
 .purelane-bestseller-info h3 {
-
-  margin: 0 0 8px;
+  margin: 0 0 7px;
 
   color: #27203d;
 
   font-size: 16px;
-
+  line-height: 1.2;
   font-weight: 900;
-
 }
 
+.purelane-bestseller-info h3 a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .purelane-bestseller-info p {
+  min-height: 31px;
 
-  margin: 0 0 10px;
+  margin: 0 0 9px;
 
   color: #686a7a;
 
   font-size: 11px;
-
   line-height: 1.4;
-
 }
 
+/* =========================================================
+   RATING
+========================================================= */
+
+.purelane-bestseller-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 9px;
+}
+
+.purelane-bestseller-rating span {
+  color: #c98220;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.purelane-bestseller-rating small {
+  color: #777987;
+  font-size: 10px;
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
 
 .purelane-bestseller-price {
-
   display: flex;
-
   align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
 
-  gap: 8px;
-
+  margin-bottom: 12px;
 }
 
-
 .purelane-bestseller-price strong {
-
   color: #18112f;
 
   font-size: 20px;
-
+  font-weight: 900;
 }
-
 
 .purelane-bestseller-price del {
-
   color: #777987;
+  font-size: 10px;
+}
+
+.purelane-bestseller-price span {
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  background: rgba(130, 163, 72, 0.12);
+
+  color: #67932d;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+.purelane-bestseller-cart {
+  margin: 0;
+}
+
+.purelane-bestseller-cart button,
+.purelane-bestseller-soldout {
+  width: 100%;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-radius: 999px;
+
+  border: 1px solid #006f69;
+
+  background: #006f69;
+
+  color: #fff;
 
   font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.purelane-bestseller-cart button:hover {
+  background: #075d59;
+  transform: translateY(-1px);
+}
+
+.purelane-bestseller-cart button span {
+  font-size: 16px;
+}
+
+.purelane-bestseller-soldout {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(100, 110, 120, 0.25);
+  color: #777987;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 901px) {
+
+  .purelane-bestseller-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 
 }
 
+/* =========================================================
+   TABLET
+========================================================= */
 
-.purelane-bestseller-info > a {
+@media (max-width: 900px) {
 
-  display: block;
+  .purelane-bestseller-grid {
+    width: min(760px, calc(100% - 40px));
 
-  margin-top: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  color: #075d59;
+    gap: 14px;
+  }
 
-  font-size: 10px;
+}
 
-  font-weight: 800;
+/* =========================================================
+   MOBILE
+========================================================= */
 
-  letter-spacing: .1em;
+@media (max-width: 650px) {
 
-  text-decoration: none;
+  .purelane-bestsellers {
+    margin-top: 55px;
+  }
+
+  .purelane-bestsellers h2 {
+    font-size: 31px;
+  }
+
+  .purelane-bestseller-grid {
+    width: calc(100% - 30px);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .purelane-bestseller-image {
+    height: 150px;
+    padding: 12px;
+  }
+
+  .purelane-bestseller-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .purelane-product-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .purelane-bestseller-info {
+    padding: 11px;
+  }
+
+  .purelane-bestseller-info h3 {
+    font-size: 13px;
+  }
+
+  .purelane-bestseller-info p {
+    font-size: 10px;
+  }
+
+  .purelane-bestseller-price strong {
+    font-size: 17px;
+  }
+
+  .purelane-bestseller-cart button,
+  .purelane-bestseller-soldout {
+    min-height: 38px;
+    font-size: 8px;
+  }
+
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .purelane-bestseller-card,
+  .purelane-bestseller-image img {
+    transition: none;
+  }
 
 }
 
