@@ -43,15 +43,15 @@
         "product_collection": "products"
       }
     },
-    "how_it_works": {
-      "type": "purelane-how-it-works",
-      "settings": {}
-    },
     "products": {
       "type": "purelane-products",
       "settings": {
         "collection": "purelane-cleaning-products"
       }
+    },
+    "how_it_works": {
+      "type": "purelane-how-it-works",
+      "settings": {}
     }
   },
   "order": [
@@ -62,7 +62,7 @@
     "ingredients",
     "benefits",
     "why",
-    "how_it_works",
-    "products"
+    "products",
+    "how_it_works"
   ]
 }
