@@ -45,10 +45,16 @@
       ],
       "name": "Purelane Product Details",
       "settings": {}
+    },
+    "purelane_related_products_938QYg": {
+      "type": "purelane-related-products",
+      "name": "Purelane Related Products",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "purelane_product_details_aqDtEw"
+    "purelane_product_details_aqDtEw",
+    "purelane_related_products_938QYg"
   ]
 }
