@@ -42,7 +42,10 @@
       "settings": {
         "collection": "purelane-cleaning-products"
       }
-    }
+    },"benefits": {
+  "type": "purelane-benefits",
+  "settings": {}
+},
   },
   "order": [
     "announcement",
@@ -52,6 +55,7 @@
     "ingredients",
     "why",
     "how_it_works",
-    "products"
+    "products",
+    "benefits"
   ]
 }
