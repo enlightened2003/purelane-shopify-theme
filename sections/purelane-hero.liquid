@@ -885,21 +885,18 @@
 
 
 /* =========================================================
-   BENEFITS CARD
+   BENEFITS FLOATING CARD
    ========================================================= */
 
 .purelane-benefit-card {
-
   position: absolute;
 
   right: 2%;
-
   top: 195px;
 
   width: 130px;
 
-  padding:
-    20px 13px;
+  padding: 20px 13px;
 
   border-radius: 22px;
 
@@ -916,64 +913,53 @@
     0 20px 45px rgba(75,61,120,.15);
 
   backdrop-filter: blur(18px);
-
   -webkit-backdrop-filter: blur(18px);
 
   z-index: 10;
-
 }
 
 
 .purelane-benefit {
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
+  justify-content: center;
 
   text-align: center;
 
   gap: 9px;
-
 }
 
 
 .purelane-benefit-icon {
-
   width: 44px;
-
   height: 44px;
 
   display: grid;
-
   place-items: center;
 
   border-radius: 50%;
 
   background: rgba(255,255,255,.55);
-
 }
 
 
 .purelane-benefit-icon svg {
-
   width: 23px;
-
   height: 23px;
 
   fill: none;
 
   stroke: #5e8f23;
-
   stroke-width: 1.5;
 
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
 .purelane-benefit strong,
 .purelane-benefit span {
-
   display: block;
 
   font-family: Arial, sans-serif;
@@ -985,36 +971,26 @@
   letter-spacing: .08em;
 
   color: #49435c;
-
 }
 
 
 .purelane-benefit strong {
-
   font-weight: 800;
-
 }
 
 
 .purelane-benefit span {
-
   font-weight: 700;
-
 }
 
 
 .purelane-benefit-divider {
-
   width: 100%;
-
   height: 1px;
 
-  margin:
-    16px 0;
+  margin: 16px 0;
 
-  background:
-    rgba(91,82,120,.14);
-
+  background: rgba(91,82,120,.14);
 }
 
 
