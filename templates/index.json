@@ -83,6 +83,11 @@
       "settings": {}
     },
 
+    "newsletter": {
+      "type": "purelane-newsletter",
+      "settings": {}
+    },
+
     "how_it_works": {
       "type": "purelane-how-it-works",
       "settings": {}
@@ -102,6 +107,7 @@
     "shelf",
     "bundle_categories",
     "bundle_benefits",
+    "newsletter",
     "how_it_works"
   ]
 }
