@@ -1,48 +1,30 @@
-<section class="purelane-hero" id="home">
-
-  <div class="purelane-hero-bg"></div>
+<section
+  id="hero"
+  class="purelane-hero"
+  data-purelane-hero
+>
 
   <div class="purelane-hero-inner">
 
     <!-- =====================================================
          LEFT CONTENT
-         ===================================================== -->
+    ====================================================== -->
 
     <div class="purelane-hero-content">
 
       <h1 class="purelane-hero-title">
         <span>CLEAN</span>
         <span>THAT</span>
-        <span class="hero-accent">LASTS</span>
+        <span class="purelane-orange">LASTS</span>
       </h1>
 
 
-      <!-- LEAF DIVIDER -->
-
       <div class="purelane-hero-divider">
         <span></span>
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 19C12 12.5 14.5 7.5 20 5C19.5 11.5 16.5 16.5 12 19Z"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-          />
-
-          <path
-            d="M12 19C11 14.5 9 11 5 9"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-          />
-        </svg>
-
+        <b>⌄</b>
         <span></span>
       </div>
 
-
-      <!-- DESCRIPTION -->
 
       <p class="purelane-hero-description">
         Homecare that works on the toughest grime, made from
@@ -51,13 +33,11 @@
       </p>
 
 
-      <!-- BUTTONS -->
-
-      <div class="purelane-hero-actions">
+      <div class="purelane-hero-buttons">
 
         <a
-          href="{{ routes.all_products_collection_url }}"
-          class="purelane-hero-btn purelane-hero-btn-primary"
+          href="#shop"
+          class="purelane-hero-button purelane-hero-button-primary"
         >
           SHOP NOW
           <span>→</span>
@@ -65,7 +45,7 @@
 
         <a
           href="#how-it-works"
-          class="purelane-hero-btn purelane-hero-btn-secondary"
+          class="purelane-hero-button purelane-hero-button-secondary"
         >
           HOW IT WORKS
         </a>
@@ -76,147 +56,93 @@
 
 
     <!-- =====================================================
-         RIGHT PRODUCT VISUAL
-         ===================================================== -->
+         RIGHT PRODUCT AREA
+    ====================================================== -->
 
-    <div class="purelane-hero-visual">
+    <div class="purelane-hero-products">
 
-      <!-- BACK BOTTLE -->
+      <div class="purelane-hero-bottles">
 
-      <div class="hero-bottle hero-bottle-small hero-bottle-left">
-
-        <div class="hero-bottle-cap"></div>
-
-        <div class="hero-bottle-body">
-          <div class="hero-bottle-label">
-            <span></span>
-            <span></span>
-          </div>
+        <div class="purelane-bottle bottle-left">
+          <div class="bottle-cap"></div>
+          <div class="bottle-label"></div>
         </div>
 
-      </div>
-
-
-      <!-- MAIN BOTTLE -->
-
-      <div class="hero-bottle hero-bottle-main">
-
-        <div class="hero-bottle-cap"></div>
-
-        <div class="hero-bottle-neck"></div>
-
-        <div class="hero-bottle-body">
-
-          <div class="hero-bottle-label">
-
-            <div class="hero-label-line"></div>
-            <div class="hero-label-line short"></div>
-
-          </div>
-
+        <div class="purelane-bottle bottle-center">
+          <div class="bottle-cap"></div>
+          <div class="bottle-label"></div>
         </div>
 
-      </div>
-
-
-      <!-- RIGHT BOTTLE -->
-
-      <div class="hero-bottle hero-bottle-small hero-bottle-right">
-
-        <div class="hero-bottle-cap"></div>
-
-        <div class="hero-bottle-body">
-
-          <div class="hero-bottle-label">
-            <span></span>
-            <span></span>
-          </div>
-
+        <div class="purelane-bottle bottle-right">
+          <div class="bottle-cap"></div>
+          <div class="bottle-label"></div>
         </div>
 
       </div>
 
 
       <!-- =================================================
-           BENEFITS FLOATING CARD
-           ================================================= -->
+           BENEFIT GLASS PANEL
+      ================================================== -->
 
-      <div class="purelane-benefit-card">
+      <div class="purelane-hero-benefits">
 
-        <div class="purelane-benefit">
+        <div class="purelane-hero-benefit">
 
-          <div class="purelane-benefit-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="purelane-benefit-symbol">
+            <svg viewBox="0 0 24 24" fill="none">
               <path
-                d="M12 20C12 13 14.5 7 20 4C19.5 11 16 17 12 20Z"
+                d="M12 20C12 20 6 15.5 6 10C6 6.8 8.3 4 12 4C15.7 4 18 6.8 18 10C18 15.5 12 20 12 20Z"
               />
-              <path
-                d="M12 20C11 14 8 10 4 8"
-              />
+              <path d="M12 19V10" />
+              <path d="M12 13C14 12.2 15.2 10.8 16 9" />
             </svg>
           </div>
 
-          <div>
-            <strong>PLANT</strong>
-            <span>POWERED</span>
-          </div>
+          <span>
+            PLANT<br>
+            POWERED
+          </span>
 
         </div>
 
 
-        <div class="purelane-benefit-divider"></div>
+        <div class="purelane-hero-benefit">
 
+          <div class="purelane-benefit-symbol">
 
-        <div class="purelane-benefit">
-
-          <div class="purelane-benefit-icon">
-
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" fill="none">
               <path
-                d="M12 3L20 6V11C20 16 16.5 20 12 21C7.5 20 4 16 4 11V6L12 3Z"
+                d="M12 3L19 6.5V11.5C19 16.2 16.2 19.6 12 21C7.8 19.6 5 16.2 5 11.5V6.5L12 3Z"
               />
-
-              <path
-                d="M9 12L11 14L15 10"
-              />
+              <path d="M9 12L11 14L15 10" />
             </svg>
 
           </div>
 
-          <div>
-            <strong>SAFE FOR</strong>
-            <span>KIDS & PETS</span>
-          </div>
+          <span>
+            SAFE FOR<br>
+            KIDS & PETS
+          </span>
 
         </div>
 
 
-        <div class="purelane-benefit-divider"></div>
+        <div class="purelane-hero-benefit">
 
+          <div class="purelane-benefit-symbol">
 
-        <div class="purelane-benefit">
-
-          <div class="purelane-benefit-icon">
-
-            <svg viewBox="0 0 24 24">
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-              />
-
-              <path
-                d="M8 16L16 8"
-              />
-
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8"/>
+              <path d="M7 17L17 7"/>
             </svg>
 
           </div>
 
-          <div>
-            <strong>ZERO HARSH</strong>
-            <span>CHEMICALS</span>
-          </div>
+          <span>
+            ZERO HARSH<br>
+            CHEMICALS
+          </span>
 
         </div>
 
@@ -225,43 +151,78 @@
 
       <!-- =================================================
            PRICE CARD
-           ================================================= -->
+      ================================================== -->
 
-      <div class="purelane-price-card">
+      <div class="purelane-price-cards">
 
-        <span class="price-label">
-          SINGLE BOTTLE
-        </span>
+        <div
+          class="purelane-price-card active"
+          data-price="200"
+        >
+          <small>SINGLE BOTTLE</small>
 
-        <div class="price-row">
+          <strong>₹200</strong>
 
-          <strong>
-            ₹200
-          </strong>
+          <del>₹299</del>
 
-          <del>
-            ₹299
-          </del>
-
+          <span>33% OFF</span>
         </div>
 
-        <span class="discount">
-          33% OFF
-        </span>
+
+        <div
+          class="purelane-price-card"
+          data-price="349"
+        >
+          <small>ANY 3 PRODUCTS</small>
+
+          <strong>₹349</strong>
+
+          <del>₹597</del>
+
+          <span>SAVE ₹248</span>
+        </div>
+
+
+        <div
+          class="purelane-price-card"
+          data-price="499"
+        >
+          <small>ANY 3 PRODUCTS</small>
+
+          <strong>₹499</strong>
+
+          <del>₹897</del>
+
+          <span>SAVE ₹398</span>
+        </div>
 
       </div>
 
 
       <!-- =================================================
            SLIDER DOTS
-           ================================================= -->
+      ================================================== -->
 
       <div class="purelane-hero-dots">
 
-        <span></span>
-        <span></span>
+        <button
+          type="button"
+          class="active"
+          data-slide="0"
+          aria-label="Slide 1"
+        ></button>
 
-        <span class="active"></span>
+        <button
+          type="button"
+          data-slide="1"
+          aria-label="Slide 2"
+        ></button>
+
+        <button
+          type="button"
+          data-slide="2"
+          aria-label="Slide 3"
+        ></button>
 
       </div>
 
@@ -272,6 +233,7 @@
 </section>
 
 
+
 <style>
 
 /* =========================================================
@@ -279,118 +241,121 @@
    ========================================================= */
 
 .purelane-hero {
-
   position: relative;
-
-  min-height: 100vh;
 
   width: 100%;
 
+  min-height: 650px;
+
   overflow: hidden;
 
+  box-sizing: border-box;
+
   background:
+    radial-gradient(
+      ellipse at 70% 35%,
+      rgba(255,255,255,.35),
+      transparent 48%
+    ),
     linear-gradient(
-      110deg,
-      #ffffff 0%,
-      #f8fff9 25%,
-      #ecfbef 58%,
-      #d8f4df 100%
+      135deg,
+      #f7fcf9 0%,
+      #e9f8ee 35%,
+      #d7f2df 70%,
+      #c4e9d1 100%
     );
 
 }
 
 
 /* =========================================================
-   BACKGROUND
+   WATER / WAVE TEXTURE
    ========================================================= */
 
-.purelane-hero-bg {
-
-  position: absolute;
-
-  inset: 0;
-
-  pointer-events: none;
-
-  background:
-
-    radial-gradient(
-      ellipse at 72% 42%,
-      rgba(210,245,218,.80) 0%,
-      rgba(210,245,218,.30) 35%,
-      transparent 65%
-    ),
-
-    radial-gradient(
-      ellipse at 92% 80%,
-      rgba(174,229,192,.42),
-      transparent 55%
-    );
-
-}
-
-
-/* subtle flowing lines */
-
-.purelane-hero-bg::after {
-
+.purelane-hero::before {
   content: "";
 
   position: absolute;
 
-  width: 120%;
-  height: 350px;
-
   left: -10%;
+
   top: 30%;
+
+  width: 120%;
+
+  height: 260px;
+
+  pointer-events: none;
+
+  opacity: .40;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 45%,
+      transparent 0 48%,
+      rgba(255,255,255,.55) 49%,
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse at 70% 65%,
+      transparent 0 47%,
+      rgba(255,255,255,.38) 48%,
+      transparent 50%
+    );
+
+  transform: rotate(-2deg);
+}
+
+
+.purelane-hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+
+  bottom: 5%;
+
+  width: 110%;
+
+  height: 180px;
+
+  pointer-events: none;
+
+  opacity: .30;
+
+  border-top: 7px solid rgba(255,255,255,.55);
 
   border-radius: 50%;
 
-  border-top: 1px solid rgba(255,255,255,.65);
-
-  transform: rotate(-2deg);
-
-  box-shadow:
-    0 -25px 0 rgba(255,255,255,.25),
-    0 25px 0 rgba(255,255,255,.18);
-
-  opacity: .65;
-
+  transform: rotate(1deg);
 }
 
 
 /* =========================================================
-   HERO INNER
+   INNER
    ========================================================= */
 
 .purelane-hero-inner {
-
   position: relative;
 
   z-index: 2;
 
-  width: 100%;
+  width: min(1440px, calc(100% - 80px));
 
-  max-width: 1250px;
-
-  min-height: 100vh;
+  min-height: 650px;
 
   margin: 0 auto;
-
-  padding:
-    175px 40px
-    60px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(450px, .95fr)
-    minmax(500px, 1.05fr);
+    minmax(430px, .92fr)
+    minmax(550px, 1.08fr);
 
   align-items: center;
 
-  gap: 20px;
-
+  box-sizing: border-box;
 }
 
 
@@ -399,48 +364,48 @@
    ========================================================= */
 
 .purelane-hero-content {
-
   position: relative;
 
   z-index: 5;
 
+  padding-left: 45px;
+
+  padding-top: 45px;
 }
 
 
 .purelane-hero-title {
-
   margin: 0;
 
   display: flex;
 
   flex-direction: column;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  font-size: clamp(82px, 8vw, 128px);
+  font-size:
+    clamp(76px, 7vw, 112px);
 
-  line-height: .86;
-
-  letter-spacing: -.055em;
+  line-height: .87;
 
   font-weight: 900;
 
-  color: #130b2e;
+  letter-spacing: -.065em;
 
+  color: #160d2e;
 }
 
 
 .purelane-hero-title span {
-
   display: block;
-
 }
 
 
-.purelane-hero-title .hero-accent {
-
-  color: #c8790b;
-
+.purelane-orange {
+  color: #bd7117;
 }
 
 
@@ -449,50 +414,37 @@
    ========================================================= */
 
 .purelane-hero-divider {
+  width: 315px;
 
-  width: 390px;
-
-  max-width: 90%;
-
-  margin:
-    28px 0
-    25px;
+  margin-top: 27px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 16px;
-
+  gap: 18px;
 }
 
 
 .purelane-hero-divider span {
+  flex: 1;
 
   height: 1px;
 
-  flex: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      #b5bfd0,
-      #d2d8df
-    );
-
+  background: rgba(112,126,151,.45);
 }
 
 
-.purelane-hero-divider svg {
+.purelane-hero-divider b {
+  color: #c57816;
 
-  width: 18px;
+  font-family: Arial, sans-serif;
 
-  height: 18px;
+  font-size: 23px;
 
-  flex-shrink: 0;
+  line-height: 1;
 
-  color: #d78613;
-
+  transform: rotate(180deg);
 }
 
 
@@ -501,47 +453,44 @@
    ========================================================= */
 
 .purelane-hero-description {
+  width: 570px;
 
-  max-width: 590px;
+  max-width: 100%;
 
-  margin: 0;
+  margin: 25px 0 0;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 20px;
 
-  line-height: 1.65;
+  line-height: 1.55;
 
-  font-weight: 400;
-
-  color: #57566c;
-
+  color: #565b70;
 }
 
 
 /* =========================================================
-   HERO BUTTONS
+   BUTTONS
    ========================================================= */
 
-.purelane-hero-actions {
+.purelane-hero-buttons {
+  margin-top: 28px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 14px;
-
-  margin-top: 28px;
-
+  gap: 13px;
 }
 
 
-.purelane-hero-btn {
+.purelane-hero-button {
+  min-height: 49px;
 
-  min-height: 54px;
-
-  padding:
-    0 27px;
+  padding: 0 25px;
 
   display: inline-flex;
 
@@ -549,87 +498,74 @@
 
   justify-content: center;
 
-  gap: 14px;
+  gap: 13px;
 
   border-radius: 999px;
 
-  font-family: Arial, sans-serif;
-
-  font-size: 14px;
-
-  font-weight: 800;
-
-  letter-spacing: .13em;
+  box-sizing: border-box;
 
   text-decoration: none;
 
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
   transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
 }
 
 
-.purelane-hero-btn:hover {
+.purelane-hero-button-primary {
+  color: #ffffff;
 
-  transform: translateY(-2px);
-
-}
-
-
-.purelane-hero-btn-primary {
-
-  background: #007e72;
-
-  color: white;
+  background: #087d78;
 
   box-shadow:
-    0 10px 25px rgba(0,126,114,.18);
-
+    0 10px 22px rgba(0,100,95,.16);
 }
 
 
-.purelane-hero-btn-primary:hover {
-
-  box-shadow:
-    0 14px 30px rgba(0,126,114,.28);
-
-}
-
-
-.purelane-hero-btn-primary span {
-
-  font-size: 20px;
+.purelane-hero-button-primary span {
+  font-size: 19px;
 
   line-height: 1;
-
 }
 
 
-.purelane-hero-btn-secondary {
+.purelane-hero-button-secondary {
+  color: #075d59;
 
-  color: #075e5b;
+  background: rgba(255,255,255,.60);
 
-  background:
-    rgba(255,255,255,.65);
+  border: 1px solid rgba(94,126,151,.30);
+}
 
-  border: 1px solid rgba(0,108,102,.20);
 
+.purelane-hero-button:hover {
+  transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   RIGHT VISUAL
+   RIGHT PRODUCT AREA
    ========================================================= */
 
-.purelane-hero-visual {
-
+.purelane-hero-products {
   position: relative;
 
-  min-height: 650px;
+  height: 560px;
 
-  width: 100%;
+  display: flex;
 
+  align-items: center;
+
+  justify-content: center;
 }
 
 
@@ -637,478 +573,404 @@
    BOTTLES
    ========================================================= */
 
-.hero-bottle {
-
+.purelane-hero-bottles {
   position: absolute;
 
-  bottom: 40px;
+  right: 60px;
 
+  bottom: 38px;
+
+  width: 430px;
+
+  height: 470px;
 }
 
 
-.hero-bottle-body {
+.purelane-bottle {
+  position: absolute;
 
-  position: relative;
+  bottom: 0;
+
+  width: 118px;
+
+  height: 350px;
+
+  border-radius:
+    18px 18px 15px 15px;
 
   background:
     linear-gradient(
       90deg,
-      #7259b7,
-      #846bd0 45%,
-      #6951ad
+      #7255b6 0%,
+      #8166c4 45%,
+      #684dab 100%
     );
 
-  border-radius:
-    18px 18px 14px 14px;
-
   box-shadow:
-    0 25px 50px rgba(84,65,150,.20);
+    0 25px 35px rgba(75,58,120,.20);
 
+  transition:
+    transform .8s ease,
+    opacity .8s ease;
 }
 
 
-.hero-bottle-main {
+.bottle-left {
+  left: 15px;
 
-  width: 175px;
+  height: 270px;
 
-  height: 490px;
-
-  left: 47%;
-
-  transform:
-    translateX(-50%);
-
-  z-index: 3;
-
+  transform: translateY(20px);
 }
 
 
-.hero-bottle-main .hero-bottle-body {
+.bottle-center {
+  left: 145px;
 
-  width: 100%;
+  height: 390px;
 
-  height: 100%;
-
+  z-index: 2;
 }
 
 
-.hero-bottle-neck {
+.bottle-right {
+  right: 5px;
 
+  height: 305px;
+
+  transform: translateY(5px);
+}
+
+
+/* CAPS */
+
+.bottle-cap {
   position: absolute;
-
-  width: 42px;
-
-  height: 62px;
 
   left: 50%;
 
   top: -45px;
 
-  transform:
-    translateX(-50%);
+  width: 48px;
 
-  background: #7a61bd;
+  height: 45px;
+
+  transform: translateX(-50%);
 
   border-radius:
-    8px 8px 2px 2px;
+    8px 8px 3px 3px;
 
+  background: #8067c2;
 }
 
 
-.hero-bottle-cap {
+.bottle-cap::after {
+  content: "";
 
   position: absolute;
 
-  width: 42px;
+  left: 0;
 
-  height: 50px;
+  bottom: -14px;
 
-  left: 50%;
+  width: 48px;
 
-  top: -78px;
+  height: 14px;
 
-  transform:
-    translateX(-50%);
-
-  border-radius: 8px 8px 3px 3px;
-
-  background: #765abd;
-
-  z-index: 5;
-
+  background: #7560b6;
 }
 
 
-/* main label */
+/* LABEL */
 
-.hero-bottle-main .hero-bottle-label {
-
+.bottle-label {
   position: absolute;
 
-  width: 96px;
+  left: 16px;
 
-  height: 125px;
+  right: 16px;
 
-  left: 50%;
+  top: 45%;
 
-  top: 160px;
-
-  transform:
-    translateX(-50%);
+  height: 78px;
 
   border-radius: 5px;
-
-  background: #f4f0fb;
-
-}
-
-
-.hero-label-line {
-
-  width: 55px;
-
-  height: 12px;
-
-  margin:
-    35px auto 12px;
-
-  background: #a999d5;
-
-}
-
-
-.hero-label-line.short {
-
-  width: 45px;
-
-  margin-top: 0;
-
-}
-
-
-/* =========================================================
-   SIDE BOTTLES
-   ========================================================= */
-
-.hero-bottle-small {
-
-  z-index: 2;
-
-}
-
-
-.hero-bottle-small .hero-bottle-body {
-
-  width: 100%;
-
-  height: 100%;
-
-}
-
-
-.hero-bottle-left {
-
-  width: 110px;
-
-  height: 340px;
-
-  left: 23%;
-
-}
-
-
-.hero-bottle-right {
-
-  width: 110px;
-
-  height: 350px;
-
-  right: 14%;
-
-}
-
-
-.hero-bottle-small .hero-bottle-cap {
-
-  width: 31px;
-
-  height: 48px;
-
-  top: -43px;
-
-}
-
-
-.hero-bottle-small .hero-bottle-label {
-
-  position: absolute;
-
-  width: 75px;
-
-  height: 120px;
-
-  top: 110px;
-
-  left: 50%;
-
-  transform:
-    translateX(-50%);
-
-  background: #f5f2fa;
-
-  border-radius: 4px;
-
-}
-
-
-.hero-bottle-small .hero-bottle-label span {
-
-  display: block;
-
-  width: 42px;
-
-  height: 10px;
-
-  margin:
-    35px auto 10px;
-
-  background: #a99bd2;
-
-}
-
-
-.hero-bottle-small .hero-bottle-label span + span {
-
-  margin-top: 0;
-
-}
-
-
-/* =========================================================
-   BENEFITS FLOATING CARD
-   ========================================================= */
-
-.purelane-benefit-card {
-  position: absolute;
-
-  right: 2%;
-  top: 195px;
-
-  width: 130px;
-
-  padding: 20px 13px;
-
-  border-radius: 22px;
 
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,.82),
-      rgba(235,232,248,.72)
+      rgba(250,249,255,.96),
+      rgba(238,234,251,.92)
     );
-
-  border: 1px solid rgba(255,255,255,.85);
-
-  box-shadow:
-    0 20px 45px rgba(75,61,120,.15);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  z-index: 10;
 }
 
 
-.purelane-benefit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.bottle-label::before,
+.bottle-label::after {
+  content: "";
 
-  text-align: center;
+  position: absolute;
 
-  gap: 9px;
+  left: 20%;
+
+  right: 20%;
+
+  height: 7px;
+
+  background: #a99bd7;
 }
 
 
-.purelane-benefit-icon {
-  width: 44px;
-  height: 44px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,.55);
+.bottle-label::before {
+  top: 24px;
 }
 
 
-.purelane-benefit-icon svg {
-  width: 23px;
-  height: 23px;
+.bottle-label::after {
+  top: 42px;
 
-  fill: none;
-
-  stroke: #5e8f23;
-  stroke-width: 1.5;
-
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-
-.purelane-benefit strong,
-.purelane-benefit span {
-  display: block;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 10px;
-
-  line-height: 1.35;
-
-  letter-spacing: .08em;
-
-  color: #49435c;
-}
-
-
-.purelane-benefit strong {
-  font-weight: 800;
-}
-
-
-.purelane-benefit span {
-  font-weight: 700;
-}
-
-
-.purelane-benefit-divider {
-  width: 100%;
-  height: 1px;
-
-  margin: 16px 0;
-
-  background: rgba(91,82,120,.14);
+  opacity: .65;
 }
 
 
 /* =========================================================
-   PRICE CARD
+   BENEFIT GLASS CARD
    ========================================================= */
 
-.purelane-price-card {
-
+.purelane-hero-benefits {
   position: absolute;
-
-  left: 16%;
-
-  bottom: 75px;
-
-  width: 150px;
-
-  padding:
-    17px 18px;
-
-  border-radius: 18px;
-
-  background:
-    rgba(255,255,255,.78);
-
-  border: 1px solid rgba(255,255,255,.9);
-
-  box-shadow:
-    0 15px 35px rgba(70,60,100,.12);
-
-  backdrop-filter: blur(14px);
-
-  -webkit-backdrop-filter: blur(14px);
 
   z-index: 8;
 
+  right: -10px;
+
+  top: 50%;
+
+  width: 115px;
+
+  transform: translateY(-50%);
+
+  padding: 18px 9px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.76),
+      rgba(230,236,242,.68)
+    );
+
+  border: 1px solid rgba(255,255,255,.75);
+
+  box-shadow:
+    0 20px 40px rgba(55,70,90,.12);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
 }
 
 
-.price-label {
+.purelane-hero-benefit {
+  width: 100%;
 
-  display: block;
+  padding: 4px 0 15px;
 
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.purelane-hero-benefit:not(:last-child) {
+  border-bottom: 1px solid rgba(100,110,135,.16);
+
+  margin-bottom: 12px;
+}
+
+
+.purelane-benefit-symbol {
+  width: 44px;
+
+  height: 44px;
+
+  margin-bottom: 8px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.64);
+}
+
+
+.purelane-benefit-symbol svg {
+  width: 22px;
+
+  height: 22px;
+
+  stroke: #6d9b3f;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+.purelane-hero-benefit span {
   font-family: Arial, sans-serif;
 
   font-size: 9px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  letter-spacing: .09em;
+
+  color: #514d66;
+}
+
+
+/* =========================================================
+   PRICE CARDS
+   ========================================================= */
+
+.purelane-price-cards {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 50%;
+
+  bottom: 34px;
+
+  transform: translateX(-50%);
+
+  width: 145px;
+
+  height: 110px;
+}
+
+
+.purelane-price-card {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 17px;
+
+  opacity: 0;
+
+  transform: translateY(8px) scale(.96);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.90),
+      rgba(224,239,235,.82)
+    );
+
+  border: 1px solid rgba(180,198,202,.60);
+
+  box-shadow:
+    0 15px 30px rgba(40,70,65,.12);
+
+  transition:
+    opacity .45s ease,
+    transform .45s ease;
+}
+
+
+.purelane-price-card.active {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+}
+
+
+.purelane-price-card small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
 
   font-weight: 800;
 
   letter-spacing: .16em;
 
-  color: #c47711;
-
+  color: #c47719;
 }
 
 
-.price-row {
-
-  display: flex;
-
-  align-items: baseline;
-
-  gap: 8px;
-
-  margin-top: 4px;
-
-}
-
-
-.price-row strong {
-
+.purelane-price-card strong {
   font-family: Arial, sans-serif;
 
-  font-size: 27px;
+  font-size: 25px;
+
+  line-height: 1;
 
   font-weight: 900;
 
-  color: #19142e;
-
+  color: #18122d;
 }
 
 
-.price-row del {
+.purelane-price-card del {
+  margin-left: 5px;
 
   font-family: Arial, sans-serif;
 
-  font-size: 12px;
+  font-size: 10px;
 
-  color: #777783;
-
+  color: #777b84;
 }
 
 
-.discount {
+.purelane-price-card span {
+  display: table;
 
-  display: inline-block;
+  margin-top: 9px;
 
-  margin-top: 7px;
-
-  padding:
-    5px 10px;
+  padding: 4px 8px;
 
   border-radius: 999px;
 
-  background: rgba(195,180,80,.14);
+  background: rgba(218,205,145,.25);
 
-  border: 1px solid rgba(180,155,50,.28);
+  border: 1px solid rgba(190,153,61,.45);
 
   font-family: Arial, sans-serif;
 
-  font-size: 9px;
+  font-size: 8px;
 
   font-weight: 800;
 
-  letter-spacing: .08em;
+  letter-spacing: .07em;
 
-  color: #65851e;
-
+  color: #68933c;
 }
 
 
@@ -1117,44 +979,51 @@
    ========================================================= */
 
 .purelane-hero-dots {
-
   position: absolute;
 
-  bottom: 27px;
+  right: 15px;
 
-  left: 50%;
-
-  transform:
-    translateX(-50%);
+  bottom: 12px;
 
   display: flex;
 
-  gap: 8px;
+  flex-direction: column;
 
+  align-items: center;
+
+  gap: 10px;
 }
 
 
-.purelane-hero-dots span {
+.purelane-hero-dots button {
+  width: 8px;
 
-  width: 7px;
+  height: 8px;
 
-  height: 7px;
+  padding: 0;
+
+  border: 0;
 
   border-radius: 50%;
 
-  background: #aab9bd;
+  background: #aebfc5;
 
+  cursor: pointer;
+
+  transition:
+    height .25s ease,
+    background .25s ease;
 }
 
 
-.purelane-hero-dots span.active {
+.purelane-hero-dots button.active {
+  width: 8px;
 
-  width: 24px;
+  height: 31px;
 
   border-radius: 999px;
 
-  background: #d18116;
-
+  background: #c87a18;
 }
 
 
@@ -1162,52 +1031,36 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
   .purelane-hero-inner {
+    width: calc(100% - 35px);
 
-    grid-template-columns: 1fr;
-
-    padding-top: 170px;
-
+    grid-template-columns:
+      minmax(380px, .9fr)
+      minmax(430px, 1.1fr);
   }
 
   .purelane-hero-content {
-
-    text-align: center;
-
+    padding-left: 25px;
   }
 
   .purelane-hero-title {
-
-    align-items: center;
-
-  }
-
-  .purelane-hero-divider {
-
-    margin-left: auto;
-    margin-right: auto;
-
+    font-size: clamp(68px, 8vw, 90px);
   }
 
   .purelane-hero-description {
+    width: 480px;
 
-    margin-left: auto;
-    margin-right: auto;
-
+    font-size: 17px;
   }
 
-  .purelane-hero-actions {
+  .purelane-hero-bottles {
+    right: 25px;
 
-    justify-content: center;
+    transform: scale(.9);
 
-  }
-
-  .purelane-hero-visual {
-
-    min-height: 520px;
-
+    transform-origin: right bottom;
   }
 
 }
@@ -1220,119 +1073,158 @@
 @media (max-width: 700px) {
 
   .purelane-hero {
-
-    min-height: auto;
-
+    min-height: 760px;
   }
+
 
   .purelane-hero-inner {
+    width: 100%;
 
-    min-height: auto;
+    min-height: 760px;
 
-    padding:
-      145px 20px
-      50px;
+    display: flex;
 
-    display: block;
+    flex-direction: column;
 
+    align-items: stretch;
   }
+
+
+  .purelane-hero-content {
+    padding:
+      105px 24px 0;
+
+    text-align: left;
+  }
+
 
   .purelane-hero-title {
-
-    font-size: clamp(65px, 19vw, 95px);
+    font-size: 68px;
 
     line-height: .88;
-
   }
 
+
+  .purelane-hero-divider {
+    width: 220px;
+
+    margin-top: 22px;
+  }
+
+
   .purelane-hero-description {
+    width: 100%;
 
     font-size: 16px;
 
-    line-height: 1.55;
-
+    line-height: 1.5;
   }
 
-  .purelane-hero-actions {
 
-    flex-wrap: wrap;
+  .purelane-hero-buttons {
+    margin-top: 20px;
 
+    gap: 8px;
   }
 
-  .purelane-hero-btn {
 
-    min-height: 50px;
+  .purelane-hero-button {
+    min-height: 44px;
 
-    padding:
-      0 20px;
+    padding: 0 17px;
 
-    font-size: 11px;
-
+    font-size: 10px;
   }
 
-  .purelane-hero-visual {
 
-    min-height: 430px;
+  .purelane-hero-products {
+    height: 340px;
 
-    margin-top: 25px;
-
+    margin-top: 10px;
   }
 
-  .hero-bottle-main {
 
-    width: 125px;
+  .purelane-hero-bottles {
+    right: 15px;
 
-    height: 350px;
+    bottom: 5px;
 
+    width: 300px;
+
+    height: 310px;
+
+    transform: scale(.75);
+
+    transform-origin: right bottom;
   }
 
-  .hero-bottle-left {
 
-    width: 80px;
+  .purelane-hero-benefits {
+    right: 8px;
 
-    height: 250px;
+    width: 82px;
 
-    left: 12%;
+    border-radius: 17px;
 
+    padding: 12px 7px;
   }
 
-  .hero-bottle-right {
 
-    width: 80px;
+  .purelane-benefit-symbol {
+    width: 32px;
 
-    height: 260px;
-
-    right: 8%;
-
+    height: 32px;
   }
 
-  .purelane-benefit-card {
 
-    right: 0;
+  .purelane-benefit-symbol svg {
+    width: 17px;
 
-    top: 105px;
-
-    width: 105px;
-
-    padding: 13px 9px;
-
+    height: 17px;
   }
 
-  .purelane-benefit strong,
-  .purelane-benefit span {
 
-    font-size: 8px;
-
+  .purelane-hero-benefit span {
+    font-size: 6.5px;
   }
 
-  .purelane-price-card {
 
-    left: 5%;
+  .purelane-price-cards {
+    left: 35%;
 
-    bottom: 35px;
+    bottom: 4px;
 
-    width: 125px;
+    transform: translateX(-50%) scale(.82);
 
+    transform-origin: bottom center;
+  }
+
+
+  .purelane-hero-dots {
+    right: 8px;
+
+    bottom: 0;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .purelane-hero-title {
+    font-size: 57px;
+  }
+
+  .purelane-hero-description {
+    font-size: 14px;
+  }
+
+  .purelane-hero-products {
+    height: 310px;
   }
 
 }
@@ -1340,9 +1232,162 @@
 </style>
 
 
+
+<script>
+
+(function () {
+
+  function initPurelaneHero() {
+
+    const hero =
+      document.querySelector(
+        '[data-purelane-hero]'
+      );
+
+    if (!hero) return;
+
+
+    const cards =
+      hero.querySelectorAll(
+        '.purelane-price-card'
+      );
+
+    const dots =
+      hero.querySelectorAll(
+        '.purelane-hero-dots button'
+      );
+
+
+    let current = 0;
+
+    let timer;
+
+
+    function showSlide(index) {
+
+      current = index;
+
+      cards.forEach(function(card, i) {
+
+        card.classList.toggle(
+          'active',
+          i === index
+        );
+
+      });
+
+
+      dots.forEach(function(dot, i) {
+
+        dot.classList.toggle(
+          'active',
+          i === index
+        );
+
+      });
+
+    }
+
+
+    function nextSlide() {
+
+      const next =
+        (current + 1) % cards.length;
+
+      showSlide(next);
+
+    }
+
+
+    function startSlider() {
+
+      clearInterval(timer);
+
+      timer = setInterval(
+        nextSlide,
+        4500
+      );
+
+    }
+
+
+    dots.forEach(function(dot) {
+
+      dot.addEventListener(
+        'click',
+        function() {
+
+          const index =
+            parseInt(
+              this.dataset.slide,
+              10
+            );
+
+          showSlide(index);
+
+          startSlider();
+
+        }
+      );
+
+    });
+
+
+    showSlide(0);
+
+    startSlider();
+
+
+    document.addEventListener(
+      'shopify:section:unload',
+      function(event) {
+
+        if (
+          event.detail &&
+          event.detail.sectionId ===
+          hero.dataset.sectionId
+        ) {
+
+          clearInterval(timer);
+
+        }
+
+      }
+    );
+
+  }
+
+
+  if (
+    document.readyState ===
+    'loading'
+  ) {
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      initPurelaneHero
+    );
+
+  } else {
+
+    initPurelaneHero();
+
+  }
+
+})();
+
+</script>
+
+
+
 {% schema %}
 {
   "name": "Purelane Hero",
-  "settings": []
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purelane Hero"
+    }
+  ]
 }
 {% endschema %}
