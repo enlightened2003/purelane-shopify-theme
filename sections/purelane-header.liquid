@@ -1,4 +1,9 @@
+<!-- =========================================================
+     PURELANE HEADER
+     ========================================================= -->
+
 <header class="purelane-header">
+
   <div class="purelane-header-inner">
 
     <!-- LOGO -->
@@ -7,69 +12,113 @@
       class="purelane-logo"
       aria-label="Purelane home"
     >
+
       <span class="purelane-logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M12 3L19 8V16L12 21L5 16V8L12 3Z"
             stroke="currentColor"
             stroke-width="1.5"
           />
+
           <path
             d="M12 7L15.5 9.5V14.5L12 17L8.5 14.5V9.5L12 7Z"
             stroke="currentColor"
             stroke-width="1.2"
           />
         </svg>
+
       </span>
 
+
       <span class="purelane-logo-text">
+
         <strong>PURELANE</strong>
+
         <small>CLEAN, SIMPLY</small>
+
       </span>
+
     </a>
 
 
-    <!-- NAVIGATION -->
-    <nav class="purelane-nav" aria-label="Main navigation">
+    <!-- =====================================================
+         DESKTOP NAVIGATION
+         ===================================================== -->
 
-      <!-- HOME -->
-      <a href="{{ routes.root_url }}#purelane-home">
+    <nav
+      class="purelane-nav"
+      aria-label="Main navigation"
+    >
+
+      <a
+        href="{{ routes.root_url }}"
+        class="purelane-nav-link"
+      >
         Home
       </a>
 
-      <!-- INGREDIENTS -->
-      <a href="{{ routes.root_url }}#ingredients">
+
+      <a
+        href="{{ routes.root_url }}#ingredients"
+        class="purelane-nav-link"
+      >
         Ingredients
       </a>
 
-      <!-- HOW IT WORKS -->
-      <a href="{{ routes.root_url }}#how-it-works">
+
+      <a
+        href="{{ routes.root_url }}#how-it-works"
+        class="purelane-nav-link"
+      >
         How it works
       </a>
 
-      <!-- SHOP -->
-      <a href="{{ routes.root_url }}#shop">
+
+      <a
+        href="{{ routes.root_url }}#shop"
+        class="purelane-nav-link"
+      >
         Shop
       </a>
 
-      <!-- BUNDLES -->
-      <a href="{{ routes.root_url }}#bundles">
+
+      <a
+        href="{{ routes.root_url }}#bundles"
+        class="purelane-nav-link"
+      >
         Bundles
       </a>
 
     </nav>
 
 
-    <!-- ACTIONS -->
+    <!-- =====================================================
+         ACTIONS
+         ===================================================== -->
+
     <div class="purelane-actions">
 
+
       <!-- SEARCH -->
+
       <a
         href="{{ routes.search_url }}"
         class="purelane-action"
         aria-label="Search"
       >
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+
           <circle
             cx="11"
             cy="11"
@@ -77,23 +126,33 @@
             stroke="currentColor"
             stroke-width="1.7"
           />
+
           <path
             d="M16 16L21 21"
             stroke="currentColor"
             stroke-width="1.7"
             stroke-linecap="round"
           />
+
         </svg>
+
       </a>
 
 
       <!-- ACCOUNT -->
+
       <a
         href="{{ routes.account_url }}"
         class="purelane-action"
         aria-label="Account"
       >
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+
           <circle
             cx="12"
             cy="8"
@@ -101,69 +160,94 @@
             stroke="currentColor"
             stroke-width="1.6"
           />
+
           <path
             d="M5.5 20C6.2 15.8 8.3 13.8 12 13.8C15.7 13.8 17.8 15.8 18.5 20"
             stroke="currentColor"
             stroke-width="1.6"
             stroke-linecap="round"
           />
+
         </svg>
+
       </a>
 
 
       <!-- CART -->
+
       <a
         href="{{ routes.cart_url }}"
         class="purelane-action purelane-cart"
         aria-label="Cart"
       >
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+
           <path
             d="M5 8H19L18 20H6L5 8Z"
             stroke="currentColor"
             stroke-width="1.6"
           />
+
           <path
             d="M9 9V6.5C9 4.8 10.3 3.5 12 3.5C13.7 3.5 15 4.8 15 6.5V9"
             stroke="currentColor"
             stroke-width="1.6"
             stroke-linecap="round"
           />
+
         </svg>
 
+
         {% if cart.item_count > 0 %}
+
           <span class="purelane-cart-count">
             {{ cart.item_count }}
           </span>
+
         {% endif %}
+
       </a>
 
 
       <!-- MOBILE MENU -->
+
       <button
         type="button"
         class="purelane-menu-button"
         aria-label="Open menu"
         aria-expanded="false"
       >
+
         <span></span>
         <span></span>
         <span></span>
+
       </button>
 
     </div>
 
   </div>
+
 </header>
 
+
+<!-- =========================================================
+     PURELANE HEADER STYLES
+     ========================================================= -->
 
 <style>
 
 /* =========================================================
-   PURELANE HEADER
+   HEADER
    ========================================================= */
 
 .purelane-header {
+
   position: absolute;
 
   top: 0;
@@ -171,44 +255,63 @@
 
   width: 100%;
 
-  z-index: 50;
+  z-index: 100;
 
   padding: 14px 18px;
 
   background: transparent;
+
 }
 
 
 /* =========================================================
-   HEADER CONTAINER
+   HEADER INNER
    ========================================================= */
 
 .purelane-header-inner {
+
   width: 100%;
+
   max-width: 1180px;
 
-  min-height: 70px;
+  min-height: 72px;
 
   margin: 0 auto;
 
-  padding: 7px 14px 7px 16px;
+  padding: 7px 16px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   border-radius: 999px;
 
-  background: #4b3a8f;
+  /*
+     LIGHT GLASS EFFECT
+  */
 
-  border: 1px solid rgba(255,255,255,.30);
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.88),
+      rgba(255,255,255,.66)
+    );
+
+  border: 1px solid rgba(91,74,143,.18);
 
   box-shadow:
-    0 14px 40px rgba(20,10,45,.18),
-    inset 0 1px 0 rgba(255,255,255,.30);
 
-  backdrop-filter: blur(18px) saturate(130%);
-  -webkit-backdrop-filter: blur(18px) saturate(130%);
+    0 10px 35px rgba(42,32,76,.10),
+
+    inset 0 1px 0 rgba(255,255,255,.95);
+
+  backdrop-filter: blur(18px) saturate(120%);
+
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+
 }
 
 
@@ -217,53 +320,77 @@
    ========================================================= */
 
 .purelane-logo {
+
   display: flex;
+
   align-items: center;
 
-  gap: 10px;
+  gap: 11px;
 
   flex-shrink: 0;
 
-  color: #ffffff;
+  color: #292044;
 
   text-decoration: none;
+
 }
 
 
+/* LOGO ICON */
+
 .purelane-logo-icon {
+
   width: 46px;
+
   height: 46px;
 
   display: grid;
+
   place-items: center;
 
   flex-shrink: 0;
 
   border-radius: 50%;
 
-  background: rgba(255,255,255,.13);
+  background:
 
-  border: 1px solid rgba(255,255,255,.28);
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.95),
+      rgba(245,239,230,.90)
+    );
 
-  color: #f0a03c;
+  border: 1px solid rgba(190,157,91,.25);
+
+  color: #dca14c;
+
 }
 
 
 .purelane-logo-icon svg {
+
   width: 25px;
+
   height: 25px;
+
 }
 
 
+/* LOGO TEXT */
+
 .purelane-logo-text {
+
   display: flex;
+
   flex-direction: column;
 
   line-height: 1;
+
 }
 
 
 .purelane-logo-text strong {
+
   font-family: Arial, sans-serif;
 
   font-size: 20px;
@@ -272,11 +399,13 @@
 
   letter-spacing: .02em;
 
-  color: #ffffff;
+  color: #34304c;
+
 }
 
 
 .purelane-logo-text small {
+
   margin-top: 5px;
 
   font-family: Arial, sans-serif;
@@ -287,7 +416,8 @@
 
   letter-spacing: .20em;
 
-  color: rgba(255,255,255,.68);
+  color: #9995a7;
+
 }
 
 
@@ -296,70 +426,91 @@
    ========================================================= */
 
 .purelane-nav {
+
   display: flex;
+
   align-items: center;
 
   gap: 32px;
 
   margin-left: auto;
+
   margin-right: auto;
+
 }
 
 
-.purelane-nav a {
+.purelane-nav-link {
+
   position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 8px 0;
 
   font-family: Arial, sans-serif;
 
-  font-size: 14px;
+  font-size: 15px;
 
-  font-weight: 600;
+  font-weight: 500;
 
-  color: rgba(255,255,255,.86);
+  color: #504b68;
 
   text-decoration: none;
 
   white-space: nowrap;
 
   transition:
+
     color .25s ease,
+
     transform .25s ease;
+
 }
 
 
-.purelane-nav a::after {
+.purelane-nav-link::after {
+
   content: "";
 
   position: absolute;
 
   left: 0;
+
   right: 0;
 
-  bottom: -7px;
+  bottom: 0;
 
   height: 2px;
 
-  border-radius: 10px;
+  border-radius: 999px;
 
-  background: #f0a03c;
+  background: #d99938;
 
   transform: scaleX(0);
 
   transform-origin: center;
 
   transition: transform .25s ease;
+
 }
 
 
-.purelane-nav a:hover {
-  color: #ffffff;
+.purelane-nav-link:hover {
+
+  color: #30274f;
 
   transform: translateY(-1px);
+
 }
 
 
-.purelane-nav a:hover::after {
+.purelane-nav-link:hover::after {
+
   transform: scaleX(1);
+
 }
 
 
@@ -368,46 +519,60 @@
    ========================================================= */
 
 .purelane-actions {
+
   display: flex;
+
   align-items: center;
 
-  gap: 16px;
+  gap: 17px;
 
   flex-shrink: 0;
+
 }
 
 
 .purelane-action {
+
   position: relative;
 
-  width: 25px;
-  height: 25px;
+  width: 26px;
+
+  height: 26px;
 
   display: grid;
+
   place-items: center;
 
   padding: 0;
 
-  color: rgba(255,255,255,.90);
+  color: #504b68;
 
   text-decoration: none;
 
   transition:
+
     color .25s ease,
+
     transform .25s ease;
+
 }
 
 
 .purelane-action:hover {
-  color: #ffffff;
+
+  color: #292044;
 
   transform: translateY(-1px);
+
 }
 
 
 .purelane-action svg {
+
   width: 21px;
+
   height: 21px;
+
 }
 
 
@@ -416,33 +581,35 @@
    ========================================================= */
 
 .purelane-cart {
+
   position: relative;
+
 }
 
 
-/* =========================================================
-   CART COUNT
-   ========================================================= */
-
 .purelane-cart-count {
+
   position: absolute;
 
   top: -7px;
-  right: -8px;
+
+  right: -7px;
 
   min-width: 17px;
+
   height: 17px;
 
   padding: 0 4px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
 
-  background: #f0a03c;
+  background: #51408e;
 
-  color: #241a3d;
+  color: #ffffff;
 
   font-family: Arial, sans-serif;
 
@@ -451,20 +618,23 @@
   font-weight: 800;
 
   line-height: 1;
+
 }
 
 
 /* =========================================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
    ========================================================= */
 
 .purelane-menu-button {
+
   display: none;
 
-  width: 25px;
-  height: 25px;
+  width: 28px;
 
-  padding: 3px;
+  height: 28px;
+
+  padding: 5px;
 
   flex-direction: column;
 
@@ -472,18 +642,21 @@
 
   gap: 4px;
 
-  color: #ffffff;
+  border: 0;
 
   background: transparent;
 
-  border: 0;
+  color: #504b68;
 
   cursor: pointer;
+
 }
 
 
 .purelane-menu-button span {
+
   width: 100%;
+
   height: 1.5px;
 
   display: block;
@@ -491,6 +664,7 @@
   background: currentColor;
 
   border-radius: 10px;
+
 }
 
 
@@ -498,18 +672,26 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
   .purelane-nav {
-    gap: 18px;
+
+    gap: 20px;
+
   }
 
-  .purelane-nav a {
-    font-size: 12px;
+
+  .purelane-nav-link {
+
+    font-size: 13px;
+
   }
+
 
   .purelane-actions {
+
     gap: 11px;
+
   }
 
 }
@@ -522,47 +704,75 @@
 @media (max-width: 700px) {
 
   .purelane-header {
+
     padding: 10px;
+
   }
 
+
   .purelane-header-inner {
+
     min-height: 62px;
 
     padding: 6px 12px;
 
     border-radius: 999px;
+
   }
+
 
   .purelane-logo-icon {
+
     width: 40px;
+
     height: 40px;
+
   }
+
 
   .purelane-logo-icon svg {
+
     width: 22px;
+
     height: 22px;
+
   }
+
 
   .purelane-logo-text strong {
+
     font-size: 17px;
+
   }
+
 
   .purelane-logo-text small {
+
     font-size: 6.5px;
+
   }
+
 
   .purelane-nav {
+
     display: none;
+
   }
 
+
   .purelane-actions {
+
     margin-left: auto;
 
     gap: 12px;
+
   }
 
+
   .purelane-menu-button {
+
     display: flex;
+
   }
 
 }
@@ -573,25 +783,114 @@
    ========================================================= */
 
 html {
+
   scroll-behavior: smooth;
+
 }
 
 
-/* Prevent sections from hiding underneath the header */
-#purelane-home,
+/*
+   Prevent sections from hiding underneath
+   the floating header when scrolling.
+*/
+
 #ingredients,
 #how-it-works,
 #shop,
 #bundles {
+
   scroll-margin-top: 100px;
+
 }
 
 </style>
 
 
+<!-- =========================================================
+     HEADER NAVIGATION SCRIPT
+     ========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const links = document.querySelectorAll(
+    ".purelane-nav-link[href*='#']"
+  );
+
+
+  links.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const url = new URL(
+        link.href,
+        window.location.origin
+      );
+
+      const targetId = url.hash;
+
+
+      if (!targetId) {
+        return;
+      }
+
+
+      /*
+         Only handle same-page navigation.
+      */
+
+      if (
+        url.pathname !== window.location.pathname
+      ) {
+        return;
+      }
+
+
+      const target = document.querySelector(targetId);
+
+
+      if (!target) {
+        return;
+      }
+
+
+      event.preventDefault();
+
+
+      target.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+      });
+
+
+      /*
+         Update URL without jumping.
+      */
+
+      history.pushState(
+        null,
+        "",
+        targetId
+      );
+
+    });
+
+  });
+
+});
+
+</script>
+
+
 {% schema %}
+
 {
   "name": "Purelane Header",
   "settings": []
 }
+
 {% endschema %}
