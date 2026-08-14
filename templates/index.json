@@ -67,7 +67,14 @@
     "how_it_works": {
       "type": "purelane-how-it-works",
       "settings": {}
-    }
+    },
+
+    "shelf": {
+  "type": "purelane-shelf",
+  "settings": {
+    "collection": "purelane-cleaning-products"
+  }
+},
   },
 
   "order": [
@@ -80,6 +87,7 @@
     "why",
     "products",
     "build_bundle",
+    "shelf",
     "how_it_works"
   ]
 }
