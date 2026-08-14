@@ -276,6 +276,67 @@
           font-size: 1.6rem;
         }
       }
+      /* PURELANE FLOWING WHITE WAVE DESIGN */
+
+body.gradient::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      ellipse 1100px 100px at 10% 12%,
+      transparent 55%,
+      rgba(255,255,255,0.28) 56%,
+      rgba(255,255,255,0.28) 58%,
+      transparent 59%
+    ),
+
+    radial-gradient(
+      ellipse 1200px 110px at 85% 30%,
+      transparent 55%,
+      rgba(255,255,255,0.24) 56%,
+      rgba(255,255,255,0.24) 58%,
+      transparent 59%
+    ),
+
+    radial-gradient(
+      ellipse 1300px 120px at 15% 52%,
+      transparent 55%,
+      rgba(255,255,255,0.25) 56%,
+      rgba(255,255,255,0.25) 58%,
+      transparent 59%
+    ),
+
+    radial-gradient(
+      ellipse 1200px 110px at 85% 73%,
+      transparent 55%,
+      rgba(255,255,255,0.22) 56%,
+      rgba(255,255,255,0.22) 58%,
+      transparent 59%
+    ),
+
+    radial-gradient(
+      ellipse 1300px 120px at 15% 92%,
+      transparent 55%,
+      rgba(255,255,255,0.22) 56%,
+      rgba(255,255,255,0.22) 58%,
+      transparent 59%
+    );
+
+  opacity: 0.85;
+}
+
+/* Keep all actual Shopify content above the decorative waves */
+
+#MainContent,
+.shopify-section-group-header-group,
+.shopify-section-group-footer-group {
+  position: relative;
+  z-index: 1;
+}
       /* =========================================================
    PURELANE GLOBAL BACKGROUND
    ========================================================= */
