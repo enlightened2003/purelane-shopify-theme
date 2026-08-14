@@ -64,17 +64,22 @@
       }
     },
 
-    "how_it_works": {
-      "type": "purelane-how-it-works",
+    "shelf": {
+      "type": "purelane-shelf",
+      "settings": {
+        "collection": "purelane-cleaning-products"
+      }
+    },
+
+    "bundle_benefits": {
+      "type": "purelane-bundle-benefits",
       "settings": {}
     },
 
-    "shelf": {
-  "type": "purelane-shelf",
-  "settings": {
-    "collection": "purelane-cleaning-products"
-  }
-},
+    "how_it_works": {
+      "type": "purelane-how-it-works",
+      "settings": {}
+    }
   },
 
   "order": [
@@ -88,6 +93,7 @@
     "products",
     "build_bundle",
     "shelf",
+    "bundle_benefits",
     "how_it_works"
   ]
 }
