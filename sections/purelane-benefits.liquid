@@ -82,6 +82,15 @@
 </section>
 
 
+<section class="purelane-benefits-section">
+
+  YOUR EXISTING 3 CARD HTML
+
+</section>
+
+
+<style>
+
 <style>
 
 /* =========================================================
@@ -89,33 +98,39 @@
    ========================================================= */
 
 .purelane-benefits-section {
-  width: 100%;
-  box-sizing: border-box;
+  width: 100% !important;
+  box-sizing: border-box !important;
 
-  padding: 30px 0 70px;
+  padding: 35px 0 70px !important;
 
-  background: transparent;
+  margin: 0 !important;
 
-  position: relative;
+  background: transparent !important;
+
+  display: block !important;
 }
 
 
 /* =========================================================
-   GRID
+   THREE CARDS — FORCE ONE ROW
    ========================================================= */
 
 .purelane-benefits-grid {
-  width: min(1190px, calc(100% - 70px));
+  width: calc(100% - 70px) !important;
+  max-width: 1190px !important;
 
-  margin: 0 auto;
+  margin: 0 auto !important;
 
-  display: grid;
+  display: flex !important;
+  flex-direction: row !important;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch !important;
 
-  gap: 22px;
+  justify-content: center !important;
 
-  box-sizing: border-box;
+  gap: 22px !important;
+
+  box-sizing: border-box !important;
 }
 
 
@@ -124,34 +139,37 @@
    ========================================================= */
 
 .purelane-benefit-card {
-  width: 100%;
-  min-width: 0;
-  min-height: 400px;
+  width: 0 !important;
+  min-width: 0 !important;
 
-  box-sizing: border-box;
+  flex: 1 1 0 !important;
 
-  padding: 32px 30px 30px;
+  min-height: 400px !important;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  box-sizing: border-box !important;
 
-  border-radius: 30px;
+  padding: 32px 30px 30px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  border-radius: 30px !important;
 
   background:
     linear-gradient(
       145deg,
       rgba(255,255,255,.86),
       rgba(218,238,235,.74)
-    );
+    ) !important;
 
-  border: 1px solid rgba(190,201,205,.65);
+  border: 1px solid rgba(190,201,205,.65) !important;
 
   box-shadow:
-    0 18px 40px rgba(40,70,65,.08);
+    0 18px 40px rgba(40,70,65,.08) !important;
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
 }
 
 
@@ -160,35 +178,36 @@
    ========================================================= */
 
 .purelane-benefit-icon {
-  width: 62px;
-  height: 62px;
+  width: 62px !important;
+  height: 62px !important;
 
-  flex: 0 0 62px;
+  flex: 0 0 62px !important;
 
-  display: grid;
-  place-items: center;
+  display: grid !important;
+  place-items: center !important;
 
-  margin-bottom: 22px;
+  margin: 0 0 22px !important;
 
-  border-radius: 18px;
+  border-radius: 18px !important;
 
-  background: rgba(248,247,242,.88);
+  background: rgba(248,247,242,.88) !important;
 
-  border: 1px solid rgba(190,198,202,.65);
+  border: 1px solid rgba(190,198,202,.65) !important;
 
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
+
 .purelane-benefit-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 28px !important;
+  height: 28px !important;
 
-  stroke: #76a844;
+  stroke: #76a844 !important;
 
-  stroke-width: 1.6;
+  stroke-width: 1.6 !important;
 
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
 }
 
 
@@ -197,19 +216,19 @@
    ========================================================= */
 
 .purelane-benefit-card h2 {
-  margin: 0 0 14px;
+  margin: 0 0 14px !important;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
 
-  font-size: 36px;
+  font-size: 36px !important;
 
-  line-height: 1.05;
+  line-height: 1.05 !important;
 
-  letter-spacing: -.035em;
+  letter-spacing: -.035em !important;
 
-  font-weight: 900;
+  font-weight: 900 !important;
 
-  color: #241a3d;
+  color: #241a3d !important;
 }
 
 
@@ -218,63 +237,64 @@
    ========================================================= */
 
 .purelane-benefit-card p {
-  margin: 0;
+  margin: 0 !important;
 
-  max-width: 390px;
+  max-width: 390px !important;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
 
-  font-size: 18px;
+  font-size: 18px !important;
 
-  line-height: 1.55;
+  line-height: 1.55 !important;
 
-  color: #666579;
+  font-weight: 400 !important;
+
+  color: #666579 !important;
 }
 
 
 /* =========================================================
-   BUTTON
+   LEARN MORE
    ========================================================= */
 
 .purelane-benefit-button {
-  margin-top: auto;
+  margin-top: auto !important;
 
-  min-height: 46px;
+  min-height: 46px !important;
 
-  padding: 0 23px;
+  padding: 0 23px !important;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
 
-  border-radius: 999px;
+  align-items: center !important;
+  justify-content: center !important;
 
-  background: rgba(255,255,255,.86);
+  border-radius: 999px !important;
 
-  border: 1px solid rgba(110,96,160,.28);
+  background: rgba(255,255,255,.86) !important;
 
-  color: #075d59;
+  border: 1px solid rgba(110,96,160,.28) !important;
 
-  font-family: Arial, Helvetica, sans-serif;
+  color: #075d59 !important;
 
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif !important;
 
-  font-weight: 800;
+  font-size: 12px !important;
 
-  letter-spacing: .14em;
+  font-weight: 800 !important;
 
-  text-decoration: none;
+  letter-spacing: .14em !important;
 
-  box-sizing: border-box;
+  text-decoration: none !important;
 
-  transition:
-    transform .2s ease,
-    background .2s ease;
+  box-sizing: border-box !important;
 }
 
+
 .purelane-benefit-button:hover {
-  transform: translateY(-2px);
-  background: #ffffff;
+  transform: translateY(-2px) !important;
+
+  background: #ffffff !important;
 }
 
 
@@ -284,26 +304,24 @@
 
 @media (max-width: 900px) {
 
-  .purelane-benefits-section {
-    padding: 25px 0 60px;
-  }
-
   .purelane-benefits-grid {
-    width: calc(100% - 40px);
-    gap: 14px;
+    width: calc(100% - 40px) !important;
+
+    gap: 14px !important;
   }
 
   .purelane-benefit-card {
-    min-height: 360px;
-    padding: 25px 22px;
+    min-height: 360px !important;
+
+    padding: 25px 22px !important;
   }
 
   .purelane-benefit-card h2 {
-    font-size: 27px;
+    font-size: 27px !important;
   }
 
   .purelane-benefit-card p {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
 }
@@ -315,33 +333,35 @@
 
 @media (max-width: 650px) {
 
-  .purelane-benefits-section {
-    padding: 20px 0 45px;
-  }
-
   .purelane-benefits-grid {
-    width: calc(100% - 30px);
+    width: calc(100% - 30px) !important;
 
-    grid-template-columns: 1fr;
+    flex-direction: column !important;
 
-    gap: 16px;
+    gap: 16px !important;
   }
 
   .purelane-benefit-card {
-    min-height: 300px;
+    width: 100% !important;
 
-    padding: 26px 24px;
+    min-height: 300px !important;
+
+    flex: none !important;
+
+    padding: 26px 24px !important;
   }
 
   .purelane-benefit-card h2 {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .purelane-benefit-card p {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
 }
+
+</style>
 
 </style>
 
@@ -352,3 +372,5 @@
   "settings": []
 }
 {% endschema %}
+
+
