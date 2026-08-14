@@ -12,9 +12,43 @@
     "main": {
       "type": "purelane-main-product",
       "settings": {}
+    },
+    "purelane_product_details_aqDtEw": {
+      "type": "purelane-product-details",
+      "blocks": {
+        "detail_hwn3aP": {
+          "type": "detail",
+          "settings": {
+            "heading": "Powerful & effective",
+            "text": "Cuts through everyday dirt, grime, soap scum and stains with ease."
+          }
+        },
+        "detail_4gfKPn": {
+          "type": "detail",
+          "settings": {
+            "heading": "Plant-powered care",
+            "text": "Thoughtfully formulated with a focus on effective ingredients and a gentler home."
+          }
+        },
+        "detail_UCt6LN": {
+          "type": "detail",
+          "settings": {
+            "heading": "Made for everyday homes",
+            "text": "Simple, practical cleaning designed for the spaces you use every day."
+          }
+        }
+      },
+      "block_order": [
+        "detail_hwn3aP",
+        "detail_4gfKPn",
+        "detail_UCt6LN"
+      ],
+      "name": "Purelane Product Details",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "purelane_product_details_aqDtEw"
   ]
 }
