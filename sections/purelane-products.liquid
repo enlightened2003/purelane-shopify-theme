@@ -1,18 +1,18 @@
-<section id="shop" class="purelane-products-section">
+<section class="purelane-combos">
 
   <!-- =====================================================
-       INTRO
+       SECTION HEADER
   ====================================================== -->
 
-  <div class="purelane-products-intro">
+  <div class="purelane-combos-header">
 
-    <div class="purelane-products-eyebrow">
+    <div class="purelane-combos-eyebrow">
       PRE-BUILT TO SAVE YOU MONEY
     </div>
 
     <h2>BEST SELLING COMBOS</h2>
 
-    <div class="purelane-products-divider">
+    <div class="purelane-combos-divider">
       <span></span>
       <b>⌄</b>
       <span></span>
@@ -28,82 +28,99 @@
 
 
   <!-- =====================================================
-       COMBO CAROUSEL
+       CAROUSEL
   ====================================================== -->
 
-  <div class="purelane-combos-wrapper">
+  <div class="purelane-combos-slider">
 
     <div class="purelane-combos-track">
 
 
       <!-- =================================================
-           CARD 1
+           BUNDLE 1
       ================================================== -->
 
       <article class="purelane-combo-card">
 
         <div class="purelane-combo-top">
 
-          <span class="purelane-saving-badge">
+          <span class="purelane-saving">
             YOU SAVE ₹398
           </span>
 
-          <span class="purelane-popular-badge">
+          <span class="purelane-popular">
             MOST POPULAR
           </span>
 
         </div>
 
 
-        <div class="purelane-products-preview">
+        <div class="purelane-combo-products">
 
-          <div class="purelane-mini-product">
-            {% if collection.products[0].featured_image %}
-              <img
-                src="{{ collection.products[0].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[0].title | escape }}"
-              >
-            {% else %}
-              <div class="purelane-bottle bottle-one"></div>
-            {% endif %}
+          {% assign p1 = collections[section.settings.collection].products[0] %}
+          {% assign p2 = collections[section.settings.collection].products[1] %}
+          {% assign p3 = collections[section.settings.collection].products[2] %}
 
-            <span>Cuts grease<br>instantly</span>
-          </div>
+          {% if p1 %}
+            <div class="purelane-mini-product">
 
-          <strong>+</strong>
+              {% if p1.featured_image %}
+                <img
+                  src="{{ p1.featured_image | image_url: width: 220 }}"
+                  alt="{{ p1.title | escape }}"
+                  loading="lazy"
+                >
+              {% endif %}
 
-          <div class="purelane-mini-product">
-            {% if collection.products[1].featured_image %}
-              <img
-                src="{{ collection.products[1].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[1].title | escape }}"
-              >
-            {% else %}
-              <div class="purelane-bottle bottle-two"></div>
-            {% endif %}
+              <span>Cuts grease<br>instantly</span>
 
-            <span>Squeaky clean<br>dishes</span>
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
-          <div class="purelane-mini-product">
-            {% if collection.products[2].featured_image %}
-              <img
-                src="{{ collection.products[2].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[2].title | escape }}"
-              >
-            {% else %}
-              <div class="purelane-bottle bottle-three"></div>
-            {% endif %}
 
-            <span>Melts hard water<br>stains</span>
-          </div>
+          {% if p2 %}
+            <div class="purelane-mini-product">
+
+              {% if p2.featured_image %}
+                <img
+                  src="{{ p2.featured_image | image_url: width: 220 }}"
+                  alt="{{ p2.title | escape }}"
+                  loading="lazy"
+                >
+              {% endif %}
+
+              <span>Squeaky clean<br>dishes</span>
+
+            </div>
+          {% endif %}
+
+
+          <strong>+</strong>
+
+
+          {% if p3 %}
+            <div class="purelane-mini-product">
+
+              {% if p3.featured_image %}
+                <img
+                  src="{{ p3.featured_image | image_url: width: 220 }}"
+                  alt="{{ p3.title | escape }}"
+                  loading="lazy"
+                >
+              {% endif %}
+
+              <span>Melts hard water<br>stains</span>
+
+            </div>
+          {% endif %}
 
         </div>
 
 
-        <div class="purelane-combo-info">
+        <div class="purelane-combo-content">
 
           <h3>KITCHEN ESSENTIALS</h3>
 
@@ -112,9 +129,9 @@
           </div>
 
           <p>
-            Includes: Foaming Kitchen Cleaner, Dishwash Gel &
-            Tap Cleaner. Everything for a sparkling kitchen,
-            no need to pick separately.
+            Includes: Foaming Kitchen Cleaner, Dishwash
+            Gel & Tap Cleaner. Everything for a sparkling
+            kitchen, no need to pick separately.
           </p>
 
           <div class="purelane-price-row">
@@ -131,60 +148,59 @@
             Inclusive of all taxes · COD available
           </small>
 
+          <a href="/collections/{{ section.settings.collection }}">
+            SHOP BUNDLE
+            <b>→</b>
+          </a>
+
         </div>
-
-
-        <a href="/collections/purelane-cleaning-products"
-           class="purelane-shop-button">
-
-          SHOP BUNDLE
-
-          <span>→</span>
-
-        </a>
 
       </article>
 
 
 
       <!-- =================================================
-           CARD 2
+           BUNDLE 2
       ================================================== -->
 
       <article class="purelane-combo-card">
 
         <div class="purelane-combo-top">
 
-          <span class="purelane-saving-badge">
+          <span class="purelane-saving">
             YOU SAVE ₹448
           </span>
 
         </div>
 
 
-        <div class="purelane-products-preview">
+        <div class="purelane-combo-products">
 
-          <div class="purelane-mini-product">
+          {% assign p4 = collections[section.settings.collection].products[3] %}
+          {% assign p5 = collections[section.settings.collection].products[4] %}
+          {% assign p6 = collections[section.settings.collection].products[5] %}
 
-            {% if collection.products[3].featured_image %}
+          {% if p4 %}
+            <div class="purelane-mini-product">
+
               <img
-                src="{{ collection.products[3].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[3].title | escape }}"
+                src="{{ p4.featured_image | image_url: width: 220 }}"
+                alt="{{ p4.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-one"></div>
-            {% endif %}
 
-            <span>Removes tough<br>stains & odour</span>
+              <span>Removes tough<br>stains & odour</span>
 
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product purelane-leaf-product">
+          <div class="purelane-mini-product purelane-mini-leaf">
 
-            <div class="purelane-mini-leaf">
+            <div class="purelane-leaf">
               ♡
             </div>
 
@@ -195,31 +211,31 @@
 
           </div>
 
+
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product">
+          {% if p6 %}
+            <div class="purelane-mini-product">
 
-            {% if collection.products[4].featured_image %}
               <img
-                src="{{ collection.products[4].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[4].title | escape }}"
+                src="{{ p6.featured_image | image_url: width: 220 }}"
+                alt="{{ p6.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-two"></div>
-            {% endif %}
 
-            <span>
-              Deep-cleans your<br>
-              machine
-            </span>
+              <span>
+                Deep-cleans your<br>
+                machine
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
 
         </div>
 
 
-        <div class="purelane-combo-info">
+        <div class="purelane-combo-content">
 
           <h3>LAUNDRY CARE BUNDLE</h3>
 
@@ -228,9 +244,9 @@
           </div>
 
           <p>
-            Includes: Laundry Detergent, Fabric Conditioner &
-            Machine Cleaner Powder. Softer, fresher wash,
-            all in one box.
+            Includes: Laundry Detergent, Fabric
+            Conditioner & Machine Cleaner Powder.
+            Softer, fresher wash, all in one box.
           </p>
 
           <div class="purelane-price-row">
@@ -247,106 +263,104 @@
             Inclusive of all taxes · COD available
           </small>
 
+          <a href="/collections/{{ section.settings.collection }}">
+            SHOP BUNDLE
+            <b>→</b>
+          </a>
+
         </div>
-
-
-        <a href="/collections/purelane-cleaning-products"
-           class="purelane-shop-button">
-
-          SHOP BUNDLE
-
-          <span>→</span>
-
-        </a>
 
       </article>
 
 
 
       <!-- =================================================
-           CARD 3
+           BUNDLE 3
       ================================================== -->
 
       <article class="purelane-combo-card purelane-best-value">
 
         <div class="purelane-combo-top">
 
-          <span class="purelane-saving-badge">
+          <span class="purelane-saving">
             BIGGEST SAVING
           </span>
 
-          <span class="purelane-popular-badge">
+          <span class="purelane-popular">
             BEST VALUE
           </span>
 
         </div>
 
 
-        <div class="purelane-products-preview">
+        <div class="purelane-combo-products">
 
-          <div class="purelane-mini-product">
+          {% assign p7 = collections[section.settings.collection].products[0] %}
+          {% assign p8 = collections[section.settings.collection].products[1] %}
+          {% assign p9 = collections[section.settings.collection].products[2] %}
 
-            {% if collection.products[0].featured_image %}
+          {% if p7 %}
+            <div class="purelane-mini-product">
+
               <img
-                src="{{ collection.products[0].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[0].title | escape }}"
+                src="{{ p7.featured_image | image_url: width: 220 }}"
+                alt="{{ p7.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-one"></div>
-            {% endif %}
 
-            <span>
-              Cuts grease<br>
-              instantly
-            </span>
+              <span>
+                Cuts grease<br>
+                instantly
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product">
+          {% if p8 %}
+            <div class="purelane-mini-product">
 
-            {% if collection.products[1].featured_image %}
               <img
-                src="{{ collection.products[1].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[1].title | escape }}"
+                src="{{ p8.featured_image | image_url: width: 220 }}"
+                alt="{{ p8.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-two"></div>
-            {% endif %}
 
-            <span>
-              Kills 99.9% germs
-            </span>
+              <span>
+                Kills 99.9% germs
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product">
+          {% if p9 %}
+            <div class="purelane-mini-product">
 
-            {% if collection.products[2].featured_image %}
               <img
-                src="{{ collection.products[2].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[2].title | escape }}"
+                src="{{ p9.featured_image | image_url: width: 220 }}"
+                alt="{{ p9.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-three"></div>
-            {% endif %}
 
-            <span>
-              Gentle hydration<br>
-              for hands
-            </span>
+              <span>
+                Gentle hydration<br>
+                for hands
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
 
         </div>
 
 
-        <div class="purelane-combo-info">
+        <div class="purelane-combo-content">
 
           <h3>COMPLETE HOME BUNDLE</h3>
 
@@ -355,9 +369,9 @@
           </div>
 
           <p>
-            Includes: Kitchen Cleaner, Laundry Detergent,
-            Floor Cleaner, Toilet Cleaner & Handwash.
-            Our biggest saving box.
+            Includes: Kitchen Cleaner, Laundry
+            Detergent, Floor Cleaner, Toilet Cleaner &
+            Handwash. Our biggest saving box.
           </p>
 
           <div class="purelane-price-row">
@@ -374,101 +388,102 @@
             Inclusive of all taxes · COD available
           </small>
 
+          <a class="purelane-primary-button"
+             href="/collections/{{ section.settings.collection }}">
+
+            SHOP BUNDLE
+            <b>→</b>
+
+          </a>
+
         </div>
-
-
-        <a href="/collections/purelane-cleaning-products"
-           class="purelane-shop-button purelane-shop-primary">
-
-          SHOP BUNDLE
-
-          <span>→</span>
-
-        </a>
 
       </article>
 
 
 
       <!-- =================================================
-           CARD 4
+           BUNDLE 4
       ================================================== -->
 
       <article class="purelane-combo-card">
 
         <div class="purelane-combo-top">
 
-          <span class="purelane-saving-badge">
+          <span class="purelane-saving">
             YOU SAVE ₹398
           </span>
 
         </div>
 
 
-        <div class="purelane-products-preview">
+        <div class="purelane-combo-products">
 
-          <div class="purelane-mini-product">
+          {% assign p10 = collections[section.settings.collection].products[1] %}
+          {% assign p11 = collections[section.settings.collection].products[2] %}
+          {% assign p12 = collections[section.settings.collection].products[3] %}
 
-            {% if collection.products[1].featured_image %}
+          {% if p10 %}
+            <div class="purelane-mini-product">
+
               <img
-                src="{{ collection.products[1].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[1].title | escape }}"
+                src="{{ p10.featured_image | image_url: width: 220 }}"
+                alt="{{ p10.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-two"></div>
-            {% endif %}
 
-            <span>
-              Kills 99.9% germs
-            </span>
+              <span>
+                Kills 99.9% germs
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product">
+          {% if p11 %}
+            <div class="purelane-mini-product">
 
-            {% if collection.products[2].featured_image %}
               <img
-                src="{{ collection.products[2].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[2].title | escape }}"
+                src="{{ p11.featured_image | image_url: width: 220 }}"
+                alt="{{ p11.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-three"></div>
-            {% endif %}
 
-            <span>
-              Melts hard water<br>
-              stains
-            </span>
+              <span>
+                Melts hard water<br>
+                stains
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
+
 
           <strong>+</strong>
 
 
-          <div class="purelane-mini-product">
+          {% if p12 %}
+            <div class="purelane-mini-product">
 
-            {% if collection.products[3].featured_image %}
               <img
-                src="{{ collection.products[3].featured_image | image_url: width: 220 }}"
-                alt="{{ collection.products[3].title | escape }}"
+                src="{{ p12.featured_image | image_url: width: 220 }}"
+                alt="{{ p12.title | escape }}"
+                loading="lazy"
               >
-            {% else %}
-              <div class="purelane-bottle bottle-one"></div>
-            {% endif %}
 
-            <span>
-              Scrub-free clean
-            </span>
+              <span>
+                Scrub-free cleaning
+              </span>
 
-          </div>
+            </div>
+          {% endif %}
 
         </div>
 
 
-        <div class="purelane-combo-info">
+        <div class="purelane-combo-content">
 
           <h3>BATHROOM DEEP CLEAN</h3>
 
@@ -477,7 +492,7 @@
           </div>
 
           <p>
-            Includes: Toilet Cleaner, Tap Cleaner & Magic
+            Includes: Toilet Cleaner, Tap Cleaner &
             Eraser. A complete bathroom refresh box.
           </p>
 
@@ -495,19 +510,15 @@
             Inclusive of all taxes · COD available
           </small>
 
+          <a href="/collections/{{ section.settings.collection }}">
+            SHOP BUNDLE
+            <b>→</b>
+          </a>
+
         </div>
 
-
-        <a href="/collections/purelane-cleaning-products"
-           class="purelane-shop-button">
-
-          SHOP BUNDLE
-
-          <span>→</span>
-
-        </a>
-
       </article>
+
 
     </div>
 
@@ -515,155 +526,154 @@
 
 
   <!-- =====================================================
-       SWIPE NOTE
+       SWIPE TEXT
   ====================================================== -->
 
-  <div class="purelane-swipe-note">
-
-    <div class="purelane-swipe-title">
-      <span>→</span>
-      SWIPE FOR MORE COMBOS
-    </div>
-
-    <p>
-      Tapping "Shop bundle" opens the bundle picker with these
-      products already added. You can still swap anything
-      before you pay.
-    </p>
-
+  <div class="purelane-swipe-label">
+    <span>→</span>
+    SWIPE FOR MORE COMBOS
   </div>
 
-</section>
+  <p class="purelane-swipe-description">
+    Tapping "Shop bundle" opens the bundle picker with these products already
+    added. You can still swap anything before you pay.
+  </p>
 
+
+</section>
 
 
 <style>
 
 /* =========================================================
-   PURELANE PRODUCTS SECTION
-   ========================================================= */
+   MAIN SECTION
+========================================================= */
 
-.purelane-products-section {
-  position: relative;
+.purelane-combos {
 
   width: 100%;
 
-  padding: 95px 0 70px;
+  box-sizing: border-box;
+
+  padding: 70px 0 55px;
 
   overflow: hidden;
 
-  box-sizing: border-box;
-
   background:
+
     radial-gradient(
-      ellipse at 50% 10%,
-      rgba(255,255,255,.22),
-      transparent 55%
+      circle at 15% 25%,
+      rgba(255,255,255,.28),
+      transparent 30%
     ),
+
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(255,255,255,.18),
+      transparent 28%
+    ),
+
     linear-gradient(
       180deg,
-      #d9f4df 0%,
-      #c9ecd5 48%,
-      #b5dcc8 100%
+      #dff5e2 0%,
+      #c9ebd6 48%,
+      #a9d8c4 100%
     );
+
+  position: relative;
+
 }
 
 
-/* WATER / WAVE TEXTURE */
+/* subtle wave effect */
 
-.purelane-products-section::before,
-.purelane-products-section::after {
+.purelane-combos::before {
+
   content: "";
 
   position: absolute;
 
-  left: -10%;
-
-  width: 120%;
-
-  height: 180px;
+  inset: 0;
 
   pointer-events: none;
 
-  opacity: .42;
-}
+  opacity: .45;
 
+  background:
 
-.purelane-products-section::before {
-  top: 55px;
+    repeating-radial-gradient(
+      ellipse at 50% 120%,
+      transparent 0,
+      transparent 55px,
+      rgba(255,255,255,.22) 57px,
+      transparent 60px
+    );
 
-  border-top:
-    7px solid rgba(255,255,255,.38);
-
-  border-radius:
-    50% 40% 55% 45%;
-}
-
-
-.purelane-products-section::after {
-  bottom: 50px;
-
-  border-top:
-    6px solid rgba(255,255,255,.30);
-
-  border-radius:
-    45% 55% 40% 60%;
 }
 
 
 /* =========================================================
-   INTRO
-   ========================================================= */
+   HEADER
+========================================================= */
 
-.purelane-products-intro {
+.purelane-combos-header {
+
   position: relative;
 
   z-index: 2;
 
-  width: min(900px, calc(100% - 40px));
-
-  margin: 0 auto 55px;
-
   text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 38px;
+
+  padding: 0 20px;
+
 }
 
 
-.purelane-products-eyebrow {
-  margin-bottom: 20px;
+.purelane-combos-eyebrow {
+
+  margin-bottom: 18px;
+
+  color: #777789;
 
   font-family: Arial, Helvetica, sans-serif;
 
   font-size: 14px;
 
-  font-weight: 700;
+  font-weight: 800;
 
-  letter-spacing: .20em;
+  letter-spacing: .22em;
 
-  color: #777a86;
 }
 
 
-.purelane-products-intro h2 {
+.purelane-combos-header h2 {
+
   margin: 0;
+
+  color: #17102f;
 
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: clamp(48px, 5vw, 70px);
+  font-size: 66px;
 
   line-height: .98;
 
   font-weight: 900;
 
-  letter-spacing: -.055em;
+  letter-spacing: -.045em;
 
-  color: #171029;
 }
 
 
-.purelane-products-divider {
-  width: 180px;
+.purelane-combos-divider {
 
-  margin: 23px auto 20px;
+  width: 230px;
+
+  margin: 18px auto 18px;
 
   display: flex;
 
@@ -671,185 +681,226 @@
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 18px;
+
 }
 
 
-.purelane-products-divider span {
-  flex: 1;
+.purelane-combos-divider span {
 
   height: 1px;
 
-  background: rgba(115,132,157,.48);
+  flex: 1;
+
+  background: rgba(70,100,110,.25);
+
 }
 
 
-.purelane-products-divider b {
-  font-family: Arial, sans-serif;
+.purelane-combos-divider b {
 
-  font-size: 25px;
+  color: #c77d1d;
 
-  line-height: 1;
+  font-size: 23px;
 
-  color: #c57916;
+  font-weight: 400;
 
   transform: rotate(180deg);
+
 }
 
 
-.purelane-products-intro p {
-  width: min(650px, 100%);
+.purelane-combos-header p {
 
   margin: 0 auto;
 
+  max-width: 650px;
+
+  color: #55566c;
+
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 24px;
+  font-size: 23px;
 
-  line-height: 1.45;
+  line-height: 1.5;
 
-  color: #565b70;
 }
 
 
 /* =========================================================
-   CAROUSEL
-   ========================================================= */
+   SLIDER
+========================================================= */
 
-.purelane-combos-wrapper {
+.purelane-combos-slider {
+
   position: relative;
 
-  z-index: 3;
+  z-index: 2;
 
   width: 100%;
 
   overflow: hidden;
+
 }
 
 
 .purelane-combos-track {
-  width: max-content;
-
-  padding-left: max(
-    30px,
-    calc((100vw - 1265px) / 2)
-  );
-
-  padding-right: 30px;
 
   display: flex;
 
   gap: 20px;
 
-  overflow: visible;
+  width: max-content;
+
+  padding-left: max(
+    30px,
+    calc((100vw - 1480px) / 2)
+  );
+
+  padding-right: 30px;
+
+  animation: purelaneComboMove 26s ease-in-out infinite;
+
 }
 
 
-/* =========================================================
-   COMBO CARD
-   ========================================================= */
+@keyframes purelaneComboMove {
+
+  0%,
+  20% {
+
+    transform: translateX(0);
+
+  }
+
+  35%,
+  55% {
+
+    transform: translateX(-180px);
+
+  }
+
+  70%,
+  90% {
+
+    transform: translateX(0);
+
+  }
+
+  100% {
+
+    transform: translateX(0);
+
+  }
+
+}
+
 
 .purelane-combo-card {
-  position: relative;
 
   width: 375px;
 
-  min-width: 375px;
-
-  height: 560px;
+  flex: 0 0 375px;
 
   overflow: hidden;
 
-  display: flex;
-
-  flex-direction: column;
-
-  border-radius: 28px;
-
-  border: 1px solid rgba(190,201,210,.72);
+  border-radius: 30px;
 
   background:
+
     linear-gradient(
-      180deg,
-      rgba(255,255,255,.90) 0%,
-      rgba(216,237,233,.88) 100%
+      145deg,
+      rgba(255,255,255,.88),
+      rgba(207,232,226,.88)
     );
 
+  border: 1px solid rgba(180,195,201,.75);
+
   box-shadow:
-    0 20px 40px rgba(40,70,65,.10);
+
+    0 16px 35px rgba(45,75,70,.12);
 
   backdrop-filter: blur(18px);
 
   -webkit-backdrop-filter: blur(18px);
 
-  box-sizing: border-box;
 }
 
 
-.purelane-combo-card.purelane-best-value {
-  border: 2px solid rgba(209,151,61,.65);
+.purelane-best-value {
 
-  box-shadow:
-    0 22px 45px rgba(40,70,65,.13);
+  border: 2px solid rgba(205,143,46,.65);
+
 }
 
 
 /* =========================================================
    TOP BADGES
-   ========================================================= */
+========================================================= */
 
 .purelane-combo-top {
-  position: relative;
 
-  z-index: 4;
+  height: 62px;
 
-  min-height: 64px;
+  padding: 20px 17px 0;
 
-  padding: 20px 17px 8px;
+  box-sizing: border-box;
 
   display: flex;
 
-  align-items: flex-start;
-
   justify-content: space-between;
 
-  box-sizing: border-box;
+  align-items: flex-start;
+
 }
 
 
-.purelane-saving-badge {
-  padding: 8px 14px;
+.purelane-saving {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.75);
 
-  border: 1px solid rgba(205,148,64,.38);
+  border: 1px solid rgba(202,139,43,.38);
 
-  font-family: Arial, sans-serif;
+  color: #79a34c;
 
   font-size: 12px;
 
   font-weight: 800;
 
-  letter-spacing: .12em;
-
-  color: #719b4c;
+  letter-spacing: .1em;
 
   white-space: nowrap;
+
 }
 
 
-.purelane-popular-badge {
-  padding: 8px 14px;
+.purelane-popular {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0 15px;
 
   border-radius: 999px;
 
   background: #006d68;
 
-  color: #ffffff;
-
-  font-family: Arial, sans-serif;
+  color: white;
 
   font-size: 11px;
 
@@ -858,17 +909,21 @@
   letter-spacing: .08em;
 
   white-space: nowrap;
+
 }
 
 
 /* =========================================================
-   PRODUCT PREVIEW
-   ========================================================= */
+   PRODUCT IMAGES
+========================================================= */
 
-.purelane-products-preview {
+.purelane-combo-products {
+
   height: 145px;
 
-  padding: 5px 17px 15px;
+  padding: 4px 14px 10px;
+
+  box-sizing: border-box;
 
   display: flex;
 
@@ -876,18 +931,18 @@
 
   justify-content: space-between;
 
-  gap: 8px;
+  gap: 5px;
 
-  border-bottom: 1px solid rgba(175,192,196,.35);
+  background: rgba(255,255,255,.22);
 
-  box-sizing: border-box;
 }
 
 
 .purelane-mini-product {
-  flex: 1;
 
-  min-width: 0;
+  width: 94px;
+
+  flex: 0 0 94px;
 
   height: 130px;
 
@@ -900,152 +955,105 @@
   justify-content: flex-start;
 
   text-align: center;
+
 }
 
 
 .purelane-mini-product img {
-  width: 70px;
 
-  height: 88px;
+  width: 74px;
+
+  height: 92px;
 
   object-fit: contain;
 
-  margin-bottom: 3px;
+  display: block;
 
-  filter:
-    drop-shadow(
-      0 7px 9px rgba(80,70,120,.16)
-    );
+  margin-bottom: 5px;
+
 }
 
 
 .purelane-mini-product span {
-  font-family: Arial, Helvetica, sans-serif;
+
+  display: block;
+
+  color: #59596c;
 
   font-size: 11px;
 
-  line-height: 1.15;
+  line-height: 1.2;
 
-  color: #55586b;
+  font-weight: 500;
+
 }
 
 
-.purelane-products-preview > strong {
-  flex-shrink: 0;
+.purelane-combo-products > strong {
 
-  color: #c97818;
+  color: #c87916;
 
-  font-family: Arial, sans-serif;
+  font-size: 16px;
 
-  font-size: 14px;
-}
+  font-weight: 800;
 
+  flex: 0 0 auto;
 
-/* FALLBACK BOTTLE */
-
-.purelane-bottle {
-  position: relative;
-
-  width: 35px;
-
-  height: 70px;
-
-  margin-top: 13px;
-
-  margin-bottom: 8px;
-
-  border-radius: 8px 8px 6px 6px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #8d77cc,
-      #7460b8
-    );
-
-  box-shadow:
-    0 8px 12px rgba(65,55,110,.18);
-}
-
-
-.purelane-bottle::before {
-  content: "";
-
-  position: absolute;
-
-  left: 10px;
-
-  top: -12px;
-
-  width: 15px;
-
-  height: 14px;
-
-  border-radius: 3px 3px 1px 1px;
-
-  background: #7964bd;
-}
-
-
-.purelane-bottle::after {
-  content: "";
-
-  position: absolute;
-
-  left: 6px;
-
-  top: 32px;
-
-  width: 23px;
-
-  height: 18px;
-
-  border-radius: 2px;
-
-  background: rgba(245,243,255,.90);
 }
 
 
 .purelane-mini-leaf {
+
+  justify-content: center;
+
+}
+
+
+.purelane-leaf {
+
   width: 54px;
 
-  height: 82px;
+  height: 78px;
 
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 
   display: grid;
 
   place-items: center;
 
-  border: 1px dashed rgba(120,140,190,.35);
+  border-radius: 12px;
 
-  border-radius: 10px;
+  border: 1px dashed rgba(110,130,180,.4);
 
-  font-size: 23px;
+  color: #61932e;
 
-  color: #6b9b38;
+  font-size: 22px;
+
 }
 
 
 /* =========================================================
-   CARD INFORMATION
-   ========================================================= */
+   CARD CONTENT
+========================================================= */
 
-.purelane-combo-info {
-  flex: 1;
+.purelane-combo-content {
 
-  padding: 18px 20px 10px;
+  padding: 19px 20px 20px;
 
-  box-sizing: border-box;
+  border-top: 1px solid rgba(180,195,201,.55);
+
 }
 
 
-.purelane-combo-info h3 {
-  margin: 0 0 9px;
+.purelane-combo-content h3 {
+
+  margin: 0 0 8px;
+
+  color: #26203e;
 
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 20px;
+  font-size: 21px;
 
   line-height: 1.1;
 
@@ -1053,113 +1061,111 @@
 
   letter-spacing: -.025em;
 
-  color: #29243e;
 }
 
 
 .purelane-product-count {
-  margin-bottom: 14px;
 
-  font-family: Arial, sans-serif;
+  margin-bottom: 17px;
+
+  color: #858696;
 
   font-size: 13px;
 
   font-weight: 800;
 
-  letter-spacing: .13em;
+  letter-spacing: .1em;
 
-  color: #818595;
 }
 
 
-.purelane-combo-info p {
-  margin: 0;
+.purelane-combo-content p {
 
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 76px;
 
-  font-size: 15.5px;
+  margin: 0 0 16px;
 
-  line-height: 1.45;
+  color: #5d5d71;
 
-  color: #5d6073;
+  font-size: 15px;
+
+  line-height: 1.48;
+
 }
 
 
 .purelane-price-row {
-  margin-top: 25px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 9px;
+  gap: 10px;
+
+  margin-bottom: 8px;
+
 }
 
 
 .purelane-price-row strong {
-  font-family: Arial, sans-serif;
 
-  font-size: 31px;
+  color: #17102f;
+
+  font-size: 30px;
 
   font-weight: 900;
 
-  letter-spacing: -.04em;
-
-  color: #161127;
 }
 
 
 .purelane-price-row del {
-  font-family: Arial, sans-serif;
+
+  color: #777785;
 
   font-size: 14px;
 
-  color: #858691;
 }
 
 
 .purelane-price-row span {
-  padding: 7px 10px;
+
+  padding: 6px 10px;
 
   border-radius: 999px;
 
-  background: rgba(218,207,154,.25);
+  background: rgba(130,163,72,.12);
 
-  border: 1px solid rgba(197,151,54,.45);
+  border: 1px solid rgba(130,163,72,.4);
 
-  font-family: Arial, sans-serif;
+  color: #67932d;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 800;
 
-  letter-spacing: .08em;
-
-  color: #669438;
 }
 
 
-.purelane-combo-info small {
+.purelane-combo-content small {
+
   display: block;
 
-  margin-top: 10px;
+  margin-bottom: 18px;
 
-  font-family: Arial, sans-serif;
+  color: #77798a;
 
   font-size: 12px;
 
-  color: #7a7d8b;
 }
 
 
-/* =========================================================
-   SHOP BUTTON
-   ========================================================= */
+.purelane-combo-content > a {
 
-.purelane-shop-button {
-  height: 56px;
+  width: 100%;
 
-  margin: 0 20px 20px;
+  height: 55px;
+
+  box-sizing: border-box;
 
   display: flex;
 
@@ -1167,7 +1173,7 @@
 
   justify-content: center;
 
-  gap: 14px;
+  gap: 15px;
 
   border-radius: 999px;
 
@@ -1177,187 +1183,195 @@
 
   color: #075d59;
 
-  font-family: Arial, sans-serif;
+  text-decoration: none;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 800;
 
-  letter-spacing: .14em;
+  letter-spacing: .12em;
 
-  text-decoration: none;
-
-  transition:
-    transform .2s ease,
-    background .2s ease;
 }
 
 
-.purelane-shop-button span {
+.purelane-combo-content > a b {
+
   font-size: 20px;
 
-  line-height: 1;
+  font-weight: 400;
+
 }
 
 
-.purelane-shop-button:hover {
-  transform: translateY(-2px);
+.purelane-combo-content > a:hover {
 
-  background: #ffffff;
+  background: white;
+
 }
 
 
-.purelane-shop-primary {
-  background: #006e68;
+.purelane-combo-content > .purelane-primary-button {
 
-  color: #ffffff;
+  background: #006f69;
 
-  border-color: #006e68;
-}
+  color: white;
 
+  border-color: #006f69;
 
-.purelane-shop-primary:hover {
-  background: #007d76;
 }
 
 
 /* =========================================================
-   SWIPE NOTE
-   ========================================================= */
+   BOTTOM TEXT
+========================================================= */
 
-.purelane-swipe-note {
+.purelane-swipe-label {
+
   position: relative;
 
-  z-index: 3;
+  z-index: 2;
 
-  width: min(650px, calc(100% - 40px));
-
-  margin: 20px auto 0;
+  margin-top: 22px;
 
   text-align: center;
-}
 
+  color: #737787;
 
-.purelane-swipe-title {
-  font-family: Arial, sans-serif;
-
-  font-size: 12px;
+  font-size: 13px;
 
   font-weight: 800;
 
-  letter-spacing: .16em;
+  letter-spacing: .17em;
 
-  color: #737886;
 }
 
 
-.purelane-swipe-title span {
+.purelane-swipe-label span {
+
+  color: #c77d1d;
+
   margin-right: 8px;
 
-  color: #c57916;
+  font-size: 20px;
 
-  font-size: 18px;
 }
 
 
-.purelane-swipe-note p {
-  margin: 20px 0 0;
+.purelane-swipe-description {
 
-  font-family: Arial, sans-serif;
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin: 17px auto 0;
+
+  padding: 0 20px;
+
+  text-align: center;
+
+  color: #737787;
 
   font-size: 15px;
 
   line-height: 1.55;
-
-  color: #737886;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .purelane-products-section {
-    padding: 70px 0 55px;
-  }
-
-  .purelane-products-intro {
-    margin-bottom: 35px;
-  }
-
-  .purelane-products-eyebrow {
-    font-size: 11px;
-  }
-
-  .purelane-products-intro h2 {
-    font-size: 43px;
-  }
-
-  .purelane-products-intro p {
-    font-size: 18px;
-  }
-
-  .purelane-combos-track {
-    padding-left: 18px;
-
-    gap: 14px;
-  }
-
-  .purelane-combo-card {
-    width: 315px;
-
-    min-width: 315px;
-
-    height: 535px;
-
-    border-radius: 24px;
-  }
-
-  .purelane-products-preview {
-    padding-left: 12px;
-
-    padding-right: 12px;
-  }
-
-  .purelane-mini-product img {
-    width: 58px;
-
-    height: 78px;
-  }
-
-  .purelane-combo-info {
-    padding-left: 17px;
-
-    padding-right: 17px;
-  }
-
-  .purelane-combo-info h3 {
-    font-size: 18px;
-  }
-
-  .purelane-combo-info p {
-    font-size: 14px;
-  }
 
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (min-width: 701px) and (max-width: 1100px) {
+@media (max-width: 900px) {
 
-  .purelane-combo-card {
-    width: 340px;
+  .purelane-combos {
 
-    min-width: 340px;
+    padding-top: 55px;
+
   }
 
-  .purelane-products-intro h2 {
-    font-size: 56px;
+  .purelane-combos-header h2 {
+
+    font-size: 48px;
+
+  }
+
+  .purelane-combos-header p {
+
+    font-size: 19px;
+
+  }
+
+  .purelane-combo-card {
+
+    width: 340px;
+
+    flex-basis: 340px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .purelane-combos {
+
+    padding: 45px 0 45px;
+
+  }
+
+  .purelane-combos-eyebrow {
+
+    font-size: 11px;
+
+  }
+
+  .purelane-combos-header h2 {
+
+    font-size: 38px;
+
+  }
+
+  .purelane-combos-header p {
+
+    font-size: 17px;
+
+  }
+
+  .purelane-combo-card {
+
+    width: 320px;
+
+    flex-basis: 320px;
+
+  }
+
+  .purelane-combos-track {
+
+    animation: none;
+
+    overflow-x: auto;
+
+  }
+
+}
+
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .purelane-combos-track {
+
+    animation: none;
+
   }
 
 }
@@ -1365,21 +1379,29 @@
 </style>
 
 
-
 {% schema %}
+
 {
   "name": "Purelane Products",
+
   "settings": [
+
     {
       "type": "collection",
       "id": "collection",
       "label": "Product collection"
     }
+
   ],
+
   "presets": [
+
     {
       "name": "Purelane Products"
     }
+
   ]
+
 }
+
 {% endschema %}
