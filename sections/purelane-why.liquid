@@ -1,320 +1,226 @@
-<section class="purelane-why">
+<section id="purelane-why-{{ section.id }}" class="purelane-why-section">
 
-  <div class="purelane-why-inner">
+  <div class="purelane-why-container">
 
-    <!-- =========================================
-         TOP CONTENT
-    ========================================== -->
+    <!-- =====================================================
+         LEFT CONTENT
+    ====================================================== -->
 
-    <div class="purelane-why-main">
+    <div class="purelane-why-content">
 
-      <!-- LEFT -->
-      <div class="purelane-why-content">
-
-        <div class="purelane-eyebrow">
-          WHY IT WORKS
-        </div>
-
-        <h2>
-          TOUGH ON GRIME.<br>
-          GENTLE ON<br>
-          EVERYTHING ELSE.
-        </h2>
-
-        <p>
-          Every formula is built on plant-derived cleansers and
-          essential oils. It behaves exactly like the cleaner you
-          are used to, minus the things you never signed up for.
-        </p>
-
-        <a href="#ingredients" class="purelane-why-button">
-          SEE THE INGREDIENT LIST
-          <span>→</span>
-        </a>
-
+      <div class="purelane-why-eyebrow">
+        WHY IT WORKS
       </div>
 
-
-      <!-- =========================================
-           PRODUCT DISPLAY
-      ========================================== -->
-
-      <div class="purelane-why-product">
-
-        <div class="purelane-why-product-card">
-
-          <div class="purelane-why-bottle-area">
-
-            <!-- PRODUCT 1 -->
-
-            <div class="purelane-why-product-slide active">
-
-              <div class="why-bottle">
-
-                <div class="why-bottle-cap"></div>
-
-                <div class="why-bottle-neck"></div>
-
-                <div class="why-bottle-body">
-
-                  <div class="why-bottle-label">
-
-                    <span></span>
-                    <span></span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="why-product-name">
-                LAUNDRY DETERGENT
-              </div>
-
-              <div class="why-product-description">
-                Tough on stains, soft on fabric
-              </div>
-
-            </div>
-
-
-            <!-- PRODUCT 2 -->
-
-            <div class="purelane-why-product-slide">
-
-              <div class="why-bottle">
-
-                <div class="why-bottle-cap"></div>
-
-                <div class="why-bottle-neck"></div>
-
-                <div class="why-bottle-body">
-
-                  <div class="why-bottle-label">
-
-                    <span></span>
-                    <span></span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="why-product-name">
-                TOILET CLEANER
-              </div>
-
-              <div class="why-product-description">
-                Kills 99.9% of germs
-              </div>
-
-            </div>
-
-
-            <!-- PRODUCT 3 -->
-
-            <div class="purelane-why-product-slide">
-
-              <div class="why-bottle">
-
-                <div class="why-bottle-cap"></div>
-
-                <div class="why-bottle-neck"></div>
-
-                <div class="why-bottle-body">
-
-                  <div class="why-bottle-label">
-
-                    <span></span>
-                    <span></span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="why-product-name">
-                FLOOR CLEANER
-              </div>
-
-              <div class="why-product-description">
-                Neem powered, pet safe
-              </div>
-
-            </div>
-
-
-            <!-- PRODUCT 4 -->
-
-            <div class="purelane-why-product-slide">
-
-              <div class="why-bottle">
-
-                <div class="why-bottle-cap"></div>
-
-                <div class="why-bottle-neck"></div>
-
-                <div class="why-bottle-body">
-
-                  <div class="why-bottle-label">
-
-                    <span></span>
-                    <span></span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="why-product-name">
-                KITCHEN CLEANER
-              </div>
-
-              <div class="why-product-description">
-                Cuts grease, no harsh chemicals
-              </div>
-
-            </div>
-
-
-            <!-- PRODUCT 5 -->
-
-            <div class="purelane-why-product-slide">
-
-              <div class="why-bottle">
-
-                <div class="why-bottle-cap"></div>
-
-                <div class="why-bottle-neck"></div>
-
-                <div class="why-bottle-body">
-
-                  <div class="why-bottle-label">
-
-                    <span></span>
-                    <span></span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="why-product-name">
-                TAP & BATHROOM
-              </div>
-
-              <div class="why-product-description">
-                Melts hard water stains
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- DOTS -->
-
-          <div class="purelane-why-dots">
-
-            <button class="active" data-why-slide="0"></button>
-            <button data-why-slide="1"></button>
-            <button data-why-slide="2"></button>
-            <button data-why-slide="3"></button>
-            <button data-why-slide="4"></button>
-
-          </div>
-
-        </div>
-
-      </div>
+      <h2 class="purelane-why-title">
+        TOUGH ON GRIME.<br>
+        GENTLE ON<br>
+        EVERYTHING ELSE.
+      </h2>
+
+      <p class="purelane-why-description">
+        Every formula is built on plant-derived cleansers and
+        essential oils. It behaves exactly like the cleaner you
+        are used to, minus the things you never signed up for.
+      </p>
+
+      <a
+        href="#purelane-ingredients"
+        class="purelane-why-button"
+      >
+        SEE THE INGREDIENT LIST
+        <span>→</span>
+      </a>
 
     </div>
 
 
-    <!-- =========================================
-         STATS
-    ========================================== -->
+    <!-- =====================================================
+         RIGHT PRODUCT SLIDER
+    ====================================================== -->
+
+    <div class="purelane-why-slider">
+
+      <div class="purelane-why-product-window">
+
+        {% if section.settings.product_collection != blank %}
+
+          {% assign why_products = section.settings.product_collection.products %}
+
+          {% for product in why_products limit: 5 %}
+
+            <div
+              class="purelane-why-product-slide {% if forloop.first %}is-active{% endif %}"
+              data-slide="{{ forloop.index0 }}"
+            >
+
+              <div class="purelane-why-product-image-wrap">
+
+                {% if product.featured_image %}
+
+                  {{
+                    product.featured_image
+                    | image_url: width: 700
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'purelane-why-product-image',
+                      alt: product.featured_image.alt | default: product.title
+                  }}
+
+                {% else %}
+
+                  <div class="purelane-why-no-image">
+                    No image
+                  </div>
+
+                {% endif %}
+
+              </div>
+
+
+              <div class="purelane-why-product-info">
+
+                <h3>
+                  {{ product.title }}
+                </h3>
+
+                <p>
+                  {% if product.description != blank %}
+                    {{ product.description | strip_html | truncate: 70 }}
+                  {% else %}
+                    Plant-powered, effective and gentle.
+                  {% endif %}
+                </p>
+
+              </div>
+
+            </div>
+
+          {% endfor %}
+
+        {% else %}
+
+          <div class="purelane-why-no-collection">
+
+            <div class="purelane-why-placeholder-icon">
+              +
+            </div>
+
+            <p>
+              Select a product collection
+            </p>
+
+          </div>
+
+        {% endif %}
+
+      </div>
+
+
+      <!-- =====================================================
+           SLIDER DOTS
+      ====================================================== -->
+
+      {% if section.settings.product_collection != blank %}
+
+        <div class="purelane-why-slider-dots">
+
+          {% for product in section.settings.product_collection.products limit: 5 %}
+
+            <button
+              type="button"
+              class="purelane-why-dot {% if forloop.first %}is-active{% endif %}"
+              data-why-dot="{{ forloop.index0 }}"
+              aria-label="Show {{ product.title }}"
+            ></button>
+
+          {% endfor %}
+
+        </div>
+
+      {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         BOTTOM STATISTICS
+    ====================================================== -->
 
     <div class="purelane-why-stats">
 
-
       <!-- STAT 1 -->
 
-      <div class="purelane-stat">
+      <div class="purelane-why-stat">
 
-        <div class="purelane-stat-circle">
+        <div class="purelane-why-stat-circle">
           99.9%
         </div>
 
-        <strong>
+        <div class="purelane-why-stat-title">
           GERM KILL
-        </strong>
+        </div>
 
-        <p>
+        <div class="purelane-why-stat-text">
           Tested against germs and bacteria
-        </p>
+        </div>
 
       </div>
 
 
       <!-- STAT 2 -->
 
-      <div class="purelane-stat">
+      <div class="purelane-why-stat">
 
-        <div class="purelane-stat-circle">
+        <div class="purelane-why-stat-circle">
           0%
         </div>
 
-        <strong>
+        <div class="purelane-why-stat-title">
           SULPHATES
-        </strong>
+        </div>
 
-        <p>
+        <div class="purelane-why-stat-text">
           No SLS, chlorine or parabens
-        </p>
+        </div>
 
       </div>
 
 
       <!-- STAT 3 -->
 
-      <div class="purelane-stat">
+      <div class="purelane-why-stat">
 
-        <div class="purelane-stat-circle">
+        <div class="purelane-why-stat-circle">
           100%
         </div>
 
-        <strong>
+        <div class="purelane-why-stat-title">
           PLANT BASED
-        </strong>
+        </div>
 
-        <p>
+        <div class="purelane-why-stat-text">
           Cleansers derived from plants
-        </p>
+        </div>
 
       </div>
 
 
       <!-- STAT 4 -->
 
-      <div class="purelane-stat">
+      <div class="purelane-why-stat">
 
-        <div class="purelane-stat-circle">
+        <div class="purelane-why-stat-circle">
           4.8
         </div>
 
-        <strong>
+        <div class="purelane-why-stat-title">
           RATED
-        </strong>
+        </div>
 
-        <p>
+        <div class="purelane-why-stat-text">
           Across 8,000+ verified reviews
-        </p>
+        </div>
 
       </div>
 
@@ -328,40 +234,47 @@
 <style>
 
 /* =========================================================
-   WHY SECTION
+   PURELANE WHY SECTION
 ========================================================= */
 
-.purelane-why {
-
-  position: relative;
+#purelane-why-{{ section.id }} {
 
   width: 100%;
 
-  padding: 70px 0 75px;
-
-  overflow: hidden;
-
   box-sizing: border-box;
+
+  padding: 70px 0 55px;
 
   background:
     radial-gradient(
-      ellipse at 70% 35%,
-      rgba(255,255,255,.30),
-      transparent 55%
+      circle at 20% 30%,
+      rgba(255,255,255,.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(170,225,195,.30),
+      transparent 40%
     ),
     linear-gradient(
-      145deg,
-      #dff5e4 0%,
-      #c9ead9 48%,
-      #acd6c4 100%
+      135deg,
+      #e7f8e9 0%,
+      #d9f2df 45%,
+      #b9dec9 100%
     );
+
+  position: relative;
+
+  overflow: hidden;
 
 }
 
 
-/* subtle background waves */
+/* =========================================================
+   SUBTLE BACKGROUND WAVES
+========================================================= */
 
-.purelane-why::before {
+#purelane-why-{{ section.id }}::before {
 
   content: "";
 
@@ -371,81 +284,71 @@
 
   pointer-events: none;
 
-  opacity: .4;
+  opacity: .45;
 
   background:
 
     radial-gradient(
-      ellipse at 15% 35%,
-      transparent 0,
-      transparent 42%,
-      rgba(255,255,255,.55) 43%,
-      transparent 44%
+      ellipse at 15% 20%,
+      transparent 0 55%,
+      rgba(255,255,255,.45) 56%,
+      transparent 58%
     ),
 
     radial-gradient(
-      ellipse at 80% 70%,
-      transparent 0,
-      transparent 44%,
-      rgba(255,255,255,.45) 45%,
-      transparent 46%
+      ellipse at 75% 60%,
+      transparent 0 55%,
+      rgba(255,255,255,.35) 56%,
+      transparent 58%
     );
 
 }
 
 
 /* =========================================================
-   INNER
+   MAIN CONTAINER
 ========================================================= */
 
-.purelane-why-inner {
+.purelane-why-container {
+
+  width: min(1400px, calc(100% - 80px));
+
+  margin: 0 auto;
 
   position: relative;
 
   z-index: 2;
 
-  width: min(1200px, calc(100% - 80px));
-
-  margin: 0 auto;
-
-}
-
-
-/* =========================================================
-   MAIN
-========================================================= */
-
-.purelane-why-main {
-
   display: grid;
 
-  grid-template-columns: 58% 42%;
+  grid-template-columns: minmax(0, 1.1fr) minmax(420px, .9fr);
 
-  align-items: center;
+  column-gap: 55px;
 
-  min-height: 450px;
+  row-gap: 50px;
 
 }
 
 
 /* =========================================================
-   LEFT
+   LEFT CONTENT
 ========================================================= */
 
 .purelane-why-content {
 
-  padding: 20px 30px 30px 0;
+  padding: 35px 0 0 45px;
 
 }
 
 
-.purelane-eyebrow {
+.purelane-why-eyebrow {
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 
-  color: #9897a7;
-
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 13px;
 
@@ -453,41 +356,49 @@
 
   letter-spacing: .22em;
 
-}
-
-
-.purelane-why-content h2 {
-
-  margin: 0 0 22px;
-
-  color: #251c40;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: clamp(48px, 5vw, 72px);
-
-  line-height: .9;
-
-  letter-spacing: -.055em;
-
-  font-weight: 900;
+  color: #8b8998;
 
 }
 
 
-.purelane-why-content p {
-
-  max-width: 530px;
+.purelane-why-title {
 
   margin: 0;
 
-  color: #68697c;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(52px, 5vw, 76px);
 
-  font-size: 17px;
+  line-height: .92;
 
-  line-height: 1.7;
+  letter-spacing: -.045em;
+
+  font-weight: 900;
+
+  color: #211936;
+
+}
+
+
+.purelane-why-description {
+
+  max-width: 570px;
+
+  margin: 25px 0 30px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.55;
+
+  color: #69697d;
 
 }
 
@@ -502,84 +413,111 @@
 
   align-items: center;
 
-  gap: 18px;
+  justify-content: center;
 
-  margin-top: 27px;
+  gap: 22px;
 
-  padding: 17px 27px;
+  min-height: 56px;
+
+  padding: 0 30px;
 
   border-radius: 999px;
 
-  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      #13857e,
+      #00635f
+    );
 
-  background: #08776f;
+  color: #ffffff;
 
-  box-shadow:
-    0 15px 30px rgba(0,90,80,.18);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  text-decoration: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 800;
 
-  letter-spacing: .1em;
+  letter-spacing: .12em;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 12px 25px rgba(0,90,80,.18);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 
 }
 
 
 .purelane-why-button span {
 
-  font-size: 20px;
+  font-size: 22px;
+
+  line-height: 1;
+
+}
+
+
+.purelane-why-button:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px rgba(0,90,80,.25);
 
 }
 
 
 /* =========================================================
-   PRODUCT
+   PRODUCT SLIDER
 ========================================================= */
 
-.purelane-why-product {
+.purelane-why-slider {
+
+  min-width: 0;
 
   display: flex;
 
-  align-items: center;
+  flex-direction: column;
 
-  justify-content: center;
+  align-items: center;
 
 }
 
 
-.purelane-why-product-card {
+.purelane-why-product-window {
+
+  width: 100%;
+
+  height: 380px;
 
   position: relative;
 
-  width: 390px;
+  overflow: hidden;
 
-  height: 350px;
+  border-radius: 28px;
 
-  border-radius: 25px;
-
-  border: 1px solid rgba(255,255,255,.8);
+  border: 1px solid rgba(190,190,210,.65);
 
   background:
-
     linear-gradient(
       145deg,
-      rgba(255,255,255,.86),
-      rgba(239,239,250,.78)
+      rgba(255,255,255,.82),
+      rgba(242,241,249,.72)
     );
 
   box-shadow:
-    0 20px 45px rgba(70,70,100,.10);
+    0 20px 50px rgba(50,45,80,.10);
 
   backdrop-filter: blur(18px);
 
   -webkit-backdrop-filter: blur(18px);
-
-  overflow: hidden;
 
 }
 
@@ -587,17 +525,6 @@
 /* =========================================================
    PRODUCT SLIDES
 ========================================================= */
-
-.purelane-why-bottle-area {
-
-  position: relative;
-
-  width: 100%;
-
-  height: 100%;
-
-}
-
 
 .purelane-why-product-slide {
 
@@ -613,20 +540,25 @@
 
   justify-content: center;
 
+  padding: 25px;
+
+  box-sizing: border-box;
+
   opacity: 0;
 
   visibility: hidden;
 
-  transform: translateX(25px);
+  transform: translateX(45px);
 
   transition:
-    opacity .6s ease,
-    transform .6s ease;
+    opacity .65s ease,
+    transform .65s ease,
+    visibility .65s ease;
 
 }
 
 
-.purelane-why-product-slide.active {
+.purelane-why-product-slide.is-active {
 
   opacity: 1;
 
@@ -638,170 +570,95 @@
 
 
 /* =========================================================
-   BOTTLE
+   PRODUCT IMAGE
 ========================================================= */
 
-.why-bottle {
+.purelane-why-product-image-wrap {
 
-  position: relative;
+  width: 100%;
 
-  width: 92px;
-
-  height: 190px;
-
-  margin-top: -20px;
-
-}
-
-
-.why-bottle-cap {
-
-  position: absolute;
-
-  width: 30px;
-
-  height: 32px;
-
-  left: 50%;
-
-  top: 0;
-
-  transform: translateX(-50%);
-
-  border-radius: 6px 6px 2px 2px;
-
-  background: #8063c7;
-
-}
-
-
-.why-bottle-neck {
-
-  position: absolute;
-
-  width: 20px;
-
-  height: 28px;
-
-  left: 50%;
-
-  top: 27px;
-
-  transform: translateX(-50%);
-
-  background: #8063c7;
-
-}
-
-
-.why-bottle-body {
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: 0;
-
-  width: 92px;
-
-  height: 150px;
-
-  border-radius: 14px 14px 9px 9px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #8164cb,
-      #604ca3
-    );
-
-  box-shadow:
-    0 18px 30px rgba(75,55,130,.18);
-
-}
-
-
-.why-bottle-label {
-
-  position: absolute;
-
-  left: 12px;
-
-  right: 12px;
-
-  top: 52px;
-
-  height: 65px;
-
-  border-radius: 4px;
-
-  background: #eeeaf7;
+  height: 275px;
 
   display: flex;
 
-  flex-direction: column;
+  align-items: center;
 
   justify-content: center;
 
-  align-items: center;
-
-  gap: 9px;
-
 }
 
 
-.why-bottle-label span {
+.purelane-why-product-image {
+
+  width: auto;
+
+  height: 255px;
+
+  max-width: 80%;
+
+  object-fit: contain;
 
   display: block;
 
-  width: 48px;
-
-  height: 7px;
-
-  background: #a99bdb;
-
-}
-
-
-.why-bottle-label span:last-child {
-
-  width: 35px;
-
-  opacity: .65;
+  filter:
+    drop-shadow(
+      0 18px 18px rgba(55,45,90,.15)
+    );
 
 }
 
 
 /* =========================================================
-   PRODUCT TEXT
+   PRODUCT INFO
 ========================================================= */
 
-.why-product-name {
+.purelane-why-product-info {
 
-  margin-top: 7px;
-
-  color: #29223f;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 15px;
-
-  font-weight: 900;
-
-  letter-spacing: .1em;
+  text-align: center;
 
 }
 
 
-.why-product-description {
+.purelane-why-product-info h3 {
 
-  margin-top: 8px;
+  margin: 5px 0 7px;
 
-  color: #88889a;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 
-  font-size: 12px;
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #29223f;
+
+}
+
+
+.purelane-why-product-info p {
+
+  margin: 0;
+
+  max-width: 270px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: #77768b;
 
 }
 
@@ -810,30 +667,26 @@
    DOTS
 ========================================================= */
 
-.purelane-why-dots {
-
-  position: absolute;
-
-  left: 50%;
-
-  bottom: 14px;
-
-  transform: translateX(-50%);
+.purelane-why-slider-dots {
 
   display: flex;
 
   align-items: center;
 
-  gap: 7px;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 15px;
 
 }
 
 
-.purelane-why-dots button {
+.purelane-why-dot {
 
-  width: 7px;
+  width: 8px;
 
-  height: 7px;
+  height: 8px;
 
   padding: 0;
 
@@ -841,53 +694,109 @@
 
   border-radius: 50%;
 
-  background: #c4c4df;
+  background: #b6b8c8;
 
   cursor: pointer;
+
+  transition:
+    width .25s ease,
+    background .25s ease;
 
 }
 
 
-.purelane-why-dots button.active {
+.purelane-why-dot.is-active {
 
-  width: 22px;
+  width: 28px;
 
   border-radius: 999px;
 
-  background: #bd7920;
+  background: #bd7620;
 
 }
 
 
 /* =========================================================
-   STATS
+   NO COLLECTION
+========================================================= */
+
+.purelane-why-no-collection {
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777;
+
+}
+
+
+.purelane-why-placeholder-icon {
+
+  width: 50px;
+
+  height: 50px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 1px solid #ccc;
+
+  font-size: 25px;
+
+}
+
+
+.purelane-why-no-collection p {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BOTTOM STATISTICS
 ========================================================= */
 
 .purelane-why-stats {
+
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  min-height: 175px;
 
   display: grid;
 
   grid-template-columns:
     repeat(4, 1fr);
 
-  margin-top: 25px;
-
-  padding: 27px 25px;
+  align-items: center;
 
   border-radius: 28px;
 
-  border: 1px solid rgba(255,255,255,.8);
+  border: 1px solid rgba(190,190,210,.65);
 
   background:
-
     linear-gradient(
       145deg,
-      rgba(255,255,255,.88),
-      rgba(239,239,249,.80)
+      rgba(255,255,255,.80),
+      rgba(240,239,248,.76)
     );
 
   box-shadow:
-    0 20px 45px rgba(70,70,100,.09);
+    0 15px 40px rgba(50,45,80,.08);
 
   backdrop-filter: blur(18px);
 
@@ -896,11 +805,9 @@
 }
 
 
-/* =========================================================
-   STAT
-========================================================= */
+.purelane-why-stat {
 
-.purelane-stat {
+  min-height: 130px;
 
   display: flex;
 
@@ -908,68 +815,83 @@
 
   align-items: center;
 
+  justify-content: center;
+
   text-align: center;
 
-  padding: 0 20px;
+  padding: 15px;
+
+  box-sizing: border-box;
 
 }
 
 
-.purelane-stat-circle {
+.purelane-why-stat-circle {
 
   width: 88px;
 
   height: 88px;
 
-  display: grid;
+  display: flex;
 
-  place-items: center;
+  align-items: center;
 
-  margin-bottom: 13px;
+  justify-content: center;
 
   border-radius: 50%;
 
-  border: 1px solid rgba(130,110,180,.3);
+  border: 1px solid rgba(125,105,180,.30);
 
-  color: #241a3d;
+  background: rgba(255,255,255,.55);
 
-  font-family: Arial, Helvetica, sans-serif;
+  color: #241b3e;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 23px;
 
   font-weight: 900;
 
-  background: rgba(255,255,255,.45);
-
 }
 
 
-.purelane-stat strong {
+.purelane-why-stat-title {
 
-  color: #c07817;
+  margin-top: 12px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  font-size: 12px;
+  font-size: 13px;
 
   font-weight: 900;
 
-  letter-spacing: .15em;
+  letter-spacing: .14em;
+
+  color: #c1781c;
 
 }
 
 
-.purelane-stat p {
+.purelane-why-stat-text {
 
-  margin: 10px 0 0;
+  margin-top: 8px;
 
-  color: #69697d;
-
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 13px;
 
   line-height: 1.4;
+
+  color: #68677d;
 
 }
 
@@ -978,38 +900,51 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
-  .purelane-why-inner {
+  .purelane-why-container {
 
     width: calc(100% - 40px);
 
-  }
+    grid-template-columns: 1fr;
 
-  .purelane-why-main {
-
-    grid-template-columns: 55% 45%;
+    gap: 40px;
 
   }
 
-  .purelane-why-product-card {
 
-    width: 330px;
+  .purelane-why-content {
 
-    height: 330px;
+    padding: 20px 20px 0;
+
+    text-align: center;
+
+  }
+
+
+  .purelane-why-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
 
   }
 
-  .purelane-why-content h2 {
 
-    font-size: 47px;
+  .purelane-why-slider {
+
+    max-width: 600px;
+
+    width: 100%;
+
+    margin: 0 auto;
 
   }
+
 
   .purelane-why-stats {
 
-    grid-template-columns:
-      repeat(4, 1fr);
+    grid-column: auto;
 
   }
 
@@ -1020,93 +955,105 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-  .purelane-why {
+  #purelane-why-{{ section.id }} {
 
-    padding: 55px 0;
-
-  }
-
-  .purelane-why-main {
-
-    display: flex;
-
-    flex-direction: column;
+    padding: 50px 0 40px;
 
   }
 
-  .purelane-why-content {
 
-    padding-right: 0;
-
-  }
-
-  .purelane-why-content h2 {
-
-    font-size: 48px;
-
-  }
-
-  .purelane-why-product {
-
-    width: 100%;
-
-    margin-top: 25px;
-
-  }
-
-  .purelane-why-product-card {
-
-    width: 100%;
-
-    max-width: 390px;
-
-  }
-
-  .purelane-why-stats {
-
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 30px 10px;
-
-  }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 450px) {
-
-  .purelane-why-inner {
+  .purelane-why-container {
 
     width: calc(100% - 30px);
 
   }
 
-  .purelane-why-content h2 {
 
-    font-size: 40px;
+  .purelane-why-content {
+
+    padding: 10px 10px 0;
 
   }
 
-  .purelane-stat-circle {
+
+  .purelane-why-eyebrow {
+
+    font-size: 11px;
+
+  }
+
+
+  .purelane-why-title {
+
+    font-size: 44px;
+
+  }
+
+
+  .purelane-why-description {
+
+    font-size: 16px;
+
+  }
+
+
+  .purelane-why-button {
+
+    min-height: 52px;
+
+    padding: 0 23px;
+
+    font-size: 12px;
+
+  }
+
+
+  .purelane-why-product-window {
+
+    height: 350px;
+
+  }
+
+
+  .purelane-why-product-image-wrap {
+
+    height: 245px;
+
+  }
+
+
+  .purelane-why-product-image {
+
+    height: 225px;
+
+  }
+
+
+  .purelane-why-stats {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-radius: 22px;
+
+  }
+
+
+  .purelane-why-stat {
+
+    min-height: 150px;
+
+  }
+
+
+  .purelane-why-stat-circle {
 
     width: 70px;
 
     height: 70px;
 
     font-size: 19px;
-
-  }
-
-  .purelane-stat p {
-
-    font-size: 11px;
 
   }
 
@@ -1117,109 +1064,133 @@
 
 <script>
 
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
+(function() {
 
-    const slides =
-      document.querySelectorAll(
-        ".purelane-why-product-slide"
+  const section =
+    document.getElementById(
+      'purelane-why-{{ section.id }}'
+    );
+
+  if (!section) return;
+
+
+  const slides =
+    section.querySelectorAll(
+      '.purelane-why-product-slide'
+    );
+
+  const dots =
+    section.querySelectorAll(
+      '.purelane-why-dot'
+    );
+
+
+  if (slides.length <= 1) return;
+
+
+  let current = 0;
+
+  let timer;
+
+
+  function showSlide(index) {
+
+    current =
+      (index + slides.length) %
+      slides.length;
+
+
+    slides.forEach(function(slide, i) {
+
+      slide.classList.toggle(
+        'is-active',
+        i === current
       );
 
-    const dots =
-      document.querySelectorAll(
-        ".purelane-why-dots button"
+    });
+
+
+    dots.forEach(function(dot, i) {
+
+      dot.classList.toggle(
+        'is-active',
+        i === current
       );
 
-    if (!slides.length) return;
+    });
 
-    let current = 0;
-
-    let timer;
+  }
 
 
-    function showWhySlide(index) {
+  function startSlider() {
 
-      slides.forEach(
-        function(slide, i) {
+    clearInterval(timer);
 
-          slide.classList.toggle(
-            "active",
-            i === index
-          );
+    timer = setInterval(function() {
 
-        }
-      );
+      showSlide(current + 1);
 
+    }, 3500);
 
-      dots.forEach(
-        function(dot, i) {
-
-          dot.classList.toggle(
-            "active",
-            i === index
-          );
-
-        }
-      );
+  }
 
 
-      current = index;
+  dots.forEach(function(dot, index) {
 
-    }
+    dot.addEventListener(
+      'click',
+      function() {
 
+        showSlide(index);
 
-    function nextWhySlide() {
-
-      current++;
-
-      if (current >= slides.length) {
-
-        current = 0;
+        startSlider();
 
       }
+    );
 
-      showWhySlide(current);
-
-    }
-
-
-    function startWhySlider() {
-
-      clearInterval(timer);
-
-      timer = setInterval(
-        nextWhySlide,
-        2500
-      );
-
-    }
+  });
 
 
-    dots.forEach(
-      function(dot, index) {
+  showSlide(0);
 
-        dot.addEventListener(
-          "click",
-          function() {
+  startSlider();
 
-            showWhySlide(index);
 
-            startWhySlider();
+  /*
+   * Pause while mouse is over slider
+   * so users can inspect the product.
+   */
 
-          }
-        );
+  const slider =
+    section.querySelector(
+      '.purelane-why-slider'
+    );
+
+
+  if (slider) {
+
+    slider.addEventListener(
+      'mouseenter',
+      function() {
+
+        clearInterval(timer);
 
       }
     );
 
 
-    showWhySlide(0);
+    slider.addEventListener(
+      'mouseleave',
+      function() {
 
-    startWhySlider();
+        startSlider();
+
+      }
+    );
 
   }
-);
+
+})();
 
 </script>
 
@@ -1228,7 +1199,25 @@ document.addEventListener(
 
 {
   "name": "Purelane Why",
-  "settings": []
+
+  "settings": [
+
+    {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Product collection"
+    }
+
+  ],
+
+  "presets": [
+
+    {
+      "name": "Purelane Why"
+    }
+
+  ]
+
 }
 
 {% endschema %}
