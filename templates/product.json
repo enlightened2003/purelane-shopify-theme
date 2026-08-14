@@ -50,11 +50,98 @@
       "type": "purelane-related-products",
       "name": "Purelane Related Products",
       "settings": {}
+    },
+    "1786685746f2b9a47e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_71a26ce_ArBBtN": {
+          "type": "ai_gen_block_71a26ce",
+          "settings": {
+            "heading": "CLEANING THAT FEELS BETTER.",
+            "description": "<p>Purelane products are powerful, plant-powered, gentle, and designed for everyday homes. Experience the difference of cleaning that cares.</p>",
+            "card_1_title": "Plant Powered",
+            "card_2_title": "Tough on Dirt",
+            "card_3_title": "Family Friendly",
+            "card_4_title": "Made for Everyday Homes",
+            "background_color": "#F9F9F7",
+            "heading_color": "#1A2B4A",
+            "text_color": "#4A5568",
+            "icon_color": "#C9A961",
+            "card_background": "#FFFFFF",
+            "card_border_color": "#E8E8E6",
+            "desktop_width_percent": 100,
+            "section_padding": 60,
+            "header_spacing": 40,
+            "grid_spacing": 50,
+            "card_gap": 30,
+            "card_padding": 40,
+            "heading_size": 36,
+            "heading_margin": 20,
+            "description_size": 16,
+            "card_title_size": 16,
+            "card_radius": 8,
+            "card_border_width": 1,
+            "icon_size": 50,
+            "icon_margin": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_71a26ce_ArBBtN"
+      ],
+      "settings": {}
+    },
+    "1786685914b21a5189": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_44bc096_CjJjgN": {
+          "type": "ai_gen_block_44bc096",
+          "settings": {
+            "section_title": "HOW IT WORKS.",
+            "desktop_width_percent": 100,
+            "max_width": 1200,
+            "section_padding": 60,
+            "step_1_title": "Choose your cleaner",
+            "step_1_description": "Select from our range of eco-friendly, powerful cleaning solutions designed for every surface in your home.",
+            "step_2_title": "Clean with confidence",
+            "step_2_description": "Apply our safe, non-toxic formula and watch it work its magic on dirt, grime, and stains.",
+            "step_3_title": "Enjoy a fresher home",
+            "step_3_description": "Experience a spotless, naturally fresh space that's safe for your family and the environment.",
+            "background_color": "#F9F9F7",
+            "title_color": "#1A2B4A",
+            "step_title_color": "#1A2B4A",
+            "step_description_color": "#4A5568",
+            "number_bg_color": "#FFFFFF",
+            "number_text_color": "#1A2B4A",
+            "accent_color": "#D4AF37",
+            "title_size": 32,
+            "step_title_size": 20,
+            "step_description_size": 15,
+            "header_spacing": 40,
+            "steps_top_margin": 20,
+            "step_gap": 40,
+            "step_padding": 20,
+            "number_size": 70,
+            "number_font_size": 28,
+            "number_border_width": 2,
+            "number_margin_bottom": 20,
+            "step_title_margin": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_44bc096_CjJjgN"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "purelane_product_details_aqDtEw",
-    "purelane_related_products_938QYg"
+    "purelane_related_products_938QYg",
+    "1786685746f2b9a47e",
+    "1786685914b21a5189"
   ]
 }
