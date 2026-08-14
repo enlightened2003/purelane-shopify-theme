@@ -25,12 +25,16 @@
       "type": "purelane-reviews",
       "settings": {}
     },
-    "why": {
-      "type": "purelane-why",
-      "settings": {}
-    },
     "ingredients": {
       "type": "purelane-ingredients",
+      "settings": {}
+    },
+    "benefits": {
+      "type": "purelane-benefits",
+      "settings": {}
+    },
+    "why": {
+      "type": "purelane-why",
       "settings": {}
     },
     "how_it_works": {
@@ -42,10 +46,7 @@
       "settings": {
         "collection": "purelane-cleaning-products"
       }
-    },"benefits": {
-  "type": "purelane-benefits",
-  "settings": {}
-},
+    }
   },
   "order": [
     "announcement",
@@ -53,9 +54,9 @@
     "hero",
     "reviews",
     "ingredients",
+    "benefits",
     "why",
     "how_it_works",
-    "products",
-    "benefits"
+    "products"
   ]
 }
