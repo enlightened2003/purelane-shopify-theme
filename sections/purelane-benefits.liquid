@@ -1,0 +1,716 @@
+<section class="purelane-benefits" id="benefits">
+
+  <div class="purelane-benefits-inner">
+
+    <!-- CARD 1 -->
+    <article class="purelane-benefit-card">
+
+      <div class="purelane-benefit-icon">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="18" cy="17" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="30" cy="15" r="3" stroke="currentColor" stroke-width="2"/>
+          <circle cx="27" cy="28" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="14" cy="30" r="3" stroke="currentColor" stroke-width="2"/>
+          <path
+            d="M21 19L25 24M18 20L16 27M29 18L28 24M18 31L23 29"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <h2>LESS SCRUBBING</h2>
+
+      <p>
+        A foaming formulation. The foam clings to
+        grease and lifts it, so you wipe instead of
+        scrub.
+      </p>
+
+      <a href="#ingredients" class="purelane-benefit-button">
+        LEARN MORE
+      </a>
+
+    </article>
+
+
+    <!-- CARD 2 -->
+    <article class="purelane-benefit-card">
+
+      <div class="purelane-benefit-icon">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path
+            d="M24 8L35 13V22C35 29.5 30.4 35.4 24 38
+               C17.6 35.4 13 29.5 13 22V13L24 8Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M19 23L22.5 26.5L29 19.5"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <h2>CLEAN INGREDIENTS</h2>
+
+      <p>
+        No sulphates, no chlorine, no synthetic
+        fragrance. Nothing on the label you would not
+        want near your food.
+      </p>
+
+      <a href="#ingredients" class="purelane-benefit-button">
+        LEARN MORE
+      </a>
+
+    </article>
+
+
+    <!-- CARD 3 -->
+    <article class="purelane-benefit-card">
+
+      <div class="purelane-benefit-icon">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path
+            d="M24 34
+               C20 30
+               12 25
+               12 18
+               C12 14
+               15 11
+               19 11
+               C21.5 11
+               23.5 12.5
+               24 15
+               C24.5 12.5
+               26.5 11
+               29 11
+               C33 11
+               36 14
+               36 18
+               C36 25
+               28 30
+               24 34Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <h2>SAFE AROUND<br>EVERYONE</h2>
+
+      <p>
+        Gentle on hands, safe around kids and pets,
+        and it leaves no toxic residue on the surfaces
+        you touch every day.
+      </p>
+
+      <a href="#ingredients" class="purelane-benefit-button">
+        LEARN MORE
+      </a>
+
+    </article>
+
+  </div>
+
+  <!-- RIGHT SIDE SCROLL INDICATOR -->
+  <div class="purelane-benefits-indicator" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   PURELANE BENEFITS SECTION
+   ========================================================= */
+
+.purelane-benefits {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 560px;
+
+  padding: 80px 12.4%;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      115deg,
+      #e4f7e8 0%,
+      #d6f1dd 42%,
+      #c7e9d5 100%
+    );
+
+}
+
+
+/* =========================================================
+   SOFT WATER / ORGANIC BACKGROUND
+   ========================================================= */
+
+.purelane-benefits::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 125%;
+  height: 300px;
+
+  left: -12%;
+  top: 30px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.65);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(-2deg);
+
+  box-shadow:
+    0 40px 0 rgba(255,255,255,.25),
+    0 80px 0 rgba(255,255,255,.13);
+
+  pointer-events: none;
+
+}
+
+
+.purelane-benefits::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 220px;
+
+  left: -10%;
+  bottom: -100px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.32);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(2deg);
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CARDS CONTAINER
+   ========================================================= */
+
+.purelane-benefits-inner {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 21px;
+
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.purelane-benefit-card {
+
+  position: relative;
+
+  min-height: 398px;
+
+  padding:
+    32px 30px
+    30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.80),
+      rgba(231,241,239,.68)
+    );
+
+  border:
+    1px solid
+    rgba(191,204,216,.85);
+
+  box-shadow:
+    0 15px 40px
+    rgba(55,82,69,.07);
+
+  backdrop-filter:
+    blur(16px);
+
+  -webkit-backdrop-filter:
+    blur(16px);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.purelane-benefit-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 22px 45px
+    rgba(55,82,69,.12);
+
+}
+
+
+/* =========================================================
+   ICON BOX
+   ========================================================= */
+
+.purelane-benefit-icon {
+
+  width: 62px;
+
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 17px;
+
+  color:
+    #79a942;
+
+  background:
+    rgba(245,244,239,.78);
+
+  border:
+    1px solid
+    rgba(206,211,218,.8);
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.8);
+
+}
+
+
+.purelane-benefit-icon svg {
+
+  width: 31px;
+
+  height: 31px;
+
+}
+
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.purelane-benefit-card h2 {
+
+  margin:
+    0 0 14px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(29px, 2.05vw, 38px);
+
+  line-height:
+    1.02;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -.035em;
+
+  color:
+    #2b2440;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.purelane-benefit-card p {
+
+  max-width:
+    440px;
+
+  margin:
+    0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    18px;
+
+  line-height:
+    1.65;
+
+  font-weight:
+    400;
+
+  color:
+    #65687a;
+
+}
+
+
+/* =========================================================
+   LEARN MORE BUTTON
+   ========================================================= */
+
+.purelane-benefit-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  margin-top:
+    auto;
+
+  min-width:
+    155px;
+
+  height:
+    46px;
+
+  padding:
+    0 22px;
+
+  box-sizing:
+    border-box;
+
+  border-radius:
+    999px;
+
+  border:
+    1px solid
+    #d4d6e2;
+
+  background:
+    rgba(255,255,255,.82);
+
+  color:
+    #064d4a;
+
+  text-decoration:
+    none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    13px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    .15em;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+
+}
+
+
+.purelane-benefit-button:hover {
+
+  background:
+    #075c56;
+
+  color:
+    #ffffff;
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE PAGE INDICATOR
+   ========================================================= */
+
+.purelane-benefits-indicator {
+
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  right:
+    16px;
+
+  top:
+    50%;
+
+  transform:
+    translateY(-50%);
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+}
+
+
+.purelane-benefits-indicator span {
+
+  display:
+    block;
+
+  width:
+    9px;
+
+  height:
+    9px;
+
+  border-radius:
+    50%;
+
+  background:
+    #a9bec0;
+
+}
+
+
+.purelane-benefits-indicator span.active {
+
+  width:
+    9px;
+
+  height:
+    31px;
+
+  border-radius:
+    999px;
+
+  background:
+    #c97813;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .purelane-benefits {
+
+    padding:
+      65px 7%;
+
+  }
+
+  .purelane-benefit-card {
+
+    padding:
+      28px 24px;
+
+  }
+
+  .purelane-benefit-card h2 {
+
+    font-size:
+      28px;
+
+  }
+
+  .purelane-benefit-card p {
+
+    font-size:
+      15px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .purelane-benefits {
+
+    min-height:
+      auto;
+
+    padding:
+      45px 18px;
+
+  }
+
+  .purelane-benefits-inner {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      18px;
+
+  }
+
+  .purelane-benefit-card {
+
+    min-height:
+      370px;
+
+    border-radius:
+      22px;
+
+    padding:
+      27px 24px;
+
+  }
+
+  .purelane-benefit-card h2 {
+
+    font-size:
+      29px;
+
+  }
+
+  .purelane-benefit-card p {
+
+    font-size:
+      15px;
+
+    line-height:
+      1.55;
+
+  }
+
+  .purelane-benefits-indicator {
+
+    display:
+      none;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .purelane-benefit-card {
+
+    min-height:
+      350px;
+
+  }
+
+  .purelane-benefit-card h2 {
+
+    font-size:
+      27px;
+
+  }
+
+}
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Purelane Benefits",
+  "settings": []
+}
+{% endschema %}
