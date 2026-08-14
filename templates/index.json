@@ -21,12 +21,12 @@
       "type": "purelane-hero",
       "settings": {}
     },
-    "why": {
-      "type": "purelane-why",
-      "settings": {}
-    },
     "reviews": {
       "type": "purelane-reviews",
+      "settings": {}
+    },
+    "why": {
+      "type": "purelane-why",
       "settings": {}
     },
     "ingredients": {
@@ -48,9 +48,9 @@
     "announcement",
     "header",
     "hero",
-    "why",
     "reviews",
     "ingredients",
+    "why",
     "how_it_works",
     "products"
   ]
