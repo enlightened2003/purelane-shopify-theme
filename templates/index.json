@@ -13,12 +13,10 @@
       "type": "purelane-announcement",
       "settings": {}
     },
-
     "header": {
       "type": "purelane-header",
       "settings": {}
     },
-
     "hero": {
       "type": "purelane-hero",
       "settings": {
@@ -27,73 +25,61 @@
         "bottle_scene_3": "shopify://shop_images/ChatGPTImageAug13_2026_09_55_20PM.png"
       }
     },
-
     "reviews": {
       "type": "purelane-reviews",
       "settings": {}
     },
-
     "ingredients": {
       "type": "purelane-ingredients",
       "settings": {}
     },
-
     "benefits": {
       "type": "purelane-benefits",
       "settings": {}
     },
-
     "why": {
       "type": "purelane-why",
       "settings": {
         "product_collection": "products"
       }
     },
-
     "products": {
       "type": "purelane-products",
       "settings": {
         "collection": "purelane-cleaning-products"
       }
     },
-
     "build_bundle": {
       "type": "purelane-build-bundle",
       "settings": {
         "collection": "purelane-cleaning-products"
       }
     },
-
     "shelf": {
       "type": "purelane-shelf",
       "settings": {
         "collection": "purelane-cleaning-products"
       }
     },
-
+    "bundle_benefits": {
+      "type": "purelane-bundle-benefits",
+      "settings": {}
+    },
     "bundle_categories": {
       "type": "purelane-bundle-categories",
       "settings": {
         "collection": "purelane-cleaning-products"
       }
     },
-
-    "bundle_benefits": {
-      "type": "purelane-bundle-benefits",
-      "settings": {}
-    },
-
     "newsletter": {
       "type": "purelane-newsletter",
       "settings": {}
     },
-
     "how_it_works": {
       "type": "purelane-how-it-works",
       "settings": {}
     }
   },
-
   "order": [
     "announcement",
     "header",
@@ -105,8 +91,8 @@
     "products",
     "build_bundle",
     "shelf",
-    "bundle_categories",
     "bundle_benefits",
+    "bundle_categories",
     "newsletter",
     "how_it_works"
   ]
