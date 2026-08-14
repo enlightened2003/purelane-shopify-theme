@@ -71,6 +71,13 @@
       }
     },
 
+    "bundle_categories": {
+      "type": "purelane-bundle-categories",
+      "settings": {
+        "collection": "purelane-cleaning-products"
+      }
+    },
+
     "bundle_benefits": {
       "type": "purelane-bundle-benefits",
       "settings": {}
@@ -93,6 +100,7 @@
     "products",
     "build_bundle",
     "shelf",
+    "bundle_categories",
     "bundle_benefits",
     "how_it_works"
   ]
