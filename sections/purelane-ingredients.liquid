@@ -1,687 +1,513 @@
-<header class="purelane-header">
+<section id="ingredients" class="purelane-ingredients">
 
-  <div class="purelane-header-inner">
+  <div class="purelane-nature-panel">
 
-    <!-- LOGO -->
-    <a
-      href="{{ routes.root_url }}"
-      class="purelane-logo"
-      aria-label="Purelane Home"
-    >
+    <div class="purelane-nature-heading">
+      <h2>SOURCED FROM NATURE</h2>
 
-      <span class="purelane-logo-icon">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M12 3L19 8V16L12 21L5 16V8L12 3Z"
-            stroke="currentColor"
-            stroke-width="1.5"
-          />
-
-          <path
-            d="M12 7L15.5 9.5V14.5L12 17L8.5 14.5V9.5L12 7Z"
-            stroke="currentColor"
-            stroke-width="1.2"
-          />
-        </svg>
-      </span>
-
-      <span class="purelane-logo-text">
-        <strong>PURELANE</strong>
-        <small>CLEAN, SIMPLY</small>
-      </span>
-
-    </a>
+      <div class="purelane-nature-divider">
+        <span></span>
+        <span class="purelane-leaf">⌃</span>
+        <span></span>
+      </div>
+    </div>
 
 
-    <!-- NAVIGATION -->
-    <nav
-      class="purelane-nav"
-      aria-label="Main navigation"
-    >
+    <div class="purelane-ingredient-grid">
 
-      <a href="{{ routes.root_url }}">
-        Home
-      </a>
+      <!-- COCONUT -->
+      <div class="purelane-ingredient-card">
 
-      <a
-        href="#ingredients"
-        class="purelane-scroll-link"
-        data-target="ingredients"
-      >
-        Ingredients
-      </a>
+        <div class="purelane-ingredient-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="36" r="17"
+              stroke="currentColor"
+              stroke-width="2"/>
+            <path d="M15 25C19 16 26 13 32 18"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+            <path d="M49 25C45 16 38 13 32 18"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+            <path d="M25 38C28 42 36 42 39 38"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+          </svg>
+        </div>
 
-      <a
-        href="#how-it-works"
-        class="purelane-scroll-link"
-        data-target="how-it-works"
-      >
-        How it works
-      </a>
+        <h3>COCONUT</h3>
 
-      <a
-        href="#shop"
-        class="purelane-scroll-link"
-        data-target="shop"
-      >
-        Shop
-      </a>
+        <p>
+          Plant-derived cleansers that lift grease
+          and leave surfaces fresh.
+        </p>
 
-      <a
-        href="#bundles"
-        class="purelane-scroll-link"
-        data-target="bundles"
-      >
-        Bundles
-      </a>
-
-    </nav>
+      </div>
 
 
-    <!-- ACTIONS -->
-    <div class="purelane-actions">
+      <!-- ORANGE PEEL -->
+      <div class="purelane-ingredient-card">
 
-      <!-- SEARCH -->
-      <a
-        href="{{ routes.search_url }}"
-        class="purelane-action"
-        aria-label="Search"
-      >
+        <div class="purelane-ingredient-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="35" r="16"
+              stroke="currentColor"
+              stroke-width="2"/>
 
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="6.5"
-            stroke="currentColor"
-            stroke-width="1.7"
-          />
+            <path d="M32 19V51"
+              stroke="currentColor"
+              stroke-width="1.5"/>
 
-          <path
-            d="M16 16L21 21"
-            stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
-          />
-        </svg>
+            <path d="M16 35H48"
+              stroke="currentColor"
+              stroke-width="1.5"/>
 
-      </a>
+            <path d="M21 24L43 46"
+              stroke="currentColor"
+              stroke-width="1.5"/>
 
+            <path d="M43 24L21 46"
+              stroke="currentColor"
+              stroke-width="1.5"/>
 
-      <!-- ACCOUNT -->
-      <a
-        href="{{ routes.account_url }}"
-        class="purelane-action"
-        aria-label="Account"
-      >
+            <path d="M32 19C32 13 36 10 42 10"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+          </svg>
+        </div>
 
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle
-            cx="12"
-            cy="8"
-            r="3.5"
-            stroke="currentColor"
-            stroke-width="1.6"
-          />
+        <h3>ORANGE<br>PEEL</h3>
 
-          <path
-            d="M5.5 20C6.2 15.8 8.3 13.8 12 13.8C15.7 13.8 17.8 15.8 18.5 20"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-          />
-        </svg>
+        <p>
+          Natural degreaser that helps break down
+          everyday kitchen grime.
+        </p>
 
-      </a>
+      </div>
 
 
-      <!-- CART -->
-      <a
-        href="{{ routes.cart_url }}"
-        class="purelane-action purelane-cart"
-        aria-label="Cart"
-      >
+      <!-- SOAP NUT -->
+      <div class="purelane-ingredient-card">
 
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M5 8H19L18 20H6L5 8Z"
-            stroke="currentColor"
-            stroke-width="1.6"
-          />
+        <div class="purelane-ingredient-icon">
+          <svg viewBox="0 0 64 64" fill="none">
 
-          <path
-            d="M9 9V6.5C9 4.8 10.3 3.5 12 3.5C13.7 3.5 15 4.8 15 6.5V9"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-          />
-        </svg>
+            <circle cx="24" cy="37" r="11"
+              stroke="currentColor"
+              stroke-width="2"/>
 
-        {% if cart.item_count > 0 %}
-          <span class="purelane-cart-count">
-            {{ cart.item_count }}
-          </span>
-        {% endif %}
+            <circle cx="39" cy="28" r="11"
+              stroke="currentColor"
+              stroke-width="2"/>
 
-      </a>
+            <circle cx="42" cy="43" r="10"
+              stroke="currentColor"
+              stroke-width="2"/>
+
+            <path d="M39 17C40 10 45 7 51 9"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+          </svg>
+        </div>
+
+        <h3>SOAP NUT</h3>
+
+        <p>
+          A traditional plant-based foaming agent
+          for a gentle clean.
+        </p>
+
+      </div>
+
+
+      <!-- NEEM -->
+      <div class="purelane-ingredient-card">
+
+        <div class="purelane-ingredient-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+
+            <path d="M18 49C27 40 35 30 47 16"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M25 41C20 35 21 29 27 25"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M31 35C27 28 29 22 35 19"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M38 28C35 22 38 17 44 15"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M23 39C29 38 34 34 35 28"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+          </svg>
+        </div>
+
+        <h3>NEEM</h3>
+
+        <p>
+          Time-tested botanical ingredient known
+          for its naturally purifying properties.
+        </p>
+
+      </div>
+
+
+      <!-- LEMONGRASS -->
+      <div class="purelane-ingredient-card">
+
+        <div class="purelane-ingredient-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+
+            <path d="M32 52C29 39 28 26 32 12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M32 50C38 35 45 26 51 22"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M31 49C24 36 19 27 14 23"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M32 50C34 33 35 21 39 13"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path d="M31 50C26 38 25 25 25 16"
+              stroke="#DCA05A"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+          </svg>
+        </div>
+
+        <h3>LEMONGRASS</h3>
+
+        <p>
+          Clean, refreshing botanical fragrance
+          with nothing synthetic.
+        </p>
+
+      </div>
 
     </div>
 
   </div>
 
-</header>
+</section>
 
 
 <style>
 
-/* =========================================================
-   PURELANE HEADER
-   ========================================================= */
-
-.purelane-header {
-
-  position: fixed;
-
-  top: 40px;
-
-  left: 0;
-
+.purelane-ingredients {
+  position: relative;
   width: 100%;
+  padding: 80px 0;
+  overflow: hidden;
 
-  padding: 12px 18px;
-
-  z-index: 9999;
-
-  pointer-events: none;
-
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.55),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #dff4e9 0%,
+      #d4eee0 50%,
+      #e7f7ef 100%
+    );
 }
 
 
-.purelane-header-inner {
-
-  width: 100%;
-
-  max-width: 1250px;
-
-  min-height: 70px;
+.purelane-nature-panel {
+  width: calc(100% - 48px);
+  max-width: 1140px;
 
   margin: 0 auto;
 
-  padding: 7px 16px;
+  padding: 60px 45px 45px;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  border-radius: 999px;
+  border-radius: 28px;
 
   background:
     linear-gradient(
-      110deg,
+      135deg,
       rgba(255,255,255,.78),
-      rgba(255,255,255,.58)
+      rgba(245,251,249,.65)
     );
 
-  border: 1px solid rgba(93,74,135,.16);
+  border: 1px solid rgba(87,112,142,.22);
 
   box-shadow:
-    0 14px 35px rgba(70,55,100,.08),
-    inset 0 1px 0 rgba(255,255,255,.90);
+    0 20px 60px rgba(45,80,65,.08),
+    inset 0 1px 0 rgba(255,255,255,.8);
 
-  backdrop-filter: blur(22px) saturate(135%);
-
-  -webkit-backdrop-filter: blur(22px) saturate(135%);
-
-  pointer-events: auto;
-
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 
-/* =========================================================
-   LOGO
-   ========================================================= */
+.purelane-nature-heading {
+  text-align: center;
+}
 
-.purelane-logo {
 
+.purelane-nature-heading h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: clamp(42px, 6vw, 64px);
+
+  line-height: .95;
+
+  font-weight: 900;
+
+  letter-spacing: -.025em;
+
+  color: #12102f;
+}
+
+
+.purelane-nature-divider {
   display: flex;
 
   align-items: center;
 
-  gap: 10px;
+  justify-content: center;
 
-  flex-shrink: 0;
+  gap: 26px;
 
-  text-decoration: none;
+  margin: 30px auto 80px;
 
-  color: #5d5870;
-
+  max-width: 330px;
 }
 
 
-.purelane-logo-icon {
+.purelane-nature-divider span:first-child,
+.purelane-nature-divider span:last-child {
+  flex: 1;
 
-  width: 46px;
+  height: 1px;
 
-  height: 46px;
+  background: rgba(91,110,145,.35);
+}
+
+
+.purelane-leaf {
+  width: 68px;
+  height: 68px;
 
   display: grid;
 
   place-items: center;
 
-  border-radius: 50%;
+  border-radius: 17px;
 
-  background: rgba(255,255,255,.58);
+  border: 1px dashed rgba(91,110,145,.35);
 
-  border: 1px solid rgba(90,75,120,.12);
+  color: #6d9c49;
 
-  color: #dca05a;
+  font-size: 22px;
 
+  font-weight: 700;
 }
 
 
-.purelane-logo-icon svg {
+.purelane-ingredient-grid {
+  display: grid;
 
-  width: 25px;
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
 
-  height: 25px;
+  border-top: 1px solid rgba(91,110,145,.18);
 
+  border-bottom: 1px solid rgba(91,110,145,.18);
 }
 
 
-.purelane-logo-text {
+.purelane-ingredient-card {
+  min-width: 0;
 
-  display: flex;
+  padding: 26px 24px 10px;
 
-  flex-direction: column;
+  text-align: center;
 
-  line-height: 1;
-
+  border-right:
+    1px solid rgba(91,110,145,.18);
 }
 
 
-.purelane-logo-text strong {
-
-  font-family: Arial, sans-serif;
-
-  font-size: 20px;
-
-  font-weight: 800;
-
-  letter-spacing: .02em;
-
-  color: #706b7e;
-
+.purelane-ingredient-card:last-child {
+  border-right: none;
 }
 
 
-.purelane-logo-text small {
+.purelane-ingredient-icon {
+  width: 82px;
+  height: 82px;
 
-  margin-top: 5px;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  letter-spacing: .20em;
-
-  color: #aaa5b2;
-
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-.purelane-nav {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 32px;
-
-  margin-left: auto;
-
-  margin-right: auto;
-
-}
-
-
-.purelane-nav a {
-
-  position: relative;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  color: #5d5870;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
-
-}
-
-
-.purelane-nav a::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  right: 0;
-
-  bottom: -8px;
-
-  height: 2px;
-
-  border-radius: 10px;
-
-  background: #dca05a;
-
-  transform: scaleX(0);
-
-  transition: transform .2s ease;
-
-}
-
-
-.purelane-nav a:hover {
-
-  color: #40375d;
-
-  transform: translateY(-1px);
-
-}
-
-
-.purelane-nav a:hover::after {
-
-  transform: scaleX(1);
-
-}
-
-
-/* =========================================================
-   ACTIONS
-   ========================================================= */
-
-.purelane-actions {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  flex-shrink: 0;
-
-}
-
-
-.purelane-action {
-
-  position: relative;
-
-  width: 25px;
-
-  height: 25px;
+  margin: 0 auto 28px;
 
   display: grid;
 
   place-items: center;
 
-  color: #5d5870;
-
-  text-decoration: none;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
-
+  color: #28837d;
 }
 
 
-.purelane-action:hover {
-
-  color: #40375d;
-
-  transform: translateY(-1px);
-
+.purelane-ingredient-icon svg {
+  width: 78px;
+  height: 78px;
 }
 
 
-.purelane-action svg {
-
-  width: 21px;
-
-  height: 21px;
-
-}
-
-
-/* =========================================================
-   CART COUNT
-   ========================================================= */
-
-.purelane-cart-count {
-
-  position: absolute;
-
-  top: -9px;
-
-  right: -8px;
-
-  min-width: 18px;
-
-  height: 18px;
-
-  padding: 0 4px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  background: #5b4597;
-
-  color: white;
+.purelane-ingredient-card h3 {
+  margin: 0 0 14px;
 
   font-family: Arial, sans-serif;
 
-  font-size: 9px;
+  font-size: 21px;
 
-  font-weight: 800;
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  color: #272342;
+}
+
+
+.purelane-ingredient-card p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.55;
+
+  color: #626d81;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .purelane-nature-panel {
+    padding: 50px 25px 35px;
+  }
+
+  .purelane-ingredient-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .purelane-ingredient-card {
+    border-bottom:
+      1px solid rgba(91,110,145,.18);
+  }
+
+  .purelane-ingredient-card:nth-child(3) {
+    border-right: none;
+  }
 
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* MOBILE */
 
-@media (max-width: 950px) {
+@media (max-width: 600px) {
 
-  .purelane-nav {
-
-    gap: 18px;
-
+  .purelane-ingredients {
+    padding: 45px 0;
   }
 
-  .purelane-nav a {
+  .purelane-nature-panel {
+    width: calc(100% - 24px);
 
-    font-size: 13px;
+    padding:
+      40px 15px 25px;
 
+    border-radius: 22px;
   }
 
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .purelane-header {
-
-    top: 34px;
-
-    padding: 8px 10px;
-
+  .purelane-nature-heading h2 {
+    font-size: 36px;
   }
 
-
-  .purelane-header-inner {
-
-    min-height: 58px;
-
-    padding: 6px 12px;
-
+  .purelane-nature-divider {
+    margin:
+      25px auto 45px;
   }
 
-
-  .purelane-logo-icon {
-
-    width: 38px;
-
-    height: 38px;
-
+  .purelane-ingredient-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
+  .purelane-ingredient-card {
+    padding:
+      25px 12px 30px;
 
-  .purelane-logo-icon svg {
-
-    width: 21px;
-
-    height: 21px;
-
+    border-right:
+      1px solid rgba(91,110,145,.18);
   }
 
+  .purelane-ingredient-card:nth-child(2n) {
+    border-right: none;
+  }
 
-  .purelane-logo-text strong {
+  .purelane-ingredient-icon {
+    width: 65px;
+    height: 65px;
 
+    margin-bottom: 20px;
+  }
+
+  .purelane-ingredient-icon svg {
+    width: 62px;
+    height: 62px;
+  }
+
+  .purelane-ingredient-card h3 {
     font-size: 16px;
-
   }
 
-
-  .purelane-logo-text small {
-
-    font-size: 6px;
-
+  .purelane-ingredient-card p {
+    font-size: 14px;
   }
-
-
-  .purelane-nav {
-
-    display: none;
-
-  }
-
-
-  .purelane-actions {
-
-    gap: 12px;
-
-  }
-
-}
-
-
-/* =========================================================
-   SMOOTH SCROLL
-   ========================================================= */
-
-html {
-
-  scroll-behavior: smooth;
-
-}
-
-
-#ingredients,
-#how-it-works,
-#shop,
-#bundles {
-
-  scroll-margin-top: 130px;
 
 }
 
 </style>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  const links = document.querySelectorAll(
-    '.purelane-scroll-link'
-  );
-
-  links.forEach(function (link) {
-
-    link.addEventListener('click', function (event) {
-
-      const targetId = link.getAttribute('data-target');
-
-      const target = document.getElementById(targetId);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-
-      const headerOffset = 130;
-
-      const targetPosition =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerOffset;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-
-    });
-
-  });
-
-});
-</script>
 
 
 {% schema %}
